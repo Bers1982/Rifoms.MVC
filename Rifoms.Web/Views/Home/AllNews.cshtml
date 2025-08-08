@@ -1,0 +1,28 @@
+﻿@model AllNewsModel
+@{
+    ViewData["Title"] = Model.NewsTitle;}
+
+@{
+    <h1>@Model.NewsTitle</h1>
+
+    if (Model.AllNews?.Count > 0)
+    {
+        foreach (var item in Model.AllNews)
+        {
+            <div class="d-flex flex-row flex-nowrap justify-content-between align-content-start">
+                <h2 class="mb-3 fw-bolder text-wrap">
+                    @{
+                        <a class="font_18 text-decoration-none" href="@($"{Model.SiteUrl}/{item.Id}/{item.Seolink}.html")">
+                            @item.Title
+                        </a>
+                    }
+                </h2>
+                <h4 class="text-nowrap mt-2">@item.Pubdate.ToString("D")</h4>
+            </div>
+            <div class="d-inline-block paragraf-text">
+                @(Html.Raw(item.Description))
+            </div>
+            <hr />
+        }
+    }
+}

@@ -1,0 +1,100 @@
+body {
+    /* padding-top: 50px;
+    padding-bottom: 20px;*/
+}
+
+.body_content {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+/*X-Small devices (portrait phones, less than 576px)*/
+@media (min-width: 375px) and (max-width: 575.98px) {
+    .body_content {
+        margin: 0 0 25px 0;
+    }
+}
+
+/*Small devices (landscape phones, less than 768px)*/
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .body_content {
+        margin: 0 0 25px 0;
+    }
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (min-width:767.98px) and (max-width: 991.98px) {
+    .body_content {
+        margin: 0 10px 25px 10px;
+    }
+}
+
+/*Large devices (desktops, less than 1200px)*/
+@media (min-width:991.98px) and (max-width: 1199.98px) {
+    .body_content {
+        margin: 0 50px 25px 50px;
+    }
+}
+
+/*X-Large devices (large desktops, less than 1400px)*/
+@media (min-width:1199.98px) and (max-width: 1399.98px) {
+    .body_content {
+        margin: 0 50px 25px 50px;
+    }
+}
+
+/*XX-Large devices (larger desktops)*/
+@media (min-width: 1399.98px) {
+    .body_content {
+        margin: 0 150px 25px 150px;
+    }
+}
+
+.logo_bg {
+    background-color: #eaf4fd;
+    background-image: url('/images/top-bg-left.jpg');
+    background-repeat: no-repeat;
+    height: 177px;
+    display: flex;
+    flex-wrap: nowrap;
+    /*justify-content:center;*/
+    align-items: center;
+}
+
+    .logo_bg a {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 24px;
+        color: #3d65c4;
+        text-decoration: none;
+        margin-left: 380px;
+    }
+
+.kontact_center {
+    background-image: url('/images/kontact_center.png');
+    background-repeat: no-repeat;
+}
+
+
+.navbar {
+    height: 65px;
+}
+
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4
+}
+
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%
+}
+
+#qrCode {
+    margin: 15px
+}
+
+@media screen and (max-width:767px) {
+    .carousel-caption {
+        display: none
+    }
+}

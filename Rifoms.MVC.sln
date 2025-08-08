@@ -1,0 +1,160 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35826.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rifoms.Domain", "Rifoms.Domain\Rifoms.Domain.csproj", "{95DC7CB4-C9EA-41B4-8FC1-EE968DC0D29C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rifoms.WF", "Rifoms.WF\Rifoms.WF.csproj", "{62954BCF-ABF8-4167-AC7C-42172615FBE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rifoms.Web", "Rifoms.Web\Rifoms.Web.csproj", "{EA272A56-A7F0-44EC-8DC4-A6D9CFC47CA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FILES", "FILES", "{F0E777D5-82F7-4A47-9F6C-E24EE250636E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSS", "CSS", "{B0FE9E7B-B4A1-4880-B26D-2FB4E33C1B91}"
+	ProjectSection(SolutionItems) = preProject
+		FILES\CSS\rifoms_styles.css = FILES\CSS\rifoms_styles.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IMAGES", "IMAGES", "{57C1F2A3-87FF-49BD-8FD9-DA3D27BD2602}"
+	ProjectSection(SolutionItems) = preProject
+		FILES\IMAGES\ftp_test_mayak06.jpg = FILES\IMAGES\ftp_test_mayak06.jpg
+		FILES\IMAGES\SkrinRedirectToRifoms_38_IP.png = FILES\IMAGES\SkrinRedirectToRifoms_38_IP.png
+		FILES\IMAGES\test_mayak06_database_password.jpg = FILES\IMAGES\test_mayak06_database_password.jpg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LOGO", "LOGO", "{DE8C492F-654D-438E-B39A-949D46949C47}"
+	ProjectSection(SolutionItems) = preProject
+		FILES\IMAGES\LOGO\img_avatar1.png = FILES\IMAGES\LOGO\img_avatar1.png
+		FILES\IMAGES\LOGO\top-bg-left.jpg = FILES\IMAGES\LOGO\top-bg-left.jpg
+		FILES\IMAGES\LOGO\top-bg-right.jpg = FILES\IMAGES\LOGO\top-bg-right.jpg
+		FILES\IMAGES\LOGO\top-bg.jpg = FILES\IMAGES\LOGO\top-bg.jpg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LEFT_MENU", "LEFT_MENU", "{E7920145-BB95-4B26-B4AD-28B9BB15FBDA}"
+	ProjectSection(SolutionItems) = preProject
+		FILES\IMAGES\LEFT_MENU\aktual_vopros1.png = FILES\IMAGES\LEFT_MENU\aktual_vopros1.png
+		FILES\IMAGES\LEFT_MENU\anketa1.png = FILES\IMAGES\LEFT_MENU\anketa1.png
+		FILES\IMAGES\LEFT_MENU\dispanserizactiya.png = FILES\IMAGES\LEFT_MENU\dispanserizactiya.png
+		FILES\IMAGES\LEFT_MENU\eir2.png = FILES\IMAGES\LEFT_MENU\eir2.png
+		FILES\IMAGES\LEFT_MENU\gosuslugi.png = FILES\IMAGES\LEFT_MENU\gosuslugi.png
+		FILES\IMAGES\LEFT_MENU\kontact_center.png = FILES\IMAGES\LEFT_MENU\kontact_center.png
+		FILES\IMAGES\LEFT_MENU\lichn_kab.png = FILES\IMAGES\LEFT_MENU\lichn_kab.png
+		FILES\IMAGES\LEFT_MENU\napr_obr1.png = FILES\IMAGES\LEFT_MENU\napr_obr1.png
+		FILES\IMAGES\LEFT_MENU\oms1.png = FILES\IMAGES\LEFT_MENU\oms1.png
+		FILES\IMAGES\LEFT_MENU\phone1.png = FILES\IMAGES\LEFT_MENU\phone1.png
+		FILES\IMAGES\LEFT_MENU\predstavitel.png = FILES\IMAGES\LEFT_MENU\predstavitel.png
+		FILES\IMAGES\LEFT_MENU\profy.png = FILES\IMAGES\LEFT_MENU\profy.png
+		FILES\IMAGES\LEFT_MENU\vopros1.png = FILES\IMAGES\LEFT_MENU\vopros1.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RAR", "RAR", "{7DD9B5FC-F879-4101-8D54-96A4CAF16592}"
+	ProjectSection(SolutionItems) = preProject
+		FILES\RAR\CuteEditor_for_NET6.zip = FILES\RAR\CuteEditor_for_NET6.zip
+		FILES\RAR\froala_editor_4.5.1.zip = FILES\RAR\froala_editor_4.5.1.zip
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{5635D7EE-1225-48D4-9799-E707DF70CD6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TXT", "TXT", "{DB0F05EA-8016-46C8-9C3C-AF265244831B}"
+	ProjectSection(SolutionItems) = preProject
+		FILES\TXT\CODE_TEMPLATE.txt = FILES\TXT\CODE_TEMPLATE.txt
+		FILES\TXT\DbText.txt = FILES\TXT\DbText.txt
+		FILES\TXT\DUMP's.txt = FILES\TXT\DUMP's.txt
+		FILES\TXT\kabinet_tfpmssk.html = FILES\TXT\kabinet_tfpmssk.html
+		FILES\TXT\LINKS.txt = FILES\TXT\LINKS.txt
+		FILES\TXT\nas_gromyat.rep = FILES\TXT\nas_gromyat.rep
+		FILES\TXT\new  1.txt = FILES\TXT\new  1.txt
+		FILES\TXT\Readme.txt = FILES\TXT\Readme.txt
+		FILES\TXT\sql_param_description.html = FILES\TXT\sql_param_description.html
+		FILES\TXT\sql_param_description.txt = FILES\TXT\sql_param_description.txt
+		FILES\TXT\stdout_20250514121813_42276.log = FILES\TXT\stdout_20250514121813_42276.log
+		FILES\TXT\web.config = FILES\TXT\web.config
+		FILES\TXT\В январе 2025 года по ОМС проведено 245 тыс рентгеновских.docx = FILES\TXT\В январе 2025 года по ОМС проведено 245 тыс рентгеновских.docx
+		FILES\TXT\Гражданам Абхазии с гражданством РФ доступен весь объем медпомощи по ОМС.docx = FILES\TXT\Гражданам Абхазии с гражданством РФ доступен весь объем медпомощи по ОМС.docx
+		FILES\TXT\Заместитель председателя Федерального фонда обязательного медицинского страхования.docx = FILES\TXT\Заместитель председателя Федерального фонда обязательного медицинского страхования.docx
+		FILES\TXT\Председатель ФОМС Илья Баланин посетил с рабочим визитом новые регионы.docx = FILES\TXT\Председатель ФОМС Илья Баланин посетил с рабочим визитом новые регионы.docx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DUMP", "DUMP", "{2B49DB90-3D14-4DA6-BBEB-59DBA15F7B2D}"
+	ProjectSection(SolutionItems) = preProject
+		FILES\SQL\DUMP\_tmp_cl104025_cl104025_rifoms.sql = FILES\SQL\DUMP\_tmp_cl104025_cl104025_rifoms.sql
+		FILES\SQL\DUMP\Dump_DATA.sql = FILES\SQL\DUMP\Dump_DATA.sql
+		FILES\SQL\DUMP\Dump_DATA_CMS_CONTENT.sql = FILES\SQL\DUMP\Dump_DATA_CMS_CONTENT.sql
+		FILES\SQL\DUMP\Dump_DATA_STR.sql = FILES\SQL\DUMP\Dump_DATA_STR.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "INSERT", "INSERT", "{23DC0C13-EB4F-4AC3-A485-2DFCFE2D38B1}"
+	ProjectSection(SolutionItems) = preProject
+		FILES\SQL\INSERT\INSERT_ALL.sql = FILES\SQL\INSERT\INSERT_ALL.sql
+		FILES\SQL\INSERT\insert_contact-center.sql = FILES\SQL\INSERT\insert_contact-center.sql
+		FILES\SQL\INSERT\insert_gosuslugi_kabinet.sql = FILES\SQL\INSERT\insert_gosuslugi_kabinet.sql
+		FILES\SQL\INSERT\insert_hotline.sql = FILES\SQL\INSERT\insert_hotline.sql
+		FILES\SQL\INSERT\insert_proverka_polisa.sql = FILES\SQL\INSERT\insert_proverka_polisa.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UPDATE", "UPDATE", "{6A328E34-3CC5-4412-A58E-14667CF6A5C6}"
+	ProjectSection(SolutionItems) = preProject
+		FILES\SQL\UPDATE\UPDATE_DESCRIPTION_CONTENT_TAGS_PARAGRAF.sql = FILES\SQL\UPDATE\UPDATE_DESCRIPTION_CONTENT_TAGS_PARAGRAF.sql
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rifoms.Test.Web", "Rifoms.Test.Web\Rifoms.Test.Web.csproj", "{9F48434B-A224-4268-93D9-D5670A924C18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SELECT", "SELECT", "{4B0BA12A-202D-4A73-B741-1B0DAF658B78}"
+	ProjectSection(SolutionItems) = preProject
+		FILES\SQL\SELECT\select_content_by_categoryId.sql = FILES\SQL\SELECT\select_content_by_categoryId.sql
+		FILES\SQL\SELECT\select_content_by_id.sql = FILES\SQL\SELECT\select_content_by_id.sql
+		FILES\SQL\SELECT\select_content_by_REGEX_STYLE.sql = FILES\SQL\SELECT\select_content_by_REGEX_STYLE.sql
+		FILES\SQL\SELECT\select_content_by_title.sql = FILES\SQL\SELECT\select_content_by_title.sql
+		FILES\SQL\SELECT\select_content_only_news.sql = FILES\SQL\SELECT\select_content_only_news.sql
+		FILES\SQL\SELECT\select_content_order_by_id_desc.sql = FILES\SQL\SELECT\select_content_order_by_id_desc.sql
+		FILES\SQL\SELECT\select_file_urls.sql = FILES\SQL\SELECT\select_file_urls.sql
+		FILES\SQL\SELECT\select_files_by_id.sql = FILES\SQL\SELECT\select_files_by_id.sql
+		FILES\SQL\SELECT\select_files_url_by_condiotion.sql = FILES\SQL\SELECT\select_files_url_by_condiotion.sql
+		FILES\SQL\SELECT\select_menu_by_condition.sql = FILES\SQL\SELECT\select_menu_by_condition.sql
+		FILES\SQL\SELECT\SELECT_NEWS.sql = FILES\SQL\SELECT\SELECT_NEWS.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95DC7CB4-C9EA-41B4-8FC1-EE968DC0D29C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95DC7CB4-C9EA-41B4-8FC1-EE968DC0D29C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95DC7CB4-C9EA-41B4-8FC1-EE968DC0D29C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95DC7CB4-C9EA-41B4-8FC1-EE968DC0D29C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62954BCF-ABF8-4167-AC7C-42172615FBE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62954BCF-ABF8-4167-AC7C-42172615FBE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62954BCF-ABF8-4167-AC7C-42172615FBE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62954BCF-ABF8-4167-AC7C-42172615FBE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA272A56-A7F0-44EC-8DC4-A6D9CFC47CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA272A56-A7F0-44EC-8DC4-A6D9CFC47CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA272A56-A7F0-44EC-8DC4-A6D9CFC47CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA272A56-A7F0-44EC-8DC4-A6D9CFC47CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F48434B-A224-4268-93D9-D5670A924C18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F48434B-A224-4268-93D9-D5670A924C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F48434B-A224-4268-93D9-D5670A924C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F48434B-A224-4268-93D9-D5670A924C18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0FE9E7B-B4A1-4880-B26D-2FB4E33C1B91} = {F0E777D5-82F7-4A47-9F6C-E24EE250636E}
+		{57C1F2A3-87FF-49BD-8FD9-DA3D27BD2602} = {F0E777D5-82F7-4A47-9F6C-E24EE250636E}
+		{DE8C492F-654D-438E-B39A-949D46949C47} = {57C1F2A3-87FF-49BD-8FD9-DA3D27BD2602}
+		{E7920145-BB95-4B26-B4AD-28B9BB15FBDA} = {57C1F2A3-87FF-49BD-8FD9-DA3D27BD2602}
+		{7DD9B5FC-F879-4101-8D54-96A4CAF16592} = {F0E777D5-82F7-4A47-9F6C-E24EE250636E}
+		{5635D7EE-1225-48D4-9799-E707DF70CD6A} = {F0E777D5-82F7-4A47-9F6C-E24EE250636E}
+		{DB0F05EA-8016-46C8-9C3C-AF265244831B} = {F0E777D5-82F7-4A47-9F6C-E24EE250636E}
+		{2B49DB90-3D14-4DA6-BBEB-59DBA15F7B2D} = {5635D7EE-1225-48D4-9799-E707DF70CD6A}
+		{23DC0C13-EB4F-4AC3-A485-2DFCFE2D38B1} = {5635D7EE-1225-48D4-9799-E707DF70CD6A}
+		{6A328E34-3CC5-4412-A58E-14667CF6A5C6} = {5635D7EE-1225-48D4-9799-E707DF70CD6A}
+		{4B0BA12A-202D-4A73-B741-1B0DAF658B78} = {5635D7EE-1225-48D4-9799-E707DF70CD6A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7AF50442-D774-41CE-B080-47B7497F1DAF}
+	EndGlobalSection
+EndGlobal

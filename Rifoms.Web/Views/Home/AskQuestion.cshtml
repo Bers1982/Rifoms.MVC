@@ -1,0 +1,167 @@
+﻿@model ContentModel
+
+@{
+    ViewData["Title"] = "AskQuestion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    <div class="row">
+        <div class="col-12">
+            <h1>Вопрос-ответ</h1>
+
+            <form class="form-horizontal" name="question_answer" action="/question-answer/" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="sessid" id="sessid" value="8a3e8e94804893ba175fb4eb839fe8f8">
+                <input type="hidden" name="WEB_FORM_ID" value="1">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h3></h3>
+
+                                <p></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-12">
+                            <div class="col-md-4">
+                                <b>Ф.И.О.</b><font color="red"><span class="form-required starrequired">*</span></font>
+                            </div>
+                            <div class="col-md-8"><input type="text" class="inputtext form-control" name="form_text_1" value=""></div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                        <div class="col-md-12">
+                            <div class="col-md-4">
+                                <b>E-mail</b><font color="red"><span class="form-required starrequired">*</span></font>
+                            </div>
+                            <div class="col-md-8"><input type="text" class="inputtext form-control" name="form_email_2" value="" size="0"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                        <div class="col-md-12">
+                            <div class="col-md-4">
+                                <b>Вопрос</b><font color="red"><span class="form-required starrequired">*</span></font>
+                            </div>
+                            <div class="col-md-8"><textarea name="form_textarea_3" cols="40" rows="5" class="inputtextarea form-control"></textarea></div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                        <div class="col-md-12">
+                            <b>Защита от автоматического заполнения</b>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-4">Введите символы с картинки<font color="red"><span class="form-required starrequired">*</span></font></div>
+                            <div class="col-md-3">
+                                <input id="captchaSid" type="hidden" name="captcha_sid" value="0a0f563444a78242656ae7e0c16e9ed2">
+                                <img src="/bitrix/tools/captcha.php?captcha_sid=0a0f563444a78242656ae7e0c16e9ed2" id="captchaImg" width="170" height="45">
+                                <a href="#" id="reloadCaptcha">Изменить картинку</a>
+                            </div>
+                            <div class="col-md-3"><input type="text" name="captcha_word" size="30" maxlength="50" value="" class="inputtext form-control"></div>
+                        </div>
+                    </div>
+
+                    @*<script>
+                            $(document).ready(function () {
+                                $('#reloadCaptcha').click(function () {
+                                    $.getJSON('/question-answer/captcha_change.php', function (data) {
+                                        $('#captchaImg').attr('src', '/bitrix/tools/captcha.php?captcha_sid=' + data);
+                                        $('#captchaSid').val(data);
+                                        //$('#whiteBlock').hide();
+                                    });
+                                    return false;
+                                });
+                            });
+                        </script>*@
+
+                    <p>&nbsp;</p>
+                    <p class="green_p"><b>Чтобы сообщение было отправлено, необходимо подтвердить адрес электронной почты!</b></p>
+                    <bytton onclick="showDiv();" class="btn smo-line" id="ok" type="bytton"> Подтвердить e-mail </bytton>
+                    <div id="result1"></div>
+                    <div id="hidden-div" style="display: none;">
+                        <table border="0">
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" id="token" class="form-control"></td>
+                                    <td width="15"></td>
+                                    <td><div id="result2" class="red-p"></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="result2" class="red-p"></div>
+
+                    @*<script>
+                            function check() {
+                                var submit = document.getElementsByName('web_form_submit')[0];
+                                if (document.getElementById('soglasie').checked)
+                                    validation_send();
+                                else
+                                    submit.disabled = 'disabled';
+                            }
+                        </script>*@
+                    <div class="col-md-12">
+                        <hr>
+                        <p align="justify">
+                            Информация о персональных данных авторов обращений, направленных в электронном виде, хранится и обрабатывается с соблюдением требований законодательства Российской Федерации о персональных данных. <a id="s_pd" onclick="Podrobnee();" class="btn">Подробнее <img src="/images/web/open_pd.png"> </a>
+                        </p>
+                        <div id="persdan" style="display: none;">
+                            <p align="justify">
+                                1. При использовании информации, размещаемой на официальном интернет-сайте ТФОМС СК (далее - Сайт), технические средства Сайта автоматически распознают сетевые (IР) адреса каждого пользователя (посетителя Сайта). Упомянутые сведения и электронные адреса лиц, пользующихся интерактивными сервисами Сайта и (или) отправляющих электронные сообщения в адреса, указанные на Сайте, автоматически накапливаемые сведения (в том числе персонального характера), сообщаемые пользователями, хранятся с использованием технических средств Сайта для целей, перечисленных в пункте 2 настоящего Уведомления.
+
+                            </p><p align="justify">
+                                2. Сведения о пользователях Сайта, накапливаемые и хранимые в технических средствах Сайта, используются исключительно для целей совершенствования способов и методов представления информации на Сайте, улучшения обслуживания его пользователей (посетителей).
+
+                            </p><p align="justify">
+                                3. Вне пределов, указанных в пункте 2 настоящего Уведомления, информация о пользователях Сайта не может быть каким-либо образом использована или разглашена. Доступ к таким сведениям имеют только лица, специально уполномоченные на проведение работ, указанных в пункте 2 настоящего Уведомления, и предупрежденные об ответственности за случайное или умышленное разглашение либо несанкционированное использование таких сведений.
+
+                            </p><p align="justify">
+                                4. Информация персонального характера о пользователях Сайта хранится и обрабатывается с соблюдением требований законодательства Российской Федерации о персональных данных.
+
+                            </p><p align="justify">
+                                5. Какая-либо информация, являющаяся производной по отношению к сведениям, перечисленным в пункте 1 настоящего Уведомления, представляется для последующего использования (распространения) исключительно в обобщенном виде, без указания конкретных сетевых (электронных) адресов пользователей (посетителей) Сайта.
+
+                            </p><p align="justify">
+                                6. Рассылка каких‑либо электронных сообщений по сетевым (электронным) адресам пользователей (посетителей) Сайта, а также размещение на Сайте гиперссылок на сетевые (электронные) адреса пользователей Сайта и (или) их интернет-страницы допускаются исключительно, если такая рассылка и (или) размещение прямо предусмотрены правилами использования соответствующего интерактивного сервиса и на такую рассылку и (или) размещение получено предварительное согласие пользователя (посетителя) Сайта, выраженное в форме, предусмотренной указанными правилами. Переписка с пользователями (посетителями) Сайта, не относящаяся к использованию интерактивных сервисов Сайта либо иных информационных разделов Сайта, не производится.
+                            </p>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <script>
+                        function Podrobnee() {
+                            var persDan = document.getElementById("persdan");
+                            if (persDan.style.display == "none") {
+
+                                persDan.setAttribute("style", "display:show");
+                            }
+                            else {
+                                persDan.setAttribute("style", "display:none");
+
+                            }
+                        }
+                    </script>
+
+                    <p>
+                        <input type="checkbox" id="soglasie" onclick="check();validation_send();" value="" autocomplete="off"> Согласен на обработку персональных данных
+                    </p><p>
+
+
+                    </p><div class="col-md-12">
+
+                        <input class="btn smo-line" disabled="" id="sent_email" type="submit" name="web_form_submit" value="Отправить">
+                        &nbsp;<input class="btn smo-line" type="reset" value="Сбросить">
+
+                    </div>
+                </div>
+                <p>
+                    <font color="red"><span class="form-required starrequired">*</span></font> - Поля, обязательные для заполнения
+                </p>
+            </form>
+        </div>
+
+    </div>
+
+}

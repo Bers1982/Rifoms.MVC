@@ -1,0 +1,2025 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CompareNETObjects" Version="4.83.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rifoms.Domain\Rifoms.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Doc\20130328_172fz.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130328_79fz.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130328_fz230.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130328_fz273.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130328_konst.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130328_pol113.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130328_post684n.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130328_prav207.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130328_prav208.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130328_prav96.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130328_trudkod.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130328_uk297.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130401_ukaz309.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130403_ukaz310.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130404_konven125.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130404_konven40.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130404_obzor4marta.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130514_fz102.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130514_izmen99fz_1.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\20130604_obzor.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\fz230_razias%281%29.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\fz230_razias.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\FZ326.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\Pravila OMS.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\Prikaz230.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\Prikaz29.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\Prikaz323.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\Prilojenie_Tarif_soglashenie2011.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\Privacy_policy.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\Program.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\Programma2012.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\raziasn_ukaz_613.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\razias_fz280.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\ReestrMO.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\ReestrSMO.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\Reestr_ekspertov.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\tarifi_20120101.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\Tarif_soglashenie2011.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\tarif_sogl_20120101.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\ukaz_613.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\Zakon RI.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Doc\Zakon369.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\-d0-a0-d0-b5-d0-ba-d0-be-d0-bc-d0-b5-d0-531ea2ed0ff1b.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\02-07-2021-00-10-92-04-3728-chernjakova-610bc95abed8e.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\04-07-2019-09-07-1124-kalimatov-m-a-m-ga5d525e5057236.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\1228untitled56cea6f3a180b.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\169-prikaz-ffoms-izm-79589d6a8d2cbca.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\1untitled62148916b34cd.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\20-07-2023-09-07-1426-fursov-o-b-antoshk65b118c802e77.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\2013-06-15-320573ac5c30458a.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\2013-12-31-294-ob-utverzhdenii-otchetnos5335202eaf86f.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\2020untitled5e37b99532f01.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\2022untitled65c39a10aa823.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\2022untitled65c39a2a6020d.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\2022untitled65c39a4e7f322.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\2022untitled65c48070c3093.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\2023untitled65c47574b69d3.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\2024untitled65c480c5d3349.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\24-02-15-mo54ed79ee099ac.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\26-07-2021-00-10-92-04-4301-mitrofanova-610bcabbc95d1.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\287untitled589d6675eb7c0.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\326-zakon-s-poslednimi-obnovlenijami5e329c0294566.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\390-fz52d63e36453fc.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\423n589d68c25b9af.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\571098660-1608971a883f46.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\67acdd0fe12a2436ae7d325bfdf866545f34d55c0b1d7.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\87d8d28cffe17f9c1f96ae8982652a9c5e4cd84845ff9.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\95b9a19a0705e8f7b5e1cfc0e22aed065e32ab742e402.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\a-na-sait65c495bd29d71.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\application1-2016-2-1-000156b050561eb16.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\bez-imeni-15e3bc66127dcf.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\byudzhet-2023-god-tfoms-ri65b0b5539e860.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\byudzhet-ffoms-20205e32aa0fd5531.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\byudzhet-tfoms-na-2020-god5df9e914901e3.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\byudzhet-tfoms-na-21-god65b0b6b4df907.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\byudzhet-tfoms-ri-2022-god65b0b8dcd43e3.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\ccf05102015-00005613816da6a80.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\ccf05102015-00015613817709504.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\ccf05102015-00025613857547c4e.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\ccf05102015-00035613858c07910.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\d51200fe96f77fcb25aa0c2b0f18f02b5aa8b8dad9264.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\desktop65a6267f380cd.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-gts-avgust651aa434f01a0.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-sogl-ot-21-11-2019-g5ddbbe877168d.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-sogl-ot-21-11-2019-g5ddbc4854348f.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-06-11-20205fb6705ae90f0.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-12-08-20205f3a373b7a3e4.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-15-09-20205f61fe13da0f6.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-158e73f1ddda54.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-202365b0a98327b9b.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-202365b0acab6e848.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-23-12-20205fe9da978d1a6.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-29-05-20205ede35e970880.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-30-07-2021615405c1cb677.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-5-ot-30-12-20175b1a35f69ee57.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-ot-15-03-2019g5cbf0f800a8d5.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-ot-16-05-2016g573ac6fa56fb5.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-ot-17-04-20205e9e9d71bbee2.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-ot-18-04-16g571e5f8660826.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-ot-20-07-2017g5981e04f32549.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie-ot-30-03-20205e84841e4aa0f.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie542d297d2de2a.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie548a9a879cd37.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie5a0c36b80f2b6.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglashenie5c209d7318c2f.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dop-soglshenie-ot-19-12-2019g5e01d42bc7e72.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dopolnitelnoe-soglashenie-gts-0015319c16d032a9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dopolnitelnoe-soglashenie-gts-0025319c229ef714.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dopolnitelnoe-soglashenie-k-gts-ot-10-035513cc30c5814.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dopolnitelnoe-soglashenie-ot-20-01-2014-547c18411839e.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dopolnitelnoe-soglashenie-ot-24-09-2014g547c15993a6ac.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dopolnitelnoe-soglashenie-ot-26-04-202160acc52baf4f6.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dopsoglaschenie-obemy6384ab6e68e2f.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dopsoglashenie-1-na-2019-god5c90c1d264ddc.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dopsoglashenie-2-ot-26-07-20195d3e996d30087.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dopsoglashenie-201659195584c9a37.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dopsoglashenie-3578f60898b6b3.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dopsoglashenie-k-gts-ot-03-06-2015g5582c2cbca897.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dopsoglashenie-k-gts-ot-23-10-2015564193e1bf563.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dosoglashenie-1-k-gts-20185b3344bd0f2de.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dosoglashenie-1-k-gts-20185b334503b07b8.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\dover-zastrah252e0e9d4130b7.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\eb2de76445ff2891dc85c8a9f099ab9358c6382683f17.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\edin-polis-big52e0eac6c6e7a.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\egyurl-pdf-tfoms-ri65b0bc0f69581.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f001-ot-05-11-135335536ccbda8.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f002-ot-06-11-13533553c9d0342.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f003-ot-06-11-135339162b2b33f.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f005-1580dec6cbbc89.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f005-ot-07-11-201353355489aa8d5.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f006-ot-07-11-2013533554d11e31d.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f006580ded4602554.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f007-ot-07-11-20135335558b4f294.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f007580deda2275e9.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f008-ot-07-11-2013533555fa005c4.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f008580dee07da414.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f009-xml5335565624d73.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f009580dee69e47fb.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f010-ot-07-11-201353355691588a7.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f010580deecca8b3a.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f011-udl-ot-07-11-2013533556ca2e49a.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f011-udl580def2606466.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f012-ot-27-04-20115335570aa3c09.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f014-ot-07-11-2013533557cb8e055.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f014580def7df33db.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f015-ot-07-11-2013533558128d646.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f015580defea8703d.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\f0b7b75e0071e793dc82c9530d4d819e62b4086c583f9.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\file0003-part156418e1bca4ef.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\file0003-part256418fc3be3b0.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\file0003-part356418fd72dbfd.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\file30-1749580efaf05bf30.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\file5cbf1173dac50.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\finansovye-obemy-gts-20216012789f6ae06.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\forma-zajavki-na-podklyuchenie-k-gis-oms610bcbf211065.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\generalnoe-tarifnoe-soglashenie-1656d67edb1b59a.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\generalnoe-tarifnoe-soglashenie-na-2015-54d8b34974d3a.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\generalnoe-tarifnoe-soglashenie-na-2016-56d5529ec9325.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\generalnoe-tarifnoe-soglashenie-na-medic547c1b293de7f.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\generalnoe-tarifnoe-soglashenie-ot-23-0154e1f1d7bfca3.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\generalnoe-tarifnoe-soglashenie-ri-na-205a8e78bc01de7.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gosgarantii-medpomosch-2020-god65bb338d005a1.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gosgarantii-medpomosch-2021-god65bb34c78bbf5.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gosgarantii-medpomosch-2023-god65bb37b0898dc.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gosgarantii-medpomosch-2024-god65bb3812e1b7a.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gosgarantii-medpomosch-22-god65bb35c8d5322.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\grafik-raboty-strahovyh-predstavitelei65b1153b14619.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-201758987d10bf859.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-2021601277af3abb2.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-20216013f57d14a11.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-202160140647d2aa1.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-2022628dcc585d1a7.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-2024-part0165e83872723b7.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-2024-part0165eff4c85d16c.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-2024-part0265e8388137e5c.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-2024-part0365e8393fa6ed4.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-2024-part0465e8649016ce0.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-2024-part0565e8649fc0932.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-2024-part0665e864b0191e4.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-2024-part0765e864c310427.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-2024-part0865e864d7c9207.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-2024-part0965e864e392a7c.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-2024-part1065e864ea47045.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-na-2019-god5c49bd6ad036f.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts-na-2019-god5c49c8ca30783.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts63625e13146b3.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\gts640f0b84ec367.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\image00155640544ac60db.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\image003456b052c83910c.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\img-99115abc9186627e7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\informacionnoe-soobschenie-o-podklyuchen610bcbc63cf50.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\informacionnoe-soobschenie-o-podklyuchen610beb51b9105.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\izmeneniya-v-158n-ot-6-08-201556175ecc044a4.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\kisspng-computer-mouse25de6913ad8f9c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\kisspng-computer-mouse5de6910d4d103.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\klassifikator-medicinskih-uslug54749ca2a06d0.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\klassifikator-tipy-sluchaev5e2feabb094c2.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\kodeks-yetiki-i-sluzhebnogo-povedenija-v65c3880e3759e.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\kontakt-centr-tfoms-ri591956273f3a4-25b3dd2b7d3e1c.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\kontakt-centr-tfoms-ri591956273f3a4-25b42fd917e368.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\kontakt-centr-tfoms-ri591956273f3a4-25b44c3a94a91a.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\kontakt-centr-tfoms-ri591956273f3a4.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\kopija-territorialnyi-reestrvse-mo-12-126405c92fc8474.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\kopija-territorialnyi-reestrvse-mo-12-1265b8af05d3635.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\metod-rekomen61404465c32d8.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\metodicheskie-rekomendacii5680cffd290fd.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\minzdrav-rf-metod-rekomendacii-k-tarifke66c439d2bbff6.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\mkb-s-352f339df48039.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\mo-2353a7de526fae4.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\mo-2553aaee627164d.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\mz1101n-27-12-195e40f8d53ebfd.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0015b6ade4eeac81.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0025b6adee405c13.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0035b6adf5de0746.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0045b6adfbdcaf4d.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0055b6ae0297b3d6.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0065b6ae09260792.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0075b6ae0f799b5a.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0085b6ae15bada6a.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0095b6ae1b54339b.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0105b6ae210c6957.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0115b6ae2698f88e.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0125b6ae2c4efe41.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0135b6ae345d0170.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0145b6ae3a63423b.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n015-1-05b6ae42219f0c.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n016-1-05b6ae48382001.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\n0175b6ae4ddcb62c.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\normativnye-dokumenty-o-korrupcii65c3883f0f2e5.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\o-byudzhete-ffoms-na-2014-i-planovyi-per52e20182ab904.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\o-vlijanii-fiz-kultury-i-sporta-na-zdoro65c491e2d9954.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\obemy6362645bbcd85.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\obemy636cc6b2b3100.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\obemy6384aa666c847.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\obemy65b0ab4819e9b.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\obemy65eff6ce48f75.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\obschie-principy-79-prikaz55599feed2a82.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\obschie-principy-ffoms533518cf69b2d.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\okato-ot-201220135339167916f10.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\okfs-2-11-05-2011533917f917824.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\okfs580f0f78d32d5.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\okopf-022580f0d6b8da80.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\okopf-ot-17-12-1253356307291e5.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\oksm-ot-12-11-20135335635da6762.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\oksm11580f0deb33888.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\oktmo533916c178eac.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\okved11580f0c3bdfd0c.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\okvyed-ot-12-11-2013533562c679bac.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\okvyed22580f0cd27964e.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\otchet-fonda-za-20165a8a89bf236c6.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\otchet-fonda-za-20175b1b6d1bdd4a8.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\otchet-fonda-za-20185e02f8723c08a.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\otchet-fonda-za-2022-okonch65c4ba6aec6cf.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\otchet-fonda-za-2022-okonch65c4bb4c37db3.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\otchet-fonda-za-202265c4b7f8aa693.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\otchet-fonda-za-2023-okonch65c4ba9041667.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\otchet-fonda-za-202365c4b8ad2adb3.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\otchet-fonda-za-9-mesjacev-20195e3d14d40b495.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\otchet-o-dejatelnosti-tfoms-ri-za-2014-g552f4ee06e3d9.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\otchet-tfoms-ri-za-2015-g5756b7a918cd7.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\p2058b5939b34ccb.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\pamjatka-dlja-naselenija-po-yenterovirus599e6f982340c.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\pamjatka-o-garantijah-besplatnogo-okazan5b7fc11e5d8c4.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\perechen-mo-provodjaschih-dispanserizaci5cfe3f8ecb80e.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\perechen-mo-provodjaschih-dispanserizaci5d1e1686469a8.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\pgg-2016g56ebfed998ac0.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\pgg-2018-ri5a73014434b08.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\pgg-2019-s-izmenenijami5d1da234a20d5.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\pika65b9fd22a9aec.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\pismo-minzdrava-i-foms5680d00bdbece.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\plan-meroprijatii-2024-god6627b46eac6f2.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\plan-po-korrupcii65c387ccd37c6.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\planovy-obemy-na-2020-god-utverzhdennye-5e4cdb390ac02.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\polozhenie-o-komissii-po-antikorrupcionn65c3886ac6ced.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\polozhenie-o-komissii-po-korrupcii65c388dd0d590.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\polozhenie-o-komissii-po-korrupcii65c389d429d54.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\polozhenie-o-tfoms-ri5b56b907da546.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\polozhenie-ob-obrabotke-pers-dannyh-25b507a3b967bd.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\polozhenie-ob-obrabotke-pers-dannyh5b2123873b54f.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\polozhenie-tfoms-ri-ob-obmene-delovymi-p65c388f190eb5.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\polozhenie547c565a88065.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\post-ri-pgg-2019-programma-gosgarantii-25c7f641915ed6.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\postan165bb41aa94ed1.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\postan265bb42484ea42.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\postan365bb4335707c8.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\postanovlenie-ot-22-05-2015-493-o-raspre5566b76d16fdf.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\postanovlenie-pravitelstva-respubliki-in5332b50172c54.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\postanovlenie-pravitelstva-respubliki-in53be6def3574c.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\postanovlenie-pravitelstva-rf-ot-26-deka52d38c950ebe0.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\postanovleniepravitelstvarino-45e2eb35f643f7.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\pr-79-obschie-principy52ce40a1121a8-254d332bd00ed4.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\pr-79-obschie-principy52ce40a1121a8.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\pravila-dostupa-v-servernoe-pomeschenie5b507a662c3ab.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prezentacija15d07641681710.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prezentacija25d076440b6242.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-806n565d46902b097.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-81-p589d6dbf79f8b.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-e2-84-9620054cb6c9153524-354d332ca08188.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-e2-84-9620054cb6c9153524.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-e2-84-96237-152d8c7b02f062.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-ffoms-265bb3c4fba203.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-ffoms-365bb3cb4426f9.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-ffoms-365bb3d2f0434a.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-ffoms-465bb3dcf6f663.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-ffoms-88589d6c2280591.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-ffoms-minzdrav5e32a87745a86.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-ffoms-ob-utverzhd-informatiz5e32ae04d3d36.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-foms-169-ot-09-09-2016584a5898801fa.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-foms-263-ot-20-12-201353390fa2485f6.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-foms-88584a58cb4b3c0.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-minzdrava-o-pravilah-oms5e32a66c4402e.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-minzdrava-rf-iyul-2024g66c4390aa4561.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-o-vnesenii-izmenenii-v-reglament-61668415ad713.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-ob-informirovanii-zastrahovannyh-54d0dd6e171fb.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-ob-utv-polozhenija-po-obr-pers-da5b5077d440d4c.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-po-bezopasnosti5b507a91f0933.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-tfoms-ri-165-p-ot-16-12-2021-g61c02b1fd5607.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-tfoms-ri-po-korrupcii65c3891a32656.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz-uet-vzroslye-i-deti54749952c442e.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz230-154d332ac302aa.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prikaz5c9382194c464.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilojenie-2-252d8c7ff86737.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhen-ie-4-15-18-195c49c1d071f48.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-1-14-6-7-8-9-10-11-12-15-16-5697522c93073.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-1-k-ts-stacionar52f8b15d3236f.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-1-k-ts-stacionar5319c32498c00.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-1-k-ts-stacionar542d29cb9dbd2.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-10-13-cz5b3346c2bf413.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-10640f0c46a03e8.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-11-12-13-14-15-16640f0c6483c77.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-11-14-urovni5b3346ea8696b.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-12-16-obemy-25b334735279c4.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-15-4569752489f214.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-156d554627c9bc.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-15c49c0bdd0432.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-15c49c8804e78c.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-16154066250651.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-1640f0b9f8f09d.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-165c49c20d14f68.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-17-18-19-20-21640f0c8451cc1.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-17-vmp5c49c24fe893d.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-1856d55772ae024.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-2-3-srafy5b33455027cbe.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-2-3-srafy5b33457a9b03b.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-2-35c49c17b0ad6a.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-2-k-ts-poliklinika52f8b16e09a26.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-2-k-ts-poliklinika5319c32f70240.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-2-k-ts-poliklinika542d29eca3384.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-22-obemy542d2a48f19e8.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-22640f0c9f0a227.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-23-24-25-26-27640f0cb6f2363.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-256d556610ed0d.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-2615406a80d34f.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-2640f0bb9bf0b2.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-4-stacionar5b3345a724966.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-k-ts-porjadok-po-srafam-56e10eda6c2a5.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-k-ts-porjadok-po-srafam56d5568904026.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-k-ts-porjadok-po-srafam56e10d4ac9632.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam5319c33752bd2.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam5319c64135a2f.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam5319c7c77badd.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam5319c8bf802e2.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam5319c973e2582.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam5319cc1fa04d0.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam5319cc1fa04d0531a0a8090dbb.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam542ba74db467b.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam542bad9d3a8bd.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam542bae462d97e.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam542baea6b282b.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam542baf27774b5.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam542baf83631ac.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3-po-srafam542d2a07dd80e.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-356e10f4a0dece.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3615406daaefc7.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-3640f0bd05b9d5.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-4-5-dnevnoi-stacionar5b3345d17397f.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-4-5-dnevnoi-stacionar5b33460b00683.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-4-kruglosut-i-stacionara52f8b180d0bd3.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-4-kruglosut-i-stacionara5319c3424a830.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-4-kruglosut-i-stacionara542d2a1bcb36d.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-456d556b68f442.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-46154070c7c205.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-4640f0bea0761e.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-5-dnevnoi-stacionar52f8b1933a635.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-5-dnevnoi-stacionar5319c349b4964.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-5-dnevnoi-stacionar542d2a3147f63.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-5-dnevnoi-stacionar56d556f01a8b4.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-56154074799964.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-5640f0bfd0f51a.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-6-756d5571871fbf.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-6-8-dispanserizacija-grupp-v5b3346256586c.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-66154079442f19.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-6640f0c0e43ac6.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-7-10-mrt5b334650f2e91.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-7640f0c1f2d903.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-8-11-gd5b334677d7be1.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-8-9-10-11-12-13-14-15-16-17-56d5574a54314.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-8-9640f0c2f75545.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie-9-12-tarify-prof-osmotry5b3346a03f372.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenie542d2aed5e1e8.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenija-1-2651aa487cf3f9.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenija-3-9651aa4c581363.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenija-6-7-8-9-10-11-12-13-14-15-152f8b1a5049d4.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenija-6-7-8-9-10-11-12-13-14-15-15319c3525f821.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\prilozhenija-6-7-8-9-10-11-12-13-14-15-1542e80f0a8d1c.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\Privacy_policy.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\proezd55f162dc0b252.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\programma-gosgarantii-rf5e32a4f80ae73.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\programma-gosgarantii54d0da9c7b6b8.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\programma-gossgarantii-na-2015-god54c9dc61a5b18.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-1-20216012783cd5113.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-1636262b7c1093.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-165b11d965ba4b.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-2022-10-0665b117ee2d03f.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-26362654ec5125.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-3-i-finansovye-obemy-30-07-20216154045e040a9.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-363626615764c4.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-4636266b995204.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-5636267d70011c.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-6-ot-08-10-202161979aa6e5ba6.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-66362694216b19.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-7-ot-08-11-202161979ac7523be.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-8-ot-09-12-2021-g-i-obemy61e115e9c436b.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-865b8b18e89308.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-avgust65b0b1cf5a546.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-dekabr65b0b260f2aff.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-i-fin-obemy5e84849ed21aa.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-i-obemy651aa23c8a10e.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-janvar65b0afb096513.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-komissii-ot-26-04-202160acc4d4e303e.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-komissii-po-razrabotke-territor5e37b90124d6c.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-mai65b0b0d06dbcf.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-ot-16-marta202265b12071b390a.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-ot-30-avgusta-2021-goda6151801a97fd8.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-ot-6-avgusta-2021-goda61517f5f939b3.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-tfoms-ot-26-12-2022-g-osnovnoi65b116b80fb64.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-tfoms-ot-29-09-2023-1-265b117785f90b.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol-tfoms-ot-29-09-2023-1-265b11f902fa24.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol202165b11e78520c7.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol65b0ac365949e.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokol65eff1e0f1ed5.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\protokolo-i-finansovye-obemy-ot-17-04-205e9e9d680fbb2.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q001580df14d3f5f8.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q002580df1ae02f7b.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q003580df2076cd8b.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q004580df2537f53b.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q005580df2b38f086.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q006580df30a4f222.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q007580df353c41b6.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q008580df3bd000ff.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q009580df425b7d50.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q010580df761a2b22.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q011580df7f78df10.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q012580df84d5ecfa.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q013580df89443953.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q014580df930a3746.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\q015580dfa05f2b0a.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r001-ot-07-11-201353355a7d976ae.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r001580dff985376f.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r002-ot-07-11-201353355ac830109.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r002580e00066c956.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r003-xml53355b0627a44.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r003580e006a18b04.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r004-ot-07-11-201353355b3eb683f.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r004580e00fdf2c53.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r005-xml53355b8a69041.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r005580e0140ce5c5.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r006-xml53355bc056cf3.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r006580e017a13e52.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r007-xml53355bf3b9fc1.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r007580e021e1a0c1.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r008-xml53355c3ed6763.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r008580e024fd138d.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r009-xml53355c828b19b.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r009580e0280c43b2.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r010-xml53355cb9da45a.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r010580e03582bd01.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r011-xml53355d1662c51.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r011580e03dbc951a.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r012580e04117a67c.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\r013580e051287b67.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-med-organizacii-na-20195c75461cd04ae.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-medicinskih-organizacii-na-2020g5e9842ad9015e.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-mo-03-12-201556713d0f41ddb.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2020g-25e3033d8e5731.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2020g5e30038ca6cca.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2020g5e3006037ed2e.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2022g65c25b0b5f980.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2022g65c4834b7e591.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2022g65c4834b7e59165c4b0ca494ee.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2022g65c4834b7e591_OLD.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2023g65c25b4d0e838.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2023g65c483a1a4569.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2023g65c483a1a456965c4b0e759e28.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2023g65c483a1a4569_OLD.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2024g5e30038ca6cca65b1139d5c6dd.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2024g65c25b9006f3a.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2024g65c483d2d9fac.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2024g65c483d2d9fac65c4b1205e195.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reest-smo-na-2024g65c483d2d9fac_OLD.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-202365b8d11c0bc6b.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-ekspertov-vrachey-ot-25-11-201454549ab86e61600.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-ekspertov-vrachey-ot-25-11-201454744c4233312.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-ekspertov-vrachey-ot-25-12-2014549bcf1e87675.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-ekspertov-vrachey5461b854bdb4a.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-med-organizacii-ri-na-2017-god5948c1ac89ca1.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-med-organizacii-ri-na-2017g589d589cebab3.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-med-organizacii-ri-na-2017g591d4b67e8741.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-med-organizacii-ri-na-2017g591d4cbb519d6.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-med-organizacii-ri-na-2019-god-xl5dc9053a6faf7.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-med-organizacii-ri-na-2019-god5ca6fc122ed25.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-med-organizacii-ri-na-2019-god5cc7e2ea3fe16.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-med-organizacii-ri-na-2019-god5d39a34831bf3.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-med-organizacii-ri-na-2019-god5ddf90d6b9511.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-med-organizacii-ri-na-2020-god5e21a9866d3b2.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-med-organizacii-ri-na-2020-god5e313e1f6be89.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-med-organizacii530444f902a2f.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-medicinskih-organizacii-na-2017g587884cecd4e3.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-medicinskih-organizacii5acb60cb495b14f6d66b392.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-medicinskih-organizacii5acb60cb49ba9.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-mo-04-10-201657fc8ccd1f8b2.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-mo-12-02-201452fb6c7b9ed20.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-mo-2016g5821943d810e3.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-mo-24-04-201453a3d787983a3.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-mo-27-05-20165747f916063df.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-mo-27-11-2014g547c1e94bb998.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-mo-po-ri-na-2018-g5a796de2204e3.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-mo-respubliki-ingushetija-na-2021600002f3e765b.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-mo-respubliki-ingushetija-na-2021600030e305401.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-mo54edd32f180ad.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-mo5559e9b416709.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-smo-202265b9f8d900371.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-smo-202365b9f8ff6dcc4.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-smo-202465b9f92768d7a.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-22-04-20195cc19a19eae30.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-22-04-20195cc19afc9d5f5.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-22-04-20195cc2b02a9e7d0.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-22-11-2019-25e2e8053b5789.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-22-11-20195e26e79537dbc.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yeksp-dlja-saita-vypolnen5b432405175b0.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yeksp-dlja-saita-vypolnen5b59b15765026.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yekspertov-01-02-20155501498fb5342.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yekspertov-04-06-2018-dlj5b14f64bd9375.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yekspertov-09-04-20185acb6a0b4b61c.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yekspertov-13-02-201554de06ba38f39.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yekspertov-17-06-201555816df391165.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yekspertov-20-10-2015-dlj562755bee80e7.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yekspertov-24-02-201554ec2c0776ab4.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yekspertov-24-04-2015553a2d64cff38.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yekspertov-26-01-2015-dlj54d21f76e885f.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yekspertov-26-01-201554d09ec3d5978.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yekspertov-27-04-20175901f299f214f.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yekspertov-dlja-saita56b8994acba70.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei-yekspertov-dlja-saita56b89a4e895ee.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-vrachei5c6ff9bd1bed6.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestr-yekspertov-2022-2023-202465b8ee99a2733.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestrvrachey5f0888a671ca7.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestrvrachey5f088c9c49c34.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestry-medicinskih-organizacii-2022-23-65b8ad4f6aaac.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestry-mo-17-09-201454191de2ae017.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestry-mo-18-09-2014541a8b4fdff68.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reestry-yekspertov-2021-2022-2023-g-g65b10c31214b2.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\region-klassifikator-po-uet5e2fea65abd8b.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reglament-230120185a6847f0be203.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reglament-informacionnogo-vzaimodeistvij561383cf2e6fe.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reglament-informacionnogo-vzaimodeistvij56b0514d72ec1.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reglament-informacionnogo-vzaimodeistvij5c6e699726a6d.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reglament-informacionnogo-vzaimodeistvij5d7f7ade48aee.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reglament-informacionnogo-vzaimodeistvij5d9c8b0be36c1.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reglament-informacionnogo-vzaimodeistvij5ebb948f61bca.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reglament-informacionnogo-vzaimodeistvij616682274248b.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reglament-informacionnogo-vzaimodeistvij61eea84f4270f.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reglament-informacionnogo-vzaimodeistvij61eeb8d2aae3b.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reglament-vzaimodeistvija-pri-inf-soprov561387a845130.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\reglamenta-ezhednevnogo-infoobme-k-81-pn589d6f4a4777d.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\scan11111111111-2589d716e05543.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\scan163625ed816357.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\scan263625f714a5a3.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\scan363625fbe0226f.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\scan463625ffd3a647.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\scan56362602babd86.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\scan5e2fe918286df.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\scan663626064395fb.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\shema-proezda-k-tfoms-ri55f1247e74f6d.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\skan589c246e0954c.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\soglashenie-obuhenie5fda089ec5af3.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\soglashenie-priobretenie-15fda09e101c59.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\soglashenie-remont5fda054d5f555.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\sostav-komissii-tfoms-o-korrupcii65c3893aef736.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\sovmestnoe-pismo-mz-rf-i-ffoms65d6e81674f93.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\spisok-lic-dopuschennyh-k-provedeniyu-ra5b507abd718ce.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\spravochniki52b1da1051a35.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\spravochniki530dd3c0b6e89.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\statja-normirovannyi-strahovoi-zapas-tfo5b5577e344bbe.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\statja-pokupka-lekarstv-v-bolnice65cc5abacc1a7.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\statja-top-10-voprosov-pro-cifrovoi-poli65c1d59a9691d.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\struktura-tfoms-45a9660f0a08e4.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\svidetelstvo-big52e0ea52eb3f8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\tarifnoe-ot-29-iyunja5f0480ea6c088.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\tarifnoe-soglashenie52f8b1448d4cc.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\tarify-201758987f3d7faa4.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\terprogramma-na-22-god65a7dc352260f.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\terprogramma-na-23-god65a7d9cbb4ad6.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\territorialnyi-reestr-mo-202265b8d0c7759d7.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\territorialnyi-reestr-mo-respubliki-ingu61e007b884789.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\territorialnyi-reestr-mo-respubliki-ingu65b8ae2845c19.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\territorialnyi-reestr-mo-respubliki-ingu65b8d2886ff2b.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\territorialnyi-reestr-yekspertov-kachest6405c229796af.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\territorialnyi-reestr-yekspertov-kachest66cd7dcec59b6.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\territorialnyi-reestr-yekspertov-kachest677fa824ab2d9.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\tfoms-old5de689d547d5d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\trmo-11-01-2024-10-16659fb0c7b1ae5.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\utverzhdennaja-pgg-201453300fb645da5.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\uvedomlenie-201757a1d5aa3ba91.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v00156a9b1e292b25.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v002-xml53355d99b10d2.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v002580ef727e4737.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v003-xml53355dda79d6e.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v003580ef76ccdde6.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v004-xml53355e196422d.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v005-xml53355ea00b5b6.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v005580ef86a76269.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v006-xml53355eed2bebe.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v006580ef9733fba6.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v008-xml53355f32948ae.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v008580ef9ba79b9b.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v009-xml53355f6b1074b.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v010-xml53355fa91b558.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v010580efb3404b74.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v012-xml53355fdfa81d0.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v012580efb7b5ad45.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v013-xml533560182cb03.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v013580efbdeb352b.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v014-xml5335605823b7a.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v014580efc0e7802e.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v015-xml533560a4ea4e6.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v015580efc3ca5eb6.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v016-xml533560dc4f0aa.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v016580efc6d6aad1.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v017-xml5335611a65616.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v017580efc9bb388c.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v018-xml533561527850f.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v018580efccbdd3ee.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v019-xml5335619d60bcf.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\v019580efd581db92.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\vazhnost-formirovanija-zdrovogo-obraza-z65c491f67660d.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zajavlenie-o-vybore-zamene-smo52e0c9a340b03.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zajavlenie-o-vybore-zamene-strahovoi-med5e3bc85b9ac8c.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zajavlenie-o-vydache-dublikata-polisa-il5e3be7f9e328a.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zakon-o-byudzhete-tfomsri-20195d22f1bf86442.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zakon-o-byudzhete-tfomsri-na-2015-god54bf4df2ad3f9.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zakon-ob-ispolnenii-byudzheta-tfoms-ri-z5d22f279d6d5d.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zakon-respubliki-ingushetija-ot-29-dekab590b1a1ad50a5.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zakon-respubliki-ingushetija-ot-3-dekabr52e2082450bed.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zakon-ri-o-byudzhete54d0dc71d5cd3.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zayav-dubl-polis52e0eb1c8b945.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zayav-vybor-smo52e0e8f87eb75.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zhurnal-registracii-poseschenija-servrno5b507a160a583.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zifra5f3a258461724.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zozh65c491eedaac9.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zp-chastnye-mmyy-kodlpu-16200cf33dcba7.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zp-mmyy-kodlpu-16200cde914abd.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upload\UserFiles\zpz-11165c4b96e73c65.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Infrastructure\Services\Interface\" />
+    <Folder Include="Infrastructure\System\" />
+    <Folder Include="wwwroot\tfoms\" />
+  </ItemGroup>
+
+</Project>

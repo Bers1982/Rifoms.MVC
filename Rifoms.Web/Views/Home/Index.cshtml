@@ -1,0 +1,102 @@
+﻿@model NewsModel
+@{
+    ViewData["Title"] = "Новости ТФОМС РИ";
+}
+
+@{
+    /* ЕСЛИ ID НОВОСТИ НЕ СУЩЕСТВУЕТ, ТО ВЫДАЕМ ВСЕ НОВОСТИ*/
+    if (!Model.IdExist)
+    {
+        <!--СПИСОК С НОВОСТЯМИ, МЕСТНЫМИ И РЕГИОНАЛЬНЫМИ-->
+        <ul class="nav nav-tabs bg-gradient" id="NewsTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab" aria-controls="home" aria-selected="true">
+                    НОВОСТИ
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="region-news-tab" data-bs-toggle="tab" data-bs-target="#region-news" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                    РЕГИОНАЛЬНЫЕ НОВОСТИ
+                </button>
+            </li>
+        </ul>
+
+        <!-- САМ КОНТЕНТ НОВОСТЕЙ -->
+        <div class="tab-content mt-3" id="NewsTabContent">
+            <div class="tab-pane fade show active" id="news" role="tabpanel" aria-labelledby="news-tab">
+                @{
+                    if (Model.News?.Count > 0)
+                    {
+                        foreach (var item in Model.News)
+                        {
+                            <div class="d-flex flex-row flex-nowrap justify-content-between align-content-start">
+                                <h2 class="mb-3 fw-bolder text-wrap">
+                                    <a class="text-decoration-none" href="@($"{Model.SiteUrl}/{item.Id}/{item.Seolink}.html")">
+                                        @item.Title
+                                    </a>
+                                </h2>
+                                <h4 class="text-nowrap mt-2">@item.Pubdate.ToString("D")</h4>
+                            </div>
+                            <div class="d-inline-block paragraf-text">
+                                @(Html.Raw(item.Description))
+                            </div>
+                            <hr />
+                        }
+                    }
+                }
+                <!--ГРУППА КНОПОК RSS и ВСЕ НОВОСТИ ТФОМС РИ-->
+                <div class="float-end btn-group">
+                    <a class="btn btn-primary">RSS-лента новостей</a>
+                    <a class="btn btn-primary" href=@($"{Model.SiteUrl}/novosti/novosti-tfoms-ri.html")>Все Новости ТФОМС РИ</a>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="region-news" role="tabpanel" aria-labelledby="region-news-tab">
+                @{
+                    if (Model.RegionNews?.Count > 0)
+                    {
+                        foreach (var item in Model.RegionNews)
+                        {
+                            <div class="d-flex flex-row flex-nowrap justify-content-between align-content-start">
+                                <h2 class="mb-3 fw-bolder text-wrap">
+                                    <a class="text-decoration-none" href="@($"{Model.SiteUrl}/{item.Id}/{item.Seolink}.html")">
+                                        @item.Title
+                                    </a>
+                                </h2>
+                                <h4 class="text-nowrap mt-2">@item.Pubdate.ToString("D")</h4>
+                            </div>
+                            <div class="d-inline-block paragraf-text">
+                                @(Html.Raw(item.Description))
+                            </div>
+                            <hr />
+                        }
+                    }
+                }
+                <!--ГРУППА КНОПОК RSS и ВСЕ РЕГИОНАЛЬНЫЕ НОВОСТИ ТФОМС РИ-->
+                <div class="float-end btn-group">
+                    <a class="btn btn-primary">RSS-лента новостей</a>
+                    <a class="btn btn-primary" href=@($"{Model.SiteUrl}/novosti/regionalnye-novosti.html")>Все Региональные Новости</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    }
+    else
+    {
+        if (Model.CurrentContent != null)
+        {
+            <div class="d-flex flex-row flex-nowrap justify-content-between align-content-start">
+                <h2 class="mb-3 fw-bolder text-primary text-wrap">
+                    @Model.CurrentContent.CurrentContent.Title
+                </h2>
+                <h4 class="text-nowrap">@Model.CurrentContent.CurrentContent.Pubdate.ToString("D")</h4>
+            </div>
+            <div class="paragraf-text">
+                @(Html.Raw(Model.CurrentContent.CurrentContent.Content))
+            </div>
+            <hr />
+        }
+    }
+}
+

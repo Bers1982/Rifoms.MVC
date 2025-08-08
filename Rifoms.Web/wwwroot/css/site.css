@@ -1,0 +1,534 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
+for details on configuring this project to bundle and minify static web assets. */
+html, body {
+}
+
+.body_content {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/*Ñòèëè ñ ğîäíîãî ñàéòà*/
+
+.mod_latest_entry {
+    margin-bottom: 10px;
+    clear: both;
+}
+
+.mod_latest_title {
+    font-size: 14px;
+}
+
+.mod_latest_blog_title {
+    font-size: 16px;
+}
+
+.mod_latest_date {
+    margin-bottom: 10px;
+    padding: 2px 0px;
+    font-size: 11px;
+    color: gray;
+}
+
+    .mod_latest_date a {
+        color: #5F98BF;
+    }
+
+.mod_latest_desc {
+    margin-bottom: 5px;
+}
+
+/*.widget_tabbed .widgets*/
+
+
+.widget_news_list_item {
+    /*background: url(../images/3line.png) left bottom repeat-x;*/
+    overflow: hidden;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    position: relative;
+}
+
+.widget_news_list_item_title {
+    line-height: 26px;
+    /* font-family: "Times New Roman", Times, serif;
+    font-size: 20px;*/
+    padding: 0 100px 0 0;
+    display: block;
+    text-decoration: none;
+}
+
+.widget_news_list_item img {
+    /*float: left;*/
+    margin: 0 auto;
+}
+
+
+/*ÑÒÈËÈ ÄËß ÍÎÂÎÑÒÅÉ*/
+h2 > a {
+    font-size: 1.8rem;
+}
+
+/*ÑÒÈËÈ ÄËß ÁÎÊÎÂÎÃÎ ÌÅÍŞ*/
+aside > ul > li > a,
+aside > ul > li > a > span {
+    font-size: 1.6rem;
+}
+
+    aside > ul > li > a > img {
+        float: left;
+        padding: 0 0 0 20px;
+    }
+/*ÊÎÍÅÖ ÑÒÈËÈ ÄËß ÁÎÊÎÂÎÃÎ ÌÅÍŞ*/
+
+
+/*ÑÒÈËÈ ÄËß ÏÀĞÀÃĞÀÔÀ*/
+.paragraf-text {
+    text-align: justify;
+    font-size: 1.6rem;
+}
+
+    .paragraf-text > div > p {
+        text-indent: 25pt;
+    }
+
+    .paragraf-text > p,
+    .paragraf-text > p > span,
+    .paragraf-text > p > span > img,
+    .paragraf-text > p > strong > span,
+    .paragraf-text > p > strong > span > img {
+        padding: 0 15px 0 0;
+    }
+
+        .paragraf-text > p > span > u > strong,
+        .paragraf-text > p > u > span > strong,
+        .paragraf-text > p > span > b > u > span {
+            color: #0000ff;
+        }
+
+        .paragraf-text > p > span > b > span,
+        .paragraf-text > p > span > b > u > span {
+            color: #ff0000;
+        }
+
+    .paragraf-text > table {
+        margin:0px auto;
+    }
+
+    .paragraf-text > table > tbody > tr > td > p {
+        text-align: center;
+    }
+    
+    .paragraf-text > table > tbody > tr > td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    .paragraf-text > table.w-100 > tbody > tr > td {
+        border: 0;
+    }
+
+        .paragraf-text > a,
+        .paragraf-text > .general_cont > div > p,
+        .paragraf-text > .general_cont > div > p > a,
+        .paragraf-text > .general_cont > div > p > strong,
+        .paragraf-text > .general_cont > div > p > strong > strong,
+        .paragraf-text > h3 > span > u > a,
+        .paragraf-text > p,
+        .paragraf-text > p > a,
+        .paragraf-text > p > strong,
+        .paragraf-text > p > strong > strong,
+        .paragraf-text > p > strong > span,
+        .paragraf-text > p > strong > span > span > a,
+        .paragraf-text > p > span,
+        .paragraf-text > p > span > a,
+        .paragraf-text > p > span > b > a > span,
+        .paragraf-text > p > span > a > u > span,
+        .paragraf-text > p > span > span,
+        .paragraf-text > p > span > span > a,
+        .paragraf-text > p > span > u > strong,
+        .paragraf-text > p > span > u > strong > a,
+        .paragraf-text > p > span > u > strong > a > span,
+        .paragraf-text > p > span > span > a > span,
+        .paragraf-text > p > span > a > span,
+        .paragraf-text > p > span > strong,
+        .paragraf-text > p > span > strong > a > span,
+        .paragraf-text > p > span > strong > span,
+        .paragraf-text > p > a > span,
+        .paragraf-text > p > span > a > span
+        .paragraf-text > p > span > a > u > span,
+        .paragraf-text > p > b > span,
+        .paragraf-text > p > b > span > a,
+        .paragraf-text > p > b > u > span,
+        .paragraf-text > p > span > b > span,
+        .paragraf-text > p > span > b > span > a,
+        .paragraf-text > p > span > b > u > span,
+        .paragraf-text > p > u > span > a,
+        .paragraf-text > p > u > span > strong,
+        .paragraf-text > p > u > span > a > span,    
+        .paragraf-text > p > u > span > u > a,
+        .paragraf-text > p > u > span > span > u > a,
+        .paragraf-text > p > u > strong > a,
+        .paragraf-text > p > u > strong > a > span,
+        .paragraf-text > table > tbody > tr > td > p,
+        .paragraf-text > table > tbody > tr > td > p > b,
+        .paragraf-text > table > tbody > tr > td > div > a,
+        .paragraf-text > table > tbody > tr > td > div > span,
+        .paragraf-text > table > tbody > tr > td > div > span > a,
+        .paragraf-text > div > p,
+        .paragraf-text > div > div > p,
+        .paragraf-text > div > div > p > span,
+        .paragraf-text > div > span,
+        .paragraf-text > div > span > a,
+        .paragraf-text > div > div > div > label,
+        .paragraf-text > div > div > a > div,
+        .paragraf-text > div > div > div > div > form > div > div > label,
+        .paragraf-text > div > div > div > div > form > div > div > label > strong,
+        .paragraf-text > ol > li,
+        .paragraf-text > ol > li > span,
+        .paragraf-text > ol > li > span > u > a > span > span,
+        .paragraf-text > ol > li > span > u > span > a > span > span,
+        .paragraf-text > ol > li > span > span > u > a > span,
+        .paragraf-text > ol > li > p > span > a,
+        .paragraf-text > ol > li > p > u > span > a,
+        .paragraf-text > ol > li > p > u > span > span > span > a,
+        .paragraf-text > ol > li > p > u > span > a > span > span,
+        .paragraf-text > ol > li > p > span > u > a,
+        .paragraf-text > ol > li > p > a > span,
+        .paragraf-text > ol > li > p > a > u > span,
+        .paragraf-text > ol > li > a > span > span > u,
+        .paragraf-text > ol > li > u > span > a > span > span,
+        .paragraf-text > ol > li > u > span > span > a > span > span,
+        .paragraf-text > ul > li,
+        .paragraf-text > ul > li > strong {
+            font-size: 1.6rem;
+        }
+/*ÊÎÍÅÖ ÑÒÈËÈ ÄËß ÏÀĞÀÃĞÀÔÀ*/
+
+/*ÑÒÈËÈ ÄËß ÊÎÍÒÀÊÒ_ÖÅÍÒĞÀ*/
+.contact-center-text,
+.contact-center-text > p,
+.contact-center-text > p > a,
+.contact-center-text > span,
+.contact-center-text > span > a,
+.contact-center-text > ul > li
+.contact-center-text > div > span > a,
+.contact-center-text > div > p {
+    text-align: justify;
+    font-size: 1.6rem;
+}
+
+    .contact-center-text,
+    .contact-center-text > p,
+    .contact-center-text > p > a,
+    .contact-center-text > span,
+    .contact-center-text > span > a,
+    .contact-center-text > ul > li
+    .contact-center-text > div > span > a,
+    .contact-center-text > div > p {
+        font-size: 1.6rem;
+    }
+
+.img_contact_center {
+    float: right;
+    margin: 5px 0 0 15px;
+    border: 1px solid #0d6efd;
+    border-radius: 13px;
+}
+/*ÊÎÍÅÖ ÑÒÈËÈ ÄËß ÊÎÍÒÀÊÒ_ÖÅÍÒĞÀ*/
+
+
+/*ÑÒÈËÈ ÄËß ËÈ×ÍÎÃÎ ÊÀÁÈÍÅÒÀ ÃÎÑÓÑËÓÃè*/
+.blue_p {
+    color: #0d6efd;
+    margin: 0 0 0 5px;
+}
+
+.img_gosuslugi {
+    margin: 0 0 0 15px;
+}
+/*ÊÎÍÅÖ ÑÒÈËÈ ÄËß ËÈ×ÍÎÃÎ ÊÀÁÈÍÅÒÀ ÃÎÑÓÑËÓÃè*/
+
+/*ÊÎÍÅÖ ÑÒÈËÈ ÄËß ÍÎÂÎÑÒÅÉ*/
+
+
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+/*X-Small devices (portrait phones, less than 576px)*/
+@media (min-width: 375px) and (max-width: 575.98px) {
+    .body_content {
+        margin: 0 0 25px 0;
+    }
+}
+
+/*Small devices (landscape phones, less than 768px)*/
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .body_content {
+        margin: 0 0 25px 0;
+    }
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (min-width:767.98px) and (max-width:991.98px) {
+    .body_content {
+        margin: 0 10px 25px 10px;
+    }
+}
+
+/*Large devices (desktops, less than 1200px)*/
+@media (min-width:991.98px) and (max-width: 1199.98px) {
+    .body_content {
+        margin: 0 50px 25px 50px;
+    }
+}
+
+/*X-Large devices (large desktops, less than 1400px)*/
+@media (min-width:1199.98px) and (max-width: 1399.98px) {
+    .body_content {
+        margin: 0 50px 25px 50px;
+    }
+
+    .contact-center-text,
+    .contact-center-text > p,
+    .contact-center-text > p > a,
+    .contact-center-text > span,
+    .contact-center-text > span > a,
+    .contact-center-text > ul > li
+    .contact-center-text > div > span > a,
+    .contact-center-text > div > p {
+        text-align: justify;
+        font-size: 1.6rem;
+    }
+}
+
+/*XX-Large devices (larger desktops)*/
+@media (min-width: 1399.98px) {
+    .body_content {
+        margin: 0 150px 25px 150px;
+    }
+
+    .contact-center-text, .contact-center-text > p,
+    .contact-center-text > p > a, .contact-center-text > span,
+    .contact-center-text > ul > li {
+        text-align: justify;
+        font-size: 1.8rem;
+    }
+}
+
+
+.collapse > ul > li > a,
+.dropdown > ul > li > a {
+    /*font-family: "Arial Narrow", Arial, Helvetica, sans-serif;*/
+    font-size: 1.6rem;
+    padding: 4px;
+}
+
+.dropdown > ul > li > a {
+    margin: 0px 4px 0px 4px;
+}
+
+#footer > p > strong, .form-control, .btn {
+    /*font-family: "Arial Narrow", Arial, Helvetica, sans-serif;*/
+    font-size: 1.6rem;
+}
+
+.font_14, address > .font_14 > a {
+    font-size: 1.4rem;
+}
+
+.font_20 {
+    font-size: 20px;
+}
+
+.font_18 {
+    font-size: 1.8rem;
+}
+
+.font_16 {
+    font-size: 1.6rem;
+}
+
+.font_15 {
+    font-size: 1.5rem;
+}
+
+.font_14 {
+    font-size: 1.4rem;
+}
+
+    .font_14 > span {
+        font-weight: 600;
+        margin-left: 10px;
+    }
+
+.btn-pembe {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #f7ddde;
+    --bs-btn-border-color: #f2b0b3;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #f2b0b3;
+    --bs-btn-hover-border-color: #f2b0b3;
+}
+
+.btn-light-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d3d4d6;
+    --bs-btn-border-color: #565657;
+    --bs-btn-hover-color: #fff;
+    /*--bs-btn-hover-bg: #a3a4a4;*/
+    --bs-btn-hover-bg: #b8baba;
+    --bs-btn-hover-border-color: #292a2a;
+}
+
+.btn-pembe-gradient {
+    background: #f7ddde; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f7ddde, #f2b0b3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f7ddde, #f2b0b3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 2px solid #f2b0c3;
+    border-radius: 5px;
+}
+
+    .btn-pembe-gradient:hover,
+    .btn-light-secondary-gradient:hover {
+        opacity: 60%;
+    }
+
+.current_page {
+    opacity: 60%;
+}
+
+
+.navbar {
+    height: 65px;
+}
+
+    .navbar .navbar-nav > li > a {
+        height: 65px;
+        justify-content: center;
+        align-content: center;
+    }
+
+        .nav-link:hover,
+        .navbar .navbar-nav > li > a:hover {
+            /*opacity: 60%;*/
+            /*height:100%;*/
+            /*padding:10px 5px;*/
+            background: #0657cf; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #0657cf, #78adfc); /*Chrome 10-25, Safari 5.1-6*/
+            background: linear-gradient(to bottom, #0657cf, #78adfc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            color: #fff;
+            /*padding-top:10px;
+    padding-top:10px;
+    border: 2px solid #055ee1;
+    border-radius: 2px;*/
+        }
+
+.bg-primary-gradient {
+    background: #0d6efd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0d6efd, #78adfc); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0d6efd, #78adfc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    /* border: 2px solid #055ee1;
+    border-radius: 2px;*/
+}
+
+
+.btn-light-secondary-gradient {
+    background: #d3d4d6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #d3d4d6, #b8baba); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #d3d4d6, #b8baba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 2px solid #b8baca;
+    border-radius: 5px;
+}
+
+.navbar-bg-color {
+    background-color: #223C55 !important;
+    border: none !important;
+    border-width: 0 !important;
+}
+
+.logo_bg {
+    background-color: #eaf4fd;
+    background-image: url('/images/web/top-bg-left.jpg');
+    background-repeat: no-repeat;
+    height: 177px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+    .logo_bg a {
+        display: flex;
+        font-size: 2em;
+        font-weight: 600;
+        color: #3d65c4;
+        text-decoration: none;
+        text-shadow: 1px 1px 2px #65b5b0;
+        font-style: italic;
+        margin-left: 280px;
+    }
+
+        .logo_bg a:hover {
+            color: #403dc4;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px #6576b5;
+        }
+
+.kontact_center {
+    background-image: url('/images/web/kontact_center.png');
+    background-repeat: no-repeat;
+}
+
+.breadcrumb-item, .breadcrumb-item > a {
+    font-size: 1.6rem;
+}
+
+/*<!-- ÑÒÈËÈ ÄËß ÑÒĞÀÍÈÖ ÍÎÂÎÑÒÅÉ -->*/
+#news-tab.nav-link,
+#region-news-tab.nav-link {
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+
+
+/*<!-- ÊÎÍÅÖ ÑÒÈËÈ ÄËß ÑÒĞÀÍÈÖ ÍÎÂÎÑÒÅÉ -->*/
+
+/*<!-- ÍÀ×ÀËÎ ÑÒÈËÈ ÄËß ÁÎÊÎÂÎÃÎ ÌÅÍŞ ÊÍÎÏÎÊ -->*/
+.bf-116__btn-wrap {
+    font-size: 14px;
+}
+/*<!-- ÊÎÍÅÖ ÑÒÈËÈ ÄËß ÁÎÊÎÂÎÃÎ ÌÅÍŞ ÊÍÎÏÎÊ -->*/
+
+/*<!-- ÍÀ×ÀËÎ ÑÒÈËÈ ÄËß ÂÈÄÆÅÒÀ ÑÏĞÀÂÀ  -->*/
+#js-show-iframe-wrapper {
+    /*îòìåíÿåì ìèí. äëèíó ıëåìåíòà*/
+    min-width: unset;
+}
+/*<!-- ÊÎÍÅÖ ÑÒÈËÈ ÄËß ÂÈÄÆÅÒÀ ÑÏĞÀÂÀ  -->*/
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}

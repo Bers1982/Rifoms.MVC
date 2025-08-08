@@ -1,0 +1,38 @@
+﻿@model List<BreadCrumbModel>;
+
+<nav style="--bs-breadcrumb-divider: '/';text-wrap:normal;" aria-label="breadcrumb">
+    <ol class="breadcrumb list-unstyled text-wrap">
+        @{
+            for (int i = 0; i < Model.Count(); i++)
+            {
+                var seolink = string.Empty;
+                if (i == 0)
+                    seolink = Model[i].SeoLink;
+                else
+                    seolink = $"{Model[i].SiteUrl}/{Model[i].Id}/{Model[i].SeoLink}.html";
+
+                if (seolink.Contains("#"))
+                {
+                    <li class="breadcrumb-item">
+                        <a class="text-primary text-decoration-none">@Model[i].Title</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="breadcrumb-item active">
+                        @{
+                            if ((i + 1) == Model.Count)
+                            {
+                                @Model[i].Title;
+                            }
+                            else
+                            {
+                                <a class="text-primary text-decoration-none" href="@seolink">@Model[i].Title</a>
+                            }
+                        }
+                    </li>
+                }
+            }
+        }
+    </ol>
+</nav>
