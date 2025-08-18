@@ -56,6 +56,7 @@ namespace Rifoms.Web.Controllers
             return base.View(model);
         }
 
+
         /// <summary>
         /// Метод для получения текущей новости, контента или дирекции и так далее
         /// Запускается из меню

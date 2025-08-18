@@ -229,12 +229,34 @@ namespace Rifoms.Web
                     name: "default",
                     template: "{controller=Home}/{action=Index}");
 
+
+                #region ROUTE's FOR ADMIN Panel
+
+                routes.MapRoute(
+                  name: "login",
+                  template: "admin/login.html",
+                  defaults: new { controller = "Admin", action = "Login" });
+
+
+                routes.MapRoute(
+                  name: "forgot",
+                  template: "admin/forgot.html",
+                  defaults: new { controller = "Admin", action = "Forgot" });
+
+                routes.MapRoute(
+                  name: "register",
+                  template: "admin/register.html",
+                  defaults: new { controller = "Admin", action = "Register" });
+
+                #endregion
+
                 #region ROUTE's FOR NEWs AND REGIONNEWDs
 
                 routes.MapRoute(
                     name: "allnews",
                     template: "novosti/{seolink}.html",
                     defaults: new { controller = "Home", action = "AllNews" });
+
 
                 routes.MapRoute(
                 name: "content",
@@ -260,24 +282,7 @@ namespace Rifoms.Web
                 #endregion
 
 
-                #region ROUTE's FOR ADMIN Panel
 
-                routes.MapRoute(
-                  name: "login",
-                  template: "login.html",
-                  defaults: new { controller = "Admin", action = "Login" });
-
-                routes.MapRoute(
-                  name: "forgot",
-                  template: "forgot.html",
-                  defaults: new { controller = "Admin", action = "Forgot" });
-
-                routes.MapRoute(
-                  name: "register",
-                  template: "register.html",
-                  defaults: new { controller = "Admin", action = "Register" });
-
-                #endregion
 
             });
         }
