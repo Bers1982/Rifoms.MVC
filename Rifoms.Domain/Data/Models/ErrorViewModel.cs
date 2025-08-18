@@ -1,4 +1,4 @@
-namespace Rifoms.Web.Models
+namespace Rifoms.Domain.Data.Models
 {
     public class ErrorViewModel
     {

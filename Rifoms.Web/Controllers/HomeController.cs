@@ -1,16 +1,12 @@
-﻿using System;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
-
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Rifoms.Domain.Data.Models;
 using Rifoms.Domain.Infrastructure.Interfaces;
 using Rifoms.Web.Controllers.Base;
-using Rifoms.Web.Models;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Rifoms.Web.Controllers
 {
