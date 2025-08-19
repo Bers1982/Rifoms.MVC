@@ -92,9 +92,11 @@ function fnFindPolis(formID) {
                 var xhr = new XMLHttpRequest();
                 var params = `FormID=${zapros.FormID}&FAM=${zapros.FAM}&IM=${zapros.IM}&OT=${zapros.OT}&DR=${zapros.DR}&ENP=${zapros.ENP}&NPOL=${zapros.NPOL}&SPOL=${zapros.SPOL}`;
 
-                xhr.open('GET', 'http://185.35.130.36:5000/api/polis/getpolis' + params, true);
-                //xhr.open('POST', '/api/polis/getpolis', true);
+                //xhr.open('GET', 'http://185.35.130.36:5000/api/polis/getpolis' + params, true);
                 //xhr.open('GET', '/api/polis/getpolis2?' + params, true);
+
+                //xhr.open('POST', '/api/polis/getpolis', true);
+                xhr.open('POST', 'http://192.168.1.38:50/api/polis/getpolis', true);
                 //xhr.open('POST', 'http://185.35.130.36:5000/api/polis/getpolis', true);
 
                 xhr.setRequestHeader("XSRF-TOKEN", $('input:hidden[name="__RequestVerificationToken"]').val());
