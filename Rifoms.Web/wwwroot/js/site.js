@@ -93,6 +93,13 @@ function fnFindPolis(formID) {
                 var xhr = new XMLHttpRequest();
                 var params = `FormID=${zapros.FormID}&FAM=${zapros.FAM}&IM=${zapros.IM}&OT=${zapros.OT}&DR=${zapros.DR}&ENP=${zapros.ENP}&NPOL=${zapros.NPOL}&SPOL=${zapros.SPOL}`;
 
+                $(`#${formID}_result`).removeClass('btn-info');
+                $(`#${formID}_result`).html('');
+
+                const myModalEl = document.getElementById('myModal');
+                const myModal = new bootstrap.Modal(myModalEl);
+                myModal.show();
+
                 //xhr.open('GET', 'http://185.35.130.36:5000/api/polis/getpolis' + params, true);
                 //xhr.open('GET', '/api/polis/getpolis2?' + params, true);
 
@@ -105,22 +112,27 @@ function fnFindPolis(formID) {
                 //xhr.setRequestHeader('Content-type', 'multipart/form-data');
 
                 xhr.onreadystatechange = () => {
-                    if (xhr.status == 200 && xhr.readyState == 4) {
-                        console.log(`Правильный запрос`);
-                        var response = JSON.parse(xhr.responseText);
-                        $(`#${formID}_result`).addClass('btn-info');
-                        //Если вовзращаемый JSON ответ от контроллера не содержит параметра result
-                        $(`#${formID}_result`).html(response);
+                    setTimeout(() => {
+                        myModal.hide();
 
-                        //Если вовзращаемый JSON ответ от контроллера содержит параметра result
-                        //$(`#${formID}_result`).html(response.result);
-                    }
-                    else
-                        console.log(`Неправильный запрос`);
+                        if (xhr.status == 200 && xhr.readyState == 4) {
+                            console.log(`Правильный запрос`);
+                            var response = JSON.parse(xhr.responseText);
+
+                            $(`#${formID}_result`).addClass('btn-info');
+                            //Если вовзращаемый JSON ответ от контроллера не содержит параметра result
+                            $(`#${formID}_result`).html(response);
+
+                            //Если вовзращаемый JSON ответ от контроллера содержит параметра result
+                            //$(`#${formID}_result`).html(response.result);
+                        }
+                        else
+                            console.log(`Неправильный запрос`);
 
                     //if (xhr.readyState == 4 && xhr.status == 200) {
                     //    alert(xhr.responseText);
                     //}
+                    }, 3000);                   
                 }
                 //Для POST запросов
                 xhr.send(JSON.stringify(zapros));
