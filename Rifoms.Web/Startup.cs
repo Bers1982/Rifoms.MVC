@@ -42,8 +42,8 @@ namespace Rifoms.Web
         public void ConfigureServices(IServiceCollection services)
         {
 
-            //string MySqlConn = ConnectionConfig.DevServerConnection;
-            string MySqlConn = DebugConfig.IsDebug ? ConnectionConfig.DevLocalConnection : ConnectionConfig.DevServerConnection;
+            //string MySqlConn = DebugConfig.IsDebug ? ConnectionConfig.DevLocalConnection : ConnectionConfig.DevServerConnection;
+            string MySqlConn = ConnectionConfig.DevLocalConnection;
 
             //for AppDbContext for Database
             services.AddDbContext<RifomsDbContext>(options =>
