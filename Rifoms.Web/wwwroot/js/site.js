@@ -75,6 +75,7 @@ function fnLoadJSON(formID) {
 function fnFindPolis(formID) {
     $("#" + formID).submit(function (e) {
         e.preventDefault();
+        //alert(formID);
         var formData = new FormData(document.getElementById(e.target.id));
 
         if (fnValidate(formID)) {
@@ -132,6 +133,9 @@ function fnFindPolis(formID) {
                 console.log(ex)
             }
         }
+        //else {
+        //    alert('Neudacha');
+        //}
     });
 }
 
@@ -205,18 +209,20 @@ function fnValidate(formId) {
             alert(`Нужно заполнить фамилию,имя,отчество и дату рождения`);
             if (form.FAM.value === "") {
                 form.FAM.focus();
+                return false;
             }
             if (form.IM.value === "") {
                 form.IM.focus();
+                return false;
             }
             if (form.OT.value === "") {
                 form.OT.focus();
             }
             if (form.DR.value === "") {
                 form.DR.focus();
+                return false;
             }
 
-            return false;
         }
         return (true);
     }
@@ -256,6 +262,8 @@ function fnValidate(formId) {
         }
         return (true);
     }
+
+
 }
 
 //function fnChangeSearch(newSearch) {
