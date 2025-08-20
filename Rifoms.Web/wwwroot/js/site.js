@@ -96,9 +96,9 @@ function fnFindPolis(formID) {
                 $(`#${formID}_result`).removeClass('btn-info');
                 $(`#${formID}_result`).html('');
 
-                const myModalEl = document.getElementById('myModal');
-                const myModal = new bootstrap.Modal(myModalEl);
-                myModal.show();
+                const modalLoadPolis = document.getElementById('modalLoadPolis');
+                const ModalLoadPolis = new bootstrap.Modal(modalLoadPolis);
+                ModalLoadPolis.show();
 
                 //xhr.open('GET', 'http://185.35.130.36:5000/api/polis/getpolis' + params, true);
                 //xhr.open('GET', '/api/polis/getpolis2?' + params, true);
@@ -112,9 +112,9 @@ function fnFindPolis(formID) {
                 //xhr.setRequestHeader('Content-type', 'multipart/form-data');
 
                 xhr.onreadystatechange = () => {
-                    setTimeout(() => {
-                        myModal.hide();
+                    ModalLoadPolis.hide();
 
+                    setTimeout(() => {
                         if (xhr.status == 200 && xhr.readyState == 4) {
                             console.log(`Правильный запрос`);
                             var response = JSON.parse(xhr.responseText);
@@ -132,7 +132,7 @@ function fnFindPolis(formID) {
                     //if (xhr.readyState == 4 && xhr.status == 200) {
                     //    alert(xhr.responseText);
                     //}
-                    }, 3000);                   
+                    }, 1000);                   
                 }
                 //Для POST запросов
                 xhr.send(JSON.stringify(zapros));
