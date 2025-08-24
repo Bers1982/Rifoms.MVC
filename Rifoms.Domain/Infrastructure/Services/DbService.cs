@@ -264,6 +264,16 @@ namespace Rifoms.Domain.Infrastructure.Services
             return model;
         }
 
+        public async Task<string> GetFileNameBySeolinkAsync(string seolink)
+        {
+            using var dbContext = dbFactory();
+            var filename = await dbContext.CmsActionsLogs
+                .Where(c => c.ObjectUrl == seolink)
+                .Select(c => c.Object)
+                .SingleOrDefaultAsync();
+            return filename;
+        }
+
         #endregion
     }
 }

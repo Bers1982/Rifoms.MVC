@@ -231,6 +231,10 @@ namespace Rifoms.Web
 
 
                 #region ROUTE's FOR ADMIN Panel
+                routes.MapRoute(
+                    name: "files",
+                    template: "users/files/download{seolink}.html",
+                    defaults: new { controller = "File", action = "Download" });
 
                 routes.MapRoute(
                   name: "login",
@@ -280,8 +284,6 @@ namespace Rifoms.Web
                     defaults: new { controller = "Home", action = "Content" });
 
                 #endregion
-
-
 
 
             });

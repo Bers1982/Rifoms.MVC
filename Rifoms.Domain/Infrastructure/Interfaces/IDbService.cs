@@ -114,5 +114,12 @@ namespace Rifoms.Domain.Infrastructure.Interfaces
         /// <param name="id"></param>
         /// <returns></returns>
         Task<ContentModel> GetCategoryByIDAsync(int id);
+
+        /// <summary>
+        /// Получение ИМЕНИ ФАЙЛА ДЛЯ СКАЧИВАНИЯ по СЕОЛИНКу
+        /// </summary>
+        /// <param name="seolink"></param>
+        /// <returns></returns>
+        Task<string> GetFileNameBySeolinkAsync(string seolink);
     }
 }

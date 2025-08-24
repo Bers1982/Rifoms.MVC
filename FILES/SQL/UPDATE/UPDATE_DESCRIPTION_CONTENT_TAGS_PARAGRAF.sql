@@ -51,6 +51,27 @@ SET content = REGEXP_REPLACE(content, ' class="[\\d\\D]*?"' ,'')
 where (category_id=8 or category_id=9 or category_id=1)  and 
 content regexp 'class="[\\d\\D]*?"';   
 
+UPDATE gb_rifoms.cms_category
+SET description = REGEXP_REPLACE(description, ' style="[\\d\\D]*?"' ,''),
+description = REGEXP_REPLACE(description, 'https://www.rifoms.ru' ,''),
+description = REGEXP_REPLACE(description, 'http://www.rifoms.ru' ,''),
+description = REGEXP_REPLACE(description, 'https://rifoms.ru' ,''),
+description = REGEXP_REPLACE(description, 'http://rifoms.ru' ,''),
+description = REGEXP_REPLACE(description, '&nbsp;' ,'')
+where id=17;  
+
+UPDATE gb_rifoms.cms_content
+SET content = REGEXP_REPLACE(content, 'https://www.rifoms.ru' ,''),
+content = REGEXP_REPLACE(content, 'http://www.rifoms.ru' ,''),
+content = REGEXP_REPLACE(content, 'https://rifoms.ru' ,''),
+content = REGEXP_REPLACE(content, 'http://rifoms.ru' ,''),
+content = REGEXP_REPLACE(content, '&nbsp;' ,''),
+description = REGEXP_REPLACE(description, 'https://www.rifoms.ru' ,''),
+description = REGEXP_REPLACE(description, 'http://www.rifoms.ru' ,''),
+description = REGEXP_REPLACE(description, 'https://rifoms.ru' ,''),
+description = REGEXP_REPLACE(description, 'http://rifoms.ru' ,''),
+description = REGEXP_REPLACE(description, '&nbsp;' ,'');
+
 UPDATE gb_rifoms.cms_content
 SET content=replace(content,'<strong>Директор ТФОМС Республики Ингушетия Дзейтов Магомед Алиевич Приемная</strong>',
 'Директор ТФОМС Республики Ингушетия Дзейтов Магомед Алиевич Приемная')
