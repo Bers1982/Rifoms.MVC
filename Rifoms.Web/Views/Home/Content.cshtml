@@ -1,12 +1,13 @@
 ﻿@model ContentModel
 @{
     ViewData["Title"] = Model.CurrentContent != null ? $"{Model.CurrentContent.Title} ТФ ОМС РИ" : string.Empty;
-
-    @if (Model.CurrentContent != null)
+}
+@{
+    if (Model.CurrentContent != null)
     {
         <!-- DIV BREADCRUMBS КОНТЕНТА -->
 
-        @if (Model.CurrentContent.CategoryId == 1 || Model.CurrentContent.CategoryId == 6)
+        if (Model.CurrentContent.CategoryId == 1 || Model.CurrentContent.CategoryId == 6)
         {
             <div class="row mh-100">
                 <div class="col-12">
@@ -38,22 +39,37 @@
             </div>
         </div>
     }
-    else
+    if (Model.CurrentCategory != null)
     {
-        @*<h1 class="mb-3 fw-bolder text-danger">@("Нет контента для данного меню...")</h1>*@
-        if (Model.CurrentContents != null && Model.CurrentContents.Count > 0)
-        {
-            foreach (var item in Model.CurrentContents)
-            {
-                <!-- СТРАНИЦА КОНТЕНТА -->
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="mb-3 fw-bolder text-primary text-wrap">
-                            <a href=@($"{Model.SiteUrl}/{item.Id}/{item.Seolink}.html")>@item.Title</a>
-                        </h2>
-                    </div>
+        <!-- СТРАНИЦА КОНТЕНТА -->
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-row flex-nowrap justify-content-between align-content-start">
+                    <h2 class="mb-3 fw-bolder text-primary text-wrap">
+                        @Model.CurrentCategory.Title
+                    </h2>
                 </div>
-            }
+                <hr />
+
+                <div class="paragraf-text">
+                    @Html.Raw(Model.CurrentCategory.Description)
+                </div>
+                <hr />
+            </div>
+        </div>
+    }
+    if (Model.CurrentContents != null && Model.CurrentContents.Count > 0)
+    {
+        foreach (var item in Model.CurrentContents)
+        {
+            <!-- СТРАНИЦА КОНТЕНТА -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mb-3 fw-bolder text-primary text-wrap">
+                        <a href=@($"{Model.SiteUrl}/{item.Id}/{item.Seolink}.html")>@item.Title</a>
+                    </h2>
+                </div>
+            </div>
         }
     }
 }

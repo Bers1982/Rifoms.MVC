@@ -75,8 +75,10 @@ namespace Rifoms.Web.Controllers
                 seolink = seolink.Replace("/", string.Empty).Replace(".html",string.Empty);
                 var categoryId = await dbService.GetCategoryIDBySeolink(seolink);
                 model = await dbService.GetContentsByCategoryIDAsync(categoryId);
-                //if(model.CurrentContents==null)
-                   
+                if (model.CurrentContents.Count == 0)
+                {
+                    model = await dbService.GetCategoryByIDAsync(categoryId);
+                }
             }
             return base.View(model);
         }

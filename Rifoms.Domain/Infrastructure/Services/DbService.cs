@@ -130,6 +130,7 @@ namespace Rifoms.Domain.Infrastructure.Services
                    .Where(c => c.Id == id)
                    .SingleOrDefaultAsync();
                 model.CurrentContents = null;
+                model.CurrentCategory = null;
                 if (model.CurrentContent != null)
                 {
                     if (model.CurrentContent.CategoryId == 1 || model.CurrentContent.CategoryId == 6)
@@ -211,13 +212,13 @@ namespace Rifoms.Domain.Infrastructure.Services
                 .ToListAsync();
         }
 
-        public async Task<CmsCategory> GetCategoryByIDAsync(int id)
-        {
-            using var dbContext = dbFactory();
-            return await dbContext.CmsCategories
-                .Where(c => c.Id == id)
-                .SingleOrDefaultAsync();
-        }
+        //public async Task<CmsCategory> GetCategoryByIDAsync(int id)
+        //{
+        //    using var dbContext = dbFactory();
+        //    return await dbContext.CmsCategories
+        //        .Where(c => c.Id == id)
+        //        .SingleOrDefaultAsync();
+        //}
 
         public async Task<int> GetCategoryIDBySeolink(string seolink)
         {
@@ -237,16 +238,29 @@ namespace Rifoms.Domain.Infrastructure.Services
                    .Where(c => c.CategoryId == id)
                    .ToListAsync();
                 model.CurrentContent = null;
-                if (model.CurrentContent != null)
-                {
-                    if (model.CurrentContent.CategoryId == 1 || model.CurrentContent.CategoryId == 6)
-                    {
-                        model.BreadCrumbs = new List<BreadCrumbModel>();
-                        model.BreadCrumbs = await GetBreadCrumbs(model.CurrentContent.Id, model.CurrentContent.Title, model.CurrentContent.Seolink, model.SiteUrl, "mainmenu");
-                    }
-                }
+                model.CurrentCategory = null;
+                //if (model.CurrentContent != null)
+                //{
+                //    if (model.CurrentContent.CategoryId == 1 || model.CurrentContent.CategoryId == 6)
+                //    {
+                //        model.BreadCrumbs = new List<BreadCrumbModel>();
+                //        model.BreadCrumbs = await GetBreadCrumbs(model.CurrentContent.Id, model.CurrentContent.Title, model.CurrentContent.Seolink, model.SiteUrl, "mainmenu");
+                //    }
+                //}
             }
 
+            return model;
+        }
+
+        public async Task<ContentModel> GetCategoryByIDAsync(int id)
+        {
+            using var dbContext = dbFactory();
+            var model = new ContentModel { SiteUrl = SiteUrl };
+            model.CurrentContent = null;
+            model.CurrentContents = null;
+            model.CurrentCategory = await dbContext.CmsCategories
+               .Where(c => c.Id==id)
+               .SingleOrDefaultAsync();
             return model;
         }
 

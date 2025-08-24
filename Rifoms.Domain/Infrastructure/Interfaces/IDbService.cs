@@ -113,7 +113,6 @@ namespace Rifoms.Domain.Infrastructure.Interfaces
         /// ИСПОЛЬЗУЮ ДЛЯ ПОЛУЧЕНИЯ ФОРМЫ И БЛАНКОВ
         /// <param name="id"></param>
         /// <returns></returns>
-        Task<CmsCategory> GetCategoryByIDAsync(int id);
-
+        Task<ContentModel> GetCategoryByIDAsync(int id);
     }
 }
