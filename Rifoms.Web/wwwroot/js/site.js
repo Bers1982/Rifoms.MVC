@@ -67,12 +67,26 @@ function fnFindPolis(formID) {
                     SPOL: formData.get('SPOL')
                 }
 
-                fnCheckPing('http://192.168.1.200').then(result => {
+                $(`#${formID}_result`).removeClass('btn-info');
+                $(`#${formID}_result`).html('');
+                const modalLoadPolis = document.getElementById('modalLoadPolis');
+                const ModalLoadPolis = new bootstrap.Modal(modalLoadPolis);
+                ModalLoadPolis.show();
+                let checkIP = '192.168.1.200';
+                fnCheckPing(`http://${checkIP}`).then(result => {
                     if (result.success) {
-                        console.log('SUCCEES to 192.168.1.200');
+                        ModalLoadPolis.hide();
+                        $(`#${formID}_result`).addClass('btn-info');
+                        //Если вовзращаемый JSON ответ от контроллера не содержит параметра result
+                        $(`#${formID}_result`).html(`SUCCEES to ${checkIP}`);
+                        console.log(`SUCCEES to ${checkIP}`);
                     }
                     else {
-                        console.log('FAILED to 192.168.1.200');
+                        ModalLoadPolis.hide();
+                        $(`#${formID}_result`).addClass('btn-info');
+                        //Если вовзращаемый JSON ответ от контроллера не содержит параметра result
+                        $(`#${formID}_result`).html(`FAILED to ${checkIP}`);
+                        console.log(`FAILED to ${checkIP}`);
                     }
                 });
                 //console.log(res);
