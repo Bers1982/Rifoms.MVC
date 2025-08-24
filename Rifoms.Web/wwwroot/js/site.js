@@ -22,6 +22,30 @@ function fnCenterDiv() {
 }
 
 /**
+ * ПРОВЕРКА ПИНГА ДЛЯ ДАННОГО АЙПИ ИЛИ УРЛА
+ * @param {any} url
+ */
+async function fnCheckPing(url) {
+    const startTime = Date.now();
+    try {
+        const response = await fetch(url, {
+            method: 'GET',
+            mode: 'no-cors', // Use 'no-cors' for cross-origin requests where you don't need to read the response content
+            cache: 'no-store' // Prevent caching for more accurate timing
+        });
+        const endTime = Date.now();
+        const latency = endTime - startTime;
+        console.log(`Successfully reached ${url}. Latency: ${latency}ms`);
+        return { success: true, latency: latency };
+    } catch (error) {
+        const endTime = Date.now();
+        const latency = endTime - startTime; // This will be the time until the error occurred
+        console.error(`Failed to reach ${url}. Error: ${error.message}. Latency until error: ${latency}ms`);
+        return { success: false, error: error, latency: latency };
+    }
+}
+
+/**
  * ПОИСК ПОЛИСОВ ПО ID ФОРМЫ
  * @param {any} formID
  */
@@ -42,58 +66,78 @@ function fnFindPolis(formID) {
                     NPOL: formData.get('NPOL'),
                     SPOL: formData.get('SPOL')
                 }
-                var xhr = new XMLHttpRequest();
-                var params = `FormID=${zapros.FormID}&FAM=${zapros.FAM}&IM=${zapros.IM}&OT=${zapros.OT}&DR=${zapros.DR}&ENP=${zapros.ENP}&NPOL=${zapros.NPOL}&SPOL=${zapros.SPOL}`;
 
-                $(`#${formID}_result`).removeClass('btn-info');
-                $(`#${formID}_result`).html('');
+                fnCheckPing('http://192.168.1.200').then(result => {
+                    if (result.success) {
+                        console.log('SUCCEES to 192.168.1.200');
+                    }
+                    else {
+                        console.log('FAILED to 192.168.1.200');
+                    }
+                });
+                //console.log(res);
 
-                const modalLoadPolis = document.getElementById('modalLoadPolis');
-                const ModalLoadPolis = new bootstrap.Modal(modalLoadPolis);
-                ModalLoadPolis.show();
+                    //.then(result => {
+                    //    if (result.success) {
+                    //        alert('SUCCESS to 192.168.1.200');
 
-                //xhr.open('GET', 'http://185.35.130.36:5000/api/polis/getpolis' + params, true);
-                //xhr.open('GET', '/api/polis/getpolis2?' + params, true);
+                    //        var xhr = new XMLHttpRequest();
+                    //        var params = `FormID=${zapros.FormID}&FAM=${zapros.FAM}&IM=${zapros.IM}&OT=${zapros.OT}&DR=${zapros.DR}&ENP=${zapros.ENP}&NPOL=${zapros.NPOL}&SPOL=${zapros.SPOL}`;
 
-                //xhr.open('POST', '/api/polis/getpolis', true);
-                xhr.open('POST', 'http://192.168.1.38:50/api/polis/getpolis', true);
-                //xhr.open('POST', 'http://185.35.130.36:5000/api/polis/getpolis', true);
+                    //        $(`#${formID}_result`).removeClass('btn-info');
+                    //        $(`#${formID}_result`).html('');
 
-                xhr.setRequestHeader("XSRF-TOKEN", $('input:hidden[name="__RequestVerificationToken"]').val());
-                xhr.setRequestHeader('Content-type', 'application/json');
-                //xhr.setRequestHeader('Content-type', 'multipart/form-data');
+                    //        const modalLoadPolis = document.getElementById('modalLoadPolis');
+                    //        const ModalLoadPolis = new bootstrap.Modal(modalLoadPolis);
+                    //        ModalLoadPolis.show();
 
-                xhr.onreadystatechange = () => {
-                    ModalLoadPolis.hide();
+                    //        //xhr.open('GET', 'http://185.35.130.36:5000/api/polis/getpolis' + params, true);
+                    //        //xhr.open('GET', '/api/polis/getpolis2?' + params, true);
 
-                    setTimeout(() => {
-                        if (xhr.status == 200 && xhr.readyState == 4) {
-                            console.log(`Правильный запрос`);
-                            var response = JSON.parse(xhr.responseText);
+                    //        //xhr.open('POST', '/api/polis/getpolis', true);
+                    //        xhr.open('POST', 'http://192.168.1.38:50/api/polis/getpolis', true);
+                    //        //xhr.open('POST', 'http://185.35.130.36:5000/api/polis/getpolis', true);
 
-                            $(`#${formID}_result`).addClass('btn-info');
-                            //Если вовзращаемый JSON ответ от контроллера не содержит параметра result
-                            $(`#${formID}_result`).html(response);
+                    //        xhr.setRequestHeader("XSRF-TOKEN", $('input:hidden[name="__RequestVerificationToken"]').val());
+                    //        xhr.setRequestHeader('Content-type', 'application/json');
+                    //        //xhr.setRequestHeader('Content-type', 'multipart/form-data');
 
-                            //Если вовзращаемый JSON ответ от контроллера содержит параметра result
-                            //$(`#${formID}_result`).html(response.result);
-                        }
-                        else
-                            console.log(`Неправильный запрос`);
+                    //        xhr.onreadystatechange = () => {
+                    //            ModalLoadPolis.hide();
 
-                        //if (xhr.readyState == 4 && xhr.status == 200) {
-                        //    alert(xhr.responseText);
-                        //}
-                    }, 500);
-                        
-                }
-                //Для POST запросов
-                xhr.send(JSON.stringify(zapros));
-                //xhr.send(zapros);
+                    //            setTimeout(() => {
+                    //                if (xhr.status == 200 && xhr.readyState == 4) {
+                    //                    console.log(`Правильный запрос`);
+                    //                    var response = JSON.parse(xhr.responseText);
 
-                //Для GET запросов
-                //xhr.send(null);
-                return false;
+                    //                    $(`#${formID}_result`).addClass('btn-info');
+                    //                    //Если вовзращаемый JSON ответ от контроллера не содержит параметра result
+                    //                    $(`#${formID}_result`).html(response);
+
+                    //                    //Если вовзращаемый JSON ответ от контроллера содержит параметра result
+                    //                    //$(`#${formID}_result`).html(response.result);
+                    //                }
+                    //                else
+                    //                    console.log(`Неправильный запрос`);
+
+                    //                //if (xhr.readyState == 4 && xhr.status == 200) {
+                    //                //    alert(xhr.responseText);
+                    //                //}
+                    //            }, 500);
+
+                    //        }
+                    //        //Для POST запросов
+                    //        xhr.send(JSON.stringify(zapros));
+                    //        //xhr.send(zapros);
+
+                    //        //Для GET запросов
+                    //        //xhr.send(null);
+                    //        //return false;
+
+                    //    } else {
+                    //        alert('FAILED to 192.168.1.200');
+                    //    }
+                    //});
             } catch (ex) {
                 console.log(ex)
             }
