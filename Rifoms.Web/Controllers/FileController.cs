@@ -52,6 +52,19 @@ namespace Rifoms.Web.Controllers
                     case ".zip":
                         contentType = "application/zip";
                         break;
+                    case ".pdf":
+                        contentType = "application/pdf";
+                        break;
+                    case ".rtf":
+                        contentType = "application/rtf";
+                        break;
+                    case ".png":
+                        contentType = "image/png";
+                        break;
+                    case ".jpg":
+                    case ".jpeg":
+                        contentType = "image/jpeg";
+                        break;
                 }
                 return PhysicalFile(filePath, contentType, fileName);
             }
