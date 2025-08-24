@@ -234,19 +234,19 @@ namespace Rifoms.Web
 
                 routes.MapRoute(
                   name: "login",
-                  template: "admin/login.html",
-                  defaults: new { controller = "Admin", action = "Login" });
+                  template: "auth/login.html",
+                  defaults: new { controller = "Auth", action = "Login" });
 
 
                 routes.MapRoute(
                   name: "forgot",
-                  template: "admin/forgot.html",
-                  defaults: new { controller = "Admin", action = "Forgot" });
+                  template: "auth/forgot.html",
+                  defaults: new { controller = "Auth", action = "Forgot" });
 
                 routes.MapRoute(
                   name: "register",
-                  template: "admin/register.html",
-                  defaults: new { controller = "Admin", action = "Register" });
+                  template: "auth/register.html",
+                  defaults: new { controller = "Auth", action = "Register" });
 
                 #endregion
 

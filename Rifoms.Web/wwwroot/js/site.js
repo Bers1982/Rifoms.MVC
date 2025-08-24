@@ -28,7 +28,6 @@ function fnCenterDiv() {
 function fnFindPolis(formID) {
     $("#" + formID).submit(function (e) {
         e.preventDefault();
-        //alert(formID);
         var formData = new FormData(document.getElementById(e.target.id));
 
         if (fnValidate(formID)) {
@@ -99,9 +98,6 @@ function fnFindPolis(formID) {
                 console.log(ex)
             }
         }
-        //else {
-        //    alert('Neudacha');
-        //}
     });
 }
 

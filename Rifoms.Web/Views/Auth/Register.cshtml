@@ -1,12 +1,13 @@
-﻿@model ForgotModel
+﻿@model RegisterModel
 @{
-    ViewData["Title"] = "Восстановление";
-    <h1>Восстановление доступа</h1>
+    ViewData["Title"] = "Регистрация";
+
+    <h1>Зарегистрироваться</h1>
     <hr />
     <div class="card p-4">
         <div class="card-body p-4">
-            <h1>Восстановление доступа</h1>
-            <p class="text-muted">Восстановите свой аккаунт</p>
+            <h1>Зарегистрироваться</h1>
+            <p class="text-muted">Создайте свой аккаунт</p>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text">
@@ -21,9 +22,24 @@
                 </div>
                 <input class="form-control" type="text" placeholder="Электронная почта">
             </div>
-            <button class="btn btn-block btn-warning" type="button">Восстановить</button>
-            <a class="btn btn-block btn-success" href="@($"{Model.SiteUrl}/admin/register.html")" type="button">Зарегистрироваться</a>
-            <a class="btn btn-block btn-primary" href="@($"{Model.SiteUrl}/admin/login.html")" type="button">Авторизоваться</a>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="icon-lock"></i>
+                    </span>
+                </div>
+                <input class="form-control" type="password" placeholder="Пароль">
+            </div>
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="icon-lock"></i>
+                    </span>
+                </div>
+                <input class="form-control" type="password" placeholder="Повторите пароль">
+            </div>
+            <a class="btn btn-block btn-success">Зарегистрироваться</a>
+            <a class="btn btn-block btn-primary" href="@($"{Model.SiteUrl}/auth/login.html")">Авторизоваться</a>
 
         </div>
         <div class="card-footer p-4">

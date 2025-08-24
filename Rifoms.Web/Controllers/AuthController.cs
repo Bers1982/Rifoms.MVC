@@ -17,11 +17,11 @@ namespace Rifoms.Web.Controllers
 {
     //[Authorize(Roles = "admin,manager", Policy = "ZayavkaPolicy")]
 
-    public class AdminController : BaseController<AdminController>
+    public class AuthController : BaseController<AuthController>
     {
 
-        public AdminController(IHttpContextAccessor httpContext, IDbService dbService,
-            ILogger<AdminController> logger)
+        public AuthController(IHttpContextAccessor httpContext, IDbService dbService,
+            ILogger<AuthController> logger)
             : base(httpContext, dbService, logger)
         {
         }
