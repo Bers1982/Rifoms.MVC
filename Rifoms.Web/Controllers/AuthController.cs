@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 using Rifoms.Domain.Data.Models;
+using Rifoms.Domain.Data.Models.Base;
 using Rifoms.Domain.Infrastructure.Interfaces;
 
 using Rifoms.Web.Controllers.Base;
@@ -32,6 +33,14 @@ namespace Rifoms.Web.Controllers
 
             return View(await Task.FromResult(model));
         }
+
+        public async Task<IActionResult> Editor()
+        {
+            var model = new BaseModel();
+
+            return View(await Task.FromResult(model));
+        }
+
 
         public async Task<IActionResult> Forgot()
         {

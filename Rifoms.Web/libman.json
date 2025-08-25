@@ -4,20 +4,8 @@
   "libraries": [
     {
       "library": "bootstrap@5.3.7",
-      "destination": "wwwroot/lib/bootstrap/dist/",
+      "destination": "wwwroot/lib/bootstrap/",
       "files": [
-        "js/bootstrap.bundle.js",
-        "js/bootstrap.bundle.js.map",
-        "js/bootstrap.bundle.min.js",
-        "js/bootstrap.bundle.min.js.map",
-        "js/bootstrap.esm.js",
-        "js/bootstrap.esm.js.map",
-        "js/bootstrap.esm.min.js",
-        "js/bootstrap.esm.min.js.map",
-        "js/bootstrap.js",
-        "js/bootstrap.js.map",
-        "js/bootstrap.min.js",
-        "js/bootstrap.min.js.map",
         "css/bootstrap-grid.css",
         "css/bootstrap-grid.css.map",
         "css/bootstrap-grid.min.css",
@@ -49,8 +37,32 @@
         "css/bootstrap.rtl.css",
         "css/bootstrap.rtl.css.map",
         "css/bootstrap.rtl.min.css",
-        "css/bootstrap.rtl.min.css.map"
+        "css/bootstrap.rtl.min.css.map",
+        "js/bootstrap.bundle.js",
+        "js/bootstrap.bundle.js.map",
+        "js/bootstrap.bundle.min.js",
+        "js/bootstrap.bundle.min.js.map",
+        "js/bootstrap.esm.js",
+        "js/bootstrap.esm.js.map",
+        "js/bootstrap.esm.min.js",
+        "js/bootstrap.esm.min.js.map",
+        "js/bootstrap.js",
+        "js/bootstrap.js.map",
+        "js/bootstrap.min.js",
+        "js/bootstrap.min.js.map"
+      ]
+    },
+    {
+      "library": "jquery@3.7.1",
+      "destination": "wwwroot/lib/jquery",
+      "files": [
+        "jquery.js",
+        "jquery.min.js",
+        "jquery.min.map",
+        "jquery.slim.js",
+        "jquery.slim.min.js",
+        "jquery.slim.min.map"
       ]
     }
-  ]
+]
 }
