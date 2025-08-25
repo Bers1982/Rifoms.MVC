@@ -51,6 +51,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RAR", "RAR", "{7DD9B5FC-F879-4101-8D54-96A4CAF16592}"
 	ProjectSection(SolutionItems) = preProject
 		FILES\RAR\CuteEditor_for_NET6.zip = FILES\RAR\CuteEditor_for_NET6.zip
+		FILES\RAR\Editor_example.rar = FILES\RAR\Editor_example.rar
 		FILES\RAR\froala_editor_4.5.1.zip = FILES\RAR\froala_editor_4.5.1.zip
 	EndProjectSection
 EndProject

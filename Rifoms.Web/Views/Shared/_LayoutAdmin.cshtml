@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/reset.css" />
-    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
-
-    <link rel="stylesheet" href="~/css/widget.css" />
+    @*<link rel="stylesheet" href="~/css/reset.css" />*@
+    <link rel="stylesheet" href="~/summernote/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/summernote/summernote-bs4.min.css" />
+    @*<link rel="stylesheet" href="~/css/widget.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/rifoms.css" />
+    <link rel="stylesheet" href="~/css/rifoms.css" />*@
 
 </head>
 <body class="body_content">
@@ -44,19 +44,19 @@
     <main>
         <div class="container-fluid m-0 p-0 mt-4">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-2 px-4 py-2">
+                <!--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-2 px-4 py-2">-->
                     <!-- ASIDE MENU -->
-                    <partial name="_AsideMenu" />
+                    <!--<partial name="_AsideMenu" />-->
                     <!-- END ASIDE MENU -->
-                </div>
+                <!--</div>-->
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-6 col-xxl-7 ps-3 py-2">
                     @RenderBody()
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 py-2">
+                <!--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 py-2">-->
                     <!--ASIDE WIDGET ФФОМС-->
-                    <partial name="_AsideWidget" />
+                    <!--<partial name="_AsideWidget" />-->
                     <!--END ASIDE WIDGET ФФОМС-->
-                </div>
+                <!--</div>-->
             </div>
         </div>
     </main>
@@ -66,17 +66,43 @@
         <p><strong>&copy; @DateTime.Now.Year - ТФ ОМС РИ. Все права защищены.</strong></p>
     </footer>
 
-    <script src="~/lib/jquery/jquery.js" asp-append-version="true"></script>
-    <script src="~/lib/jquery/jquery.min.js" asp-append-version="true"></script>
-    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <script src="~/summernote/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/summernote/popper.min.js" asp-append-version="true"></script>
     <!--ЕСЛИ РАСКОММЕНТИШЬ ВСПЛЫВАЮЩИЕ ОКНА В ПРОВЕРКЕ ПОЛИСА НЕ СВОРАЧИВАЮТСЯ-->
-    <script src="~/lib/bootstrap/js/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/summernote/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/summernote/summernote-bs4.min.js" asp-append-version="true"></script>
+    <script src="~/summernote/lang/summernote-ru-RU.js" asp-append-version="true"></script>
 
-    <script src="https://pos.gosuslugi.ru/bin/script.min.js"></script>
-    <script>Widget("https://pos.gosuslugi.ru/form", 354207)</script>
+    @*<script src="https://pos.gosuslugi.ru/bin/script.min.js"></script>
+    <script>Widget("https://pos.gosuslugi.ru/form", 354207)</script>*@
 
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        $(document).ready(function () {
 
+          
+
+
+            $('#summernote').summernote({
+                lang: 'ru-RU',
+                placeholder: 'Здесь находится ваш контенет',
+                tabsize: 2,
+                height: 120,
+                fontNames: ['Arial', 'summernote', 'Comic Sans MS', 'Courier New', 'Helvetica', 'Impact', 'Lucida Grande', 'Tahoma', 'Times New Roman', 'Verdana', 'CustomWebFont'],
+                fontSizes: ['8', '9', '10', '11', '12', '14', '18', '24', '36', '48', '64', '82', '150'],
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['fontSizes' ['8', '9', '10', '11', '12', '14', '18', '24', '36', '48', '64', '82', '150']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['codeview', 'help']]
+                ],
+                buttons: { cancel: CancelButton }
+            });
+        });
+    </script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
