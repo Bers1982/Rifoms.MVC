@@ -235,7 +235,7 @@ VALUES(1,
 							<h3 class="modal-title">Загрузка из ТФОМС РИ...</h3>
                         </div>
 						<div class="modal-body text-center">
-							<img src="/images/web/spinner_green_64.gif" />
+							<img src="/images/web/spinner_green_32.gif" />
 						</div>
                     </div>
 				</div>	
