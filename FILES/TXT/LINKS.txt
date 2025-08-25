@@ -1,0 +1,26 @@
+Create RSS Feed Using ASP.NET
+https://www.c-sharpcorner.com/UploadFile/9444a3/create-rss-feed-using-Asp-Net/
+
+КАРУСЕЛЬКА ИЗ ФОТО
+https://atuin.ru/blog/karusel-dlya-fotografij/
+
+ASP.NET CORE DATABASE FIRST FROM EXISTING DB
+https://csharp.webdelphi.ru/ef-core-podklyuchenie-k-sushhestvuyushhej-baze-dannyx-mysql/#__mysql
+Create RSS Feed Using ASP.NET
+https://www.c-sharpcorner.com/UploadFile/9444a3/create-rss-feed-using-Asp-Net/
+
+КАРУСЕЛЬКА ИЗ ФОТО
+https://atuin.ru/blog/karusel-dlya-fotografij/
+
+CONVERT TO WEBP IMAGES
+https://stackoverflow.com/questions/54136197/how-to-convert-jpg-to-webp-in-c-sharp
+
+FRIENDLY URLS's
+https://habr.com/ru/articles/132799/
+
+C# QR Code Generator for .NET
+https://ironsoftware.com/csharp/barcode/tutorials/csharp-qr-code-generator/
+
+HABRA Интеграция с ЕСИА для .Net: запутаннее, чем кажется
+https://habr.com/ru/articles/708774/
+https://habr.com/ru/articles/499016/
