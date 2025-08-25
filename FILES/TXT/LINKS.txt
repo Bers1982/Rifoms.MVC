@@ -24,3 +24,6 @@ https://ironsoftware.com/csharp/barcode/tutorials/csharp-qr-code-generator/
 HABRA Интеграция с ЕСИА для .Net: запутаннее, чем кажется
 https://habr.com/ru/articles/708774/
 https://habr.com/ru/articles/499016/
+
+ASP.NET Core MVC. Установка и настройка WYSIWYG-редактора TinyMCE
+https://alekseev74.ru/lessons/show/aspnet-core-mvc/tinymce
