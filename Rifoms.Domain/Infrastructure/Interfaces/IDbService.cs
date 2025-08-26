@@ -46,6 +46,14 @@ namespace Rifoms.Domain.Infrastructure.Interfaces
         /// </summary>
         /// <returns></returns>
         Task<List<CmsContent>> GetContents(int pageSize);
+
+        /// <summary>
+        /// Получение КОНТЕНТА по ID новости
+        /// </summary>
+        /// <param name="seolink"></param>
+        /// <returns></returns>
+        Task<ContentModel> GetContentBySeolinkAsync(string seolink);
+
         /// <summary>
         /// Получение КОНТЕНТА по ID новости
         /// </summary>
@@ -60,13 +68,7 @@ namespace Rifoms.Domain.Infrastructure.Interfaces
         /// <returns></returns>
         Task<ContentModel> GetContentsByCategoryIDAsync(int id);
 
-        /// <summary>
-        /// Получение КОНТЕНТА по SEOLINKU новости
-        /// </summary>
-        /// <param name="seolink"></param>
-        /// <returns></returns>
-        Task<CmsContent> GetContentBySeolinkAsync(string seolink);
-
+     
         /// <summary>
         /// Получение СПИСКА (ЛИСТА, в случае, если больше одного) КОНТЕНТА по ID новости
         /// </summary>

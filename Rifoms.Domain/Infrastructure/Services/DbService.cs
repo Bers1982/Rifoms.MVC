@@ -112,12 +112,25 @@ namespace Rifoms.Domain.Infrastructure.Services
                 .ToListAsync();
         }
 
-        public async Task<CmsContent> GetContentBySeolinkAsync(string seolink)
+        public async Task<ContentModel> GetContentBySeolinkAsync(string seolink)
         {
             using var dbContext = dbFactory();
-            return await dbContext.CmsContents
-                .Where(c => c.Seolink == seolink)
-                .SingleOrDefaultAsync();
+            var model = new ContentModel { SiteUrl = SiteUrl };
+            model.CurrentContent = await dbContext.CmsContents
+               .Where(c => c.Seolink.Contains(seolink))
+               .SingleOrDefaultAsync();
+            model.CurrentContents = null;
+            model.CurrentCategory = null;
+            if (model.CurrentContent != null)
+            {
+                if (model.CurrentContent.CategoryId == 1 || model.CurrentContent.CategoryId == 6)
+                {
+                    model.BreadCrumbs = new List<BreadCrumbModel>();
+                    model.BreadCrumbs = await GetBreadCrumbs(model.CurrentContent.Id, model.CurrentContent.Title, model.CurrentContent.Seolink, model.SiteUrl, "mainmenu");
+                }
+            }
+
+            return model;
         }
 
         public async Task<ContentModel> GetContentByIDAsync(int id)
@@ -259,7 +272,7 @@ namespace Rifoms.Domain.Infrastructure.Services
             model.CurrentContent = null;
             model.CurrentContents = null;
             model.CurrentCategory = await dbContext.CmsCategories
-               .Where(c => c.Id==id)
+               .Where(c => c.Id == id)
                .SingleOrDefaultAsync();
             return model;
         }

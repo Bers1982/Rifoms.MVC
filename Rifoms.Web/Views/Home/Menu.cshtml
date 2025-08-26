@@ -1,0 +1,38 @@
+﻿@model ContentModel
+@{
+    ViewData["Title"] = Model.CurrentContent != null ? $"{Model.CurrentContent.Title} ТФ ОМС РИ" : string.Empty;
+}
+@{
+    if (Model.CurrentContent != null)
+    {
+        <!-- DIV BREADCRUMBS КОНТЕНТА -->
+
+        if (Model.CurrentContent.CategoryId == 1 || Model.CurrentContent.CategoryId == 6)
+        {
+            <div class="row mh-100">
+                <div class="col-12">
+                    @{
+                        var BreadCrumbs = Model.BreadCrumbs;
+                    }
+                    <partial name="_Breadcrumb" model="BreadCrumbs" />
+                </div>
+            </div>
+        }
+        <!-- СТРАНИЦА КОНТЕНТА -->
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-row flex-nowrap justify-content-between align-content-start">
+                    <h2 class="mb-3 fw-bolder text-primary text-wrap">
+                        @Model.CurrentContent.Title
+                    </h2>
+                </div>
+                <hr />
+
+                <div class="paragraf-text">
+                    @Html.Raw(Model.CurrentContent.Content)
+                </div>
+                <hr />
+            </div>
+        </div>
+    }
+}

@@ -21,7 +21,7 @@ namespace Rifoms.Web.Controllers
 
         public async Task<IActionResult> AskQuestion()
         {
-            var model= await Task.FromResult(new ContentModel());
+            var model = await Task.FromResult(new ContentModel());
             return base.View(model);
         }
 
@@ -56,6 +56,18 @@ namespace Rifoms.Web.Controllers
             return base.View(model);
         }
 
+        /// <summary>
+        /// Метод для получения текущей новости, контента или дирекции и так далее
+        /// Запускается из меню
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IActionResult> Menu()
+        {
+            var seolink = ExtractSEOlink(Request.Path.Value).Replace("menu/","");
+            var model = new ContentModel();
+            model = await dbService.GetContentBySeolinkAsync(seolink);
+            return base.View(model);
+        }
 
         /// <summary>
         /// Метод для получения текущей новости, контента или дирекции и так далее
@@ -72,7 +84,7 @@ namespace Rifoms.Web.Controllers
                 model = await dbService.GetContentByIDAsync(id);
             else
             {
-                seolink = seolink.Replace("/", string.Empty).Replace(".html",string.Empty);
+                seolink = seolink.Replace("/", string.Empty).Replace(".html", string.Empty);
                 var categoryId = await dbService.GetCategoryIDBySeolink(seolink);
                 model = await dbService.GetContentsByCategoryIDAsync(categoryId);
                 if (model.CurrentContents.Count == 0)
