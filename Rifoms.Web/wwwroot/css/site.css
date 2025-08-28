@@ -11,6 +11,39 @@ html, body {
     display: none;
 }
 
+
+/*НАЧАЛО Стили для нового календаря в сервисе проверки полиса и админке */
+.input-group-append > .btn-outline-secondary {
+    color: #007bff;
+    border-color: #007bff
+}
+
+    .input-group-append > .btn-outline-secondary:hover {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff
+    }
+
+    .input-group-append > .btn-outline-secondary.focus, .btn-outline-secondary:focus {
+        box-shadow: 0 0 0 .2rem rgba(0,123,255,.5)
+    }
+
+    .input-group-append > .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
+        color: #007bff;
+        background-color: transparent
+    }
+
+    .input-group-append > .btn-outline-secondary:not(:disabled):not(.disabled).active, .btn-outline-secondary:not(:disabled):not(.disabled):active, .show > .btn-outline-secondary.dropdown-toggle {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff
+    }
+
+        .input-group-append > .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .show > .btn-outline-secondary.dropdown-toggle:focus {
+            box-shadow: 0 0 0 .2rem rgba(0,123,255,.5)
+        }
+/*КОНЕЦ  Стили для нового календаря в сервисе проверки полиса и админке */
+
 /*Стили с родного сайта*/
 
 .mod_latest_entry {
@@ -115,22 +148,22 @@ aside > ul > li > a > span {
         }
 
     .paragraf-text > table {
-        margin:0px auto;
+        margin: 0px auto;
     }
 
-    .paragraf-text > table > tbody > tr > td > p {
-        text-align: center;
-    }
-    
-    .paragraf-text > table > tbody > tr > td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding: 5px;
-    }
+        .paragraf-text > table > tbody > tr > td > p {
+            text-align: center;
+        }
 
-    .paragraf-text > table.w-100 > tbody > tr > td {
-        border: 0;
-    }
+        .paragraf-text > table > tbody > tr > td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        .paragraf-text > table.w-100 > tbody > tr > td {
+            border: 0;
+        }
 
         .paragraf-text > a,
         .paragraf-text > .general_cont > div > p,

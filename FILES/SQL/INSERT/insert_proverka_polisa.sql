@@ -58,7 +58,7 @@ VALUES(1,
                         </div>
                         <div class="col-6 mt-3">
                             <label>Дата рождения</label>
-                            <input type="date" name="DR" placeholder="дд.мм.гггг" class="form-control border-1 border-primary rounded-3" />
+                            <input name="DR" placeholder="дд.мм.гггг" class="border border-primary rounded-start-3" />
                         </div>
                         <div class="col-12 mt-3">
                             <button type="submit" onclick="fnFindPolis(\'SearchFio\')" class="btn btn-primary text-light">Начать поиск</button>
@@ -102,7 +102,7 @@ VALUES(1,
                         </div>
                         <div class="col-6 mt-3">
                             <label>Дата рождения</label>
-                            <input type="date" name="DR" placeholder="дд.мм.гггг" class="form-control border-1 border-primary rounded-3" />
+                            <input name="DR" placeholder="дд.мм.гггг" class="border border-primary rounded-start-3" />
                         </div>
                         <div class="col-12 mt-3">
                             <button type="submit" onclick="fnFindPolis(\'SearchFirst\')" class="btn btn-primary text-light">Начать поиск</button>
@@ -139,7 +139,7 @@ VALUES(1,
                         </div>
                         <div class="col-6 mt-3">
                             <label>Дата рождения</label>
-                            <input type="date" name="DR" placeholder="дд.мм.гггг" class="form-control border-1 border-primary rounded-3" />
+                            <input name="DR" placeholder="дд.мм.гггг" class="border border-primary rounded-start-3" />
                         </div>
                         <div class="col-12 mt-3">
                             <button type="submit" onclick="fnFindPolis(\'SearchSecond\')" class="btn btn-primary text-light">Начать поиск</button>
@@ -176,7 +176,7 @@ VALUES(1,
                         </div>
                         <div class="col-6 mt-3">
                             <label>Дата рождения</label>
-                            <input type="date" name="DR" placeholder="дд.мм.гггг" class="form-control border-1 border-primary rounded-3" />
+                            <input name="DR" placeholder="дд.мм.гггг" class="border border-primary rounded-start-3" />
                         </div>
                         <div class="col-12 mt-3">
                             <button type="submit" onclick="fnFindPolis(\'SearchThird\')" class="btn btn-primary text-light">Начать поиск</button>
