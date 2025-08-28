@@ -50,19 +50,32 @@
         "css/bootstrap.rtl.min.css",
         "css/bootstrap.rtl.min.css.map"
       ]
+    },
+    {
+      "library": "jquery@3.7.1",
+      "destination": "wwwroot/lib/jquery/",
+      "files": [
+        "jquery.js",
+        "jquery.min.js",
+        "jquery.min.map",
+        "jquery.slim.js",
+        "jquery.slim.min.js",
+        "jquery.slim.min.map"
+      ]
+    },
+    {
+      "library": "gijgo@1.9.14",
+      "destination": "wwwroot/lib/gijgo/",
+      "files": [
+        "combined/css/gijgo.min.css",
+        "combined/fonts/gijgo-material.eot",
+        "combined/fonts/gijgo-material.svg",
+        "combined/fonts/gijgo-material.ttf",
+        "combined/fonts/gijgo-material.woff",
+        "combined/js/gijgo.min.js",
+        "combined/js/messages/messages.ru-ru.min.js"
+      ]
     }
   ],
-  {
-    "library": "jquery@3.7.1",
-    "destination": "wwwroot/lib/jquery/",
-    "files": [
-      "jquery.js",
-      "jquery.min.js",
-      "jquery.min.map",
-      "jquery.slim.js",
-      "jquery.slim.min.js",
-      "jquery.slim.min.map"
-    ]
-  },
   "version": "1.0"
 }
