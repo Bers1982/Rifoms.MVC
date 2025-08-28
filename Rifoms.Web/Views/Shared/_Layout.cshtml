@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
 
     <link rel="stylesheet" href="~/css/widget.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/rifoms.css" />
 
     <link href="~/lib/gijgo/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/css/site.css" />
 
 </head>
 <body class="body_content">
@@ -85,13 +85,16 @@
         if (ViewContext.HttpContext.Request.Path.Value.Contains("servis-dlya-proverki-aktualnosti-polis"))
         {
             <script type="text/javascript">
-                $('#datepicker').datepicker({
-                    uiLibrary: 'bootstrap5',
-                    format: 'dd.mm.yyyy',
-                    locale: 'ru-ru',
-                    autclose: true,
-                    todayHighlight: true
-                });
+                let length = document.getElementsByClassName("rounded-start-3").length;
+                for (var i = 1; i <= length; i++) {
+                    $(`#datepicker${i}`).datepicker({
+                        uiLibrary: 'bootstrap5',
+                        format: 'dd.mm.yyyy',
+                        locale: 'ru-ru',
+                        autclose: true,
+                        todayHighlight: true
+                    });
+                }                
             </script>
         }
     }

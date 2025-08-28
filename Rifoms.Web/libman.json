@@ -1,4 +1,5 @@
 {
+  "version": "1.0",
   "defaultProvider": "cdnjs",
   "libraries": [
     {
@@ -75,7 +76,29 @@
         "combined/js/gijgo.min.js",
         "combined/js/messages/messages.ru-ru.min.js"
       ]
+    },
+    {
+      "library": "summernote@0.9.1",
+      "destination": "wwwroot/lib/summernote/",
+      "files": [
+        "summernote-lite.css",
+        "summernote-lite.js",
+        "font/summernote.eot",
+        "font/summernote.ttf",
+        "font/summernote.woff",
+        "font/summernote.woff2",
+        "plugin/databasic/summernote-ext-databasic.css",
+        "plugin/databasic/summernote-ext-databasic.js",
+        "plugin/databasic/summernote-ext-databasic.min.css",
+        "plugin/databasic/summernote-ext-databasic.min.js",
+        "plugin/hello/summernote-ext-hello.js",
+        "plugin/hello/summernote-ext-hello.min.js",
+        "plugin/specialchars/summernote-ext-specialchars.js",
+        "plugin/specialchars/summernote-ext-specialchars.min.js",
+        "lang/summernote-ru-RU.js",
+        "lang/summernote-ru-RU.js.map",
+        "lang/summernote-ru-RU.min.js"
+      ]
     }
-  ],
-  "version": "1.0"
+  ]
 }
