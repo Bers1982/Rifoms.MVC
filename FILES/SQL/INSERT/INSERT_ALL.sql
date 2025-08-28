@@ -240,7 +240,7 @@ VALUES(1,
                     </div>
 				</div>	
 			</div>
-            <div id="newSearch" style="display:block;">
+	<div id="newSearch" style="display:block;">
     <div id="fio">
         <a class="btn btn-primary my-3 w-100" data-bs-toggle="collapse" data-bs-target="#collapseFio" aria-expanded="false" aria-controls="collapseExample">
             <div id="btnFio" class="float-start d-inline-block text-nowrap">
@@ -271,7 +271,7 @@ VALUES(1,
                         </div>
                         <div class="col-6 mt-3">
                             <label>Дата рождения</label>
-                            <input type="date" name="DR" placeholder="дд.мм.гггг" class="form-control border-1 border-primary rounded-3" />
+                            <input id="datepicker1" name="DR" placeholder="дд.мм.гггг" class="border border-primary rounded-start-3" />
                         </div>
                         <div class="col-12 mt-3">
                             <button type="submit" onclick="fnFindPolis(\'SearchFio\')" class="btn btn-primary text-light">Начать поиск</button>
@@ -279,7 +279,7 @@ VALUES(1,
                     </div>
                 </form>
             </div>
-            <!-- RESULT_DIV -->					
+            <!-- RESULT_DIV -->
             <div id="SearchFio_result" class="btn w-100 fw-bold mt-3 text-danger"></div>
         </div>
 
@@ -315,7 +315,7 @@ VALUES(1,
                         </div>
                         <div class="col-6 mt-3">
                             <label>Дата рождения</label>
-                            <input type="date" name="DR" placeholder="дд.мм.гггг" class="form-control border-1 border-primary rounded-3" />
+                            <input id="datepicker2" name="DR" placeholder="дд.мм.гггг" class="border border-primary rounded-start-3" />
                         </div>
                         <div class="col-12 mt-3">
                             <button type="submit" onclick="fnFindPolis(\'SearchFirst\')" class="btn btn-primary text-light">Начать поиск</button>
@@ -352,7 +352,7 @@ VALUES(1,
                         </div>
                         <div class="col-6 mt-3">
                             <label>Дата рождения</label>
-                            <input type="date" name="DR" placeholder="дд.мм.гггг" class="form-control border-1 border-primary rounded-3" />
+                            <input id="datepicker3" name="DR" placeholder="дд.мм.гггг" class="border border-primary rounded-start-3" />
                         </div>
                         <div class="col-12 mt-3">
                             <button type="submit" onclick="fnFindPolis(\'SearchSecond\')" class="btn btn-primary text-light">Начать поиск</button>
@@ -374,7 +374,7 @@ VALUES(1,
 
         <div class="collapse" id="collapseThird">
             <div class="card card-body border-1 border-primary">
-                <form id="SearchThird" method="post">
+                <form id="nSearchThird" method="post">
                     <div class="form-group row">
                         <div class="col-12 mt-3">
                             <label>Для поиска полиса единого образца необходимо заполнить <b>номер полиса и фамилию</b> или <b>номер полиса и дату рождения. 16 символов номера полиса единого образца</b> заносятся в номер полиса.</label>
@@ -389,7 +389,7 @@ VALUES(1,
                         </div>
                         <div class="col-6 mt-3">
                             <label>Дата рождения</label>
-                            <input type="date" name="DR" placeholder="дд.мм.гггг" class="form-control border-1 border-primary rounded-3" />
+                            <input id="datepicker4" name="DR" placeholder="дд.мм.гггг" class="border border-primary rounded-start-3" />
                         </div>
                         <div class="col-12 mt-3">
                             <button type="submit" onclick="fnFindPolis(\'SearchThird\')" class="btn btn-primary text-light">Начать поиск</button>
