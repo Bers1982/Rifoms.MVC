@@ -1,0 +1,180 @@
+﻿/*НАЧАЛО ОБЩИЕ СТИЛИ*/
+html, body {
+}
+
+.body_content {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.navbar {
+    height: 65px;
+}
+
+.navbar .navbar-nav > li > a {
+    height: 65px;
+    justify-content: center;
+    align-content: center;
+}
+
+.nav-link:hover,
+.navbar .navbar-nav > li > a:hover {
+    /*opacity: 60%;*/
+    /*height:100%;*/
+    /*padding:10px 5px;*/
+    background: #0657cf; 
+    background: -webkit-linear-gradient(to bottom, #0657cf, #78adfc); /*Chrome 10-25, Safari 5.1-6*/
+    background: linear-gradient(to bottom, #0657cf, #78adfc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    /*padding-top:10px;
+    padding-top:10px;
+    border: 2px solid #055ee1;
+    border-radius: 2px;*/
+}
+
+.bg-primary-gradient {
+    background: #0d6efd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0d6efd, #78adfc); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0d6efd, #78adfc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    /* border: 2px solid #055ee1;
+    border-radius: 2px;*/
+}
+
+
+.btn-light-secondary-gradient {
+    background: #d3d4d6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #d3d4d6, #b8baba); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #d3d4d6, #b8baba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 2px solid #b8baca;
+    border-radius: 5px;
+}
+
+.btn-pembe {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #f7ddde;
+    --bs-btn-border-color: #f2b0b3;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #f2b0b3;
+    --bs-btn-hover-border-color: #f2b0b3;
+}
+
+.btn-light-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d3d4d6;
+    --bs-btn-border-color: #565657;
+    --bs-btn-hover-color: #fff;
+    /*--bs-btn-hover-bg: #a3a4a4;*/
+    --bs-btn-hover-bg: #b8baba;
+    --bs-btn-hover-border-color: #292a2a;
+}
+
+.btn-pembe-gradient {
+    background: #f7ddde; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f7ddde, #f2b0b3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f7ddde, #f2b0b3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 2px solid #f2b0c3;
+    border-radius: 5px;
+}
+
+.btn-pembe-gradient:hover,
+.btn-light-secondary-gradient:hover {
+    opacity: 60%;
+
+}
+
+.current_page {
+    opacity: 60%;
+}
+
+/*КОНЕЦ ОБЩИЕ СТИЛИ*/
+
+
+/*НАЧАЛО Стили для ЛОГО*/
+
+.logo_bg {
+    background-color: #eaf4fd;
+    background-image: url('/images/web/top-bg-left.jpg');
+    background-repeat: no-repeat;
+    height: 177px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.logo_bg_admin {
+    /*background-color: #eaf4fd;*/
+    background-image: url('/images/web/top-bg-admin-logo.png');
+    background-repeat: no-repeat;
+    width:fit-content;
+    height: 40px;
+    
+  /*  display: flex;
+    flex-wrap: nowrap;
+    align-items: center;*/
+}
+
+.logo_bg a {
+    display: flex;
+    font-size: 2em;
+    font-weight: 600;
+    color: #3d65c4;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #65b5b0;
+    font-style: italic;
+    margin-left: 280px;
+}
+
+.logo_bg a:hover {
+    color: #403dc4;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #6576b5;
+}
+
+/*КОНЕЦ Стили для ЛОГО*/
+
+
+.navbar-bg-color {
+    background-color: #223C55 !important;
+    border: none !important;
+    border-width: 0 !important;
+}
+
+/*НАЧАЛО Стили для нового календаря в сервисе проверки полиса и админке */
+.gj-datepicker > .btn-outline-secondary {
+    color: #007bff;
+    border-color: #007bff
+}
+
+.gj-datepicker > .btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff
+}
+
+.gj-datepicker > .btn-outline-secondary.focus, 
+.btn-outline-secondary:focus {
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.5)
+}
+
+.gj-datepicker > .btn-outline-secondary.disabled, 
+.btn-outline-secondary:disabled {
+    color: #007bff;
+    background-color: transparent
+}
+
+.gj-datepicker > .btn-outline-secondary:not(:disabled):not(.disabled).active, 
+.btn-outline-secondary:not(:disabled):not(.disabled):active, 
+.show > .btn-outline-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff
+}
+
+.gj-datepicker > .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus, 
+.show > .btn-outline-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.5)
+}
+/*КОНЕЦ  Стили для нового календаря в сервисе проверки полиса и админке */

@@ -1,7 +1,101 @@
 ﻿@model BaseModel
-<a class="navbar-brand ms-5" href=@($"{Model.SiteUrl}/auth/editor.html")>
-    <img src="~/images/web/edit.gif" alt="Вход" title="Вход" />
-</a>
-<a class="navbar-brand ms-5" href=@($"{Model.SiteUrl}/auth/login.html")>
-    <img src="~/images/web/enter-icon.png" alt="Вход" title="Вход" />
-</a>
+<ul class="navbar-nav text-light me-auto mb-2 mb-lg-0">
+    @*МЕНЮ И ПОДМЕНЮ*@
+    <li class="nav-item dropdown">
+        <a class="nav-link text-light dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="~/images/web/menu.png" />Меню
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href=@($"{Model.SiteUrl}/menu/addmenu.html")><img src="~/images/web/add.png" />Добавить пункт меню</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href=@($"{Model.SiteUrl}/menu/createmenu.html")><img src="~/images/web/add.png" />Создать меню</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href=@($"{Model.SiteUrl}/menu/showmenus.html")><img src="~/images/web/list.png" />Показать все</a></li>
+        </ul>
+    </li>
+
+    @*РАЗДЕЛЫ И СТАТЬИ*@
+    <li class="nav-item dropdown">
+        <a class="nav-link text-light dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="~/images/web/content.png" />Каталог статей
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a class="dropdown-item" href=@($"{Model.SiteUrl}/menu/articles.html")>
+                    <img src="~/images/web/content.png" />Разделы и статьи
+                </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <a class="dropdown-item" href=@($"{Model.SiteUrl}/menu/createchapter.html")>
+                    <img src="~/images/web/add.png" />Создать раздел
+                </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <a class="dropdown-item" href=@($"{Model.SiteUrl}/menu/createarticle.html")>
+                    <img src="~/images/web/add.png" />Создать статью
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    @*ПОЛЬЗОВАТЕЛИ*@
+    <li class="nav-item dropdown">
+        <a class="nav-link text-light dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="~/images/web/users.png" />Пользователи
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a class="dropdown-item" href=@($"{Model.SiteUrl}/menu/users.html")>
+                    <img src="~/images/web/user.png" />Пользователи
+                </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <a class="dropdown-item" href=@($"{Model.SiteUrl}/menu/banlist.html")>
+                    <img src="~/images/web/banlist.png" />Бан-лист
+                </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <a class="dropdown-item" href=@($"{Model.SiteUrl}/menu/usergroup.html")>
+                    <img src="~/images/web/users.png" />Группы пользователей
+                </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <a class="dropdown-item" href=@($"{Model.SiteUrl}/menu/createuser.html")>
+                    <img src="~/images/web/add.png" />Создать пользователя
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    @*НАСТРОЙКИ САЙТА И СИСТЕМЫ*@
+    <li class="nav-item dropdown">
+        <a class="nav-link text-light dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="~/images/web/config.png" />Настройки
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a class="dropdown-item" href=@($"{Model.SiteUrl}/menu/config.html")>
+                    <img src="~/images/web/config.png" />Настройки сайта
+                </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <a class="dropdown-item" href=@($"{Model.SiteUrl}/menu/repairnested.html")>
+                    <img src="~/images/web/repairnested.png" />Проверка деревьев
+                </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <a class="dropdown-item" href=@($"{Model.SiteUrl}/menu/cron.html")>
+                    <img src="~/images/web/cron.png" />Задачи CRON
+                </a>
+            </li>
+        </ul>
+    </li>
+
+</ul>
