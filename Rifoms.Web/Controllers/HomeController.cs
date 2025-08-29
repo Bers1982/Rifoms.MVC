@@ -95,7 +95,8 @@ namespace Rifoms.Web.Controllers
                 model = await dbService.GetContentByIDAsync(id);
             else
             {
-                seolink = seolink.Replace("/", string.Empty).Replace(".html", string.Empty);
+                //seolink = seolink.Replace("/", string.Empty).Replace(".html", string.Empty);
+                seolink = ExtractSEOlink(seolink);
                 var categoryId = await dbService.GetCategoryIDBySeolink(seolink);
                 model = await dbService.GetContentsByCategoryIDAsync(categoryId);
                 if (model.CurrentContents.Count == 0)

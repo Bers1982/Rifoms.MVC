@@ -84,30 +84,32 @@ namespace Rifoms.Web.Controllers.Base
         }
 
         /// <summary>
-        /// REPLACE .HTML EXTENSION AND CHANGE LEADER CHARACTER "/"
-        /// AND GET SEOLINK
+        /// REPTURN SEOLINK AFTER LAST LEADER SYMBOL "/" FROM REQUEST PATH VALUE
         /// </summary>
         /// <param name="seolink"></param>
         /// <returns></returns>
         public string ExtractSEOlink(string seolink)
         {
             if (seolink != null)
-                seolink = seolink.Substring(1, seolink.Length - 1).Replace(".html", "");
+            {
+                seolink = seolink.Replace(".html", "");
+                int lastIndex = seolink.LastIndexOf("/");
+                seolink = seolink.Substring(lastIndex + 1);
+            }
             return seolink;
         }
 
         /// <summary>
-        /// REPLACE .HTML EXTENSION AND CHANGE LEADER CHARACTER "/"
-        /// AND GET ID
+        /// RETURN ID FROM REQUEST PATH VALUE
         /// </summary>
         /// <param name="seolink"></param>
         /// <returns></returns>
         public int ExtractIDFromRequest(string seolink)
         {
-            string value = ExtractSEOlink(seolink).Split("/")[0];
-            int id = 0;
-            if (int.TryParse(value, out id))
-                id = Convert.ToInt32(value);
+            seolink = seolink.Substring(1, seolink.Length - 1).Replace(".html", "");
+            string idValue = seolink.Split("/")[0];
+            if (int.TryParse(idValue, out int id))
+                id = Convert.ToInt32(idValue);
             return id;
         }
 

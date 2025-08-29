@@ -1,5 +1,6 @@
 ﻿@model ContentModel
-@{
+@{    
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = Model.CurrentContent != null ? $"{Model.CurrentContent.Title} ТФ ОМС РИ" : string.Empty;
 }
 @{
