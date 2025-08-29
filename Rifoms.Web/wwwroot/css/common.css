@@ -10,10 +10,11 @@ html, body {
     margin-left: 20px;
 }
 
-/*УБИРАЕМ  СТРЕЛОЧКУ В АДМИН-ПАНЕЛИ НАД ЗАГЛОВКАМИ МЕНЮ*/
-.dropdown-toggle::after {
+/*УБИРАЕМ  СТРЕЛОЧКУ В TOPMENU НАД ЗАГЛОВКАМИ МЕНЮ*/
+.text-light .dropdown-toggle::after {
     content: unset;
 }
+
 
 .navbar {
     height: 65px;
