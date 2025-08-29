@@ -85,3 +85,10 @@ SET content = '<p>Директор ТФ ОМС РИ — Дзейтов Маго�
 <a class=\"fw-bold text-decoration-none\" href=\"tel:88734724141\">8 (8734) 72-41-41</a> доб. 105</p>' 
 WHERE (id = '5');
 
+UPDATE gb_rifoms.cms_content
+SET
+description='<p class="font_16 fw-bold">            Адрес ТФОМС РИ:            <address class="font_16">                386203, г. Сунжа, ул. Богатырева, №. 127 .<br /><br />                Телефон:<br />                <a class="font_14 text-decoration-none" href="tel:+88734724141">8(8734)72-41-41</a> доб. 102</span><br /><br />                Эл. почта:<br />                <a class="font_14 text-decoration-none" href="mailto:rifoms@rifoms.ru">rifoms@rifoms.ru</a>            </address></p>',
+content='<div id="TfomsMap" class="bg-gradient border border-0 border-dark w-100"></div>'
+WHERE id=661;
+
+
