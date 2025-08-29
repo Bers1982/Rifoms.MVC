@@ -208,9 +208,7 @@ VALUES(1,
                  <tr><td colspan="2"><hr /></td></tr>
              </tbody>
          </table>');
-		 
-
-
+ 
 INSERT INTO `cms_content`
 (`category_id`,
 `user_id`,
@@ -374,7 +372,7 @@ VALUES(1,
 
         <div class="collapse" id="collapseThird">
             <div class="card card-body border-1 border-primary">
-                <form id="nSearchThird" method="post">
+                <form id="SearchThird" method="post">
                     <div class="form-group row">
                         <div class="col-12 mt-3">
                             <label>Для поиска полиса единого образца необходимо заполнить <b>номер полиса и фамилию</b> или <b>номер полиса и дату рождения. 16 символов номера полиса единого образца</b> заносятся в номер полиса.</label>
