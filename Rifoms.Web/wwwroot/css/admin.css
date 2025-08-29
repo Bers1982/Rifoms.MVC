@@ -28,19 +28,35 @@
     
 }
 
+html, body {
+    margin:0;
+    padding:0;
+}
+
 .body_content {
     margin: 0;
 }
 
+.navbar {
+    height: 45px;
+}
 
-.nav-item {
-    margin-left:20px;
+.navbar .navbar-nav > li > a {
+    height: 45px;
+    justify-content: center;
+    align-content: center;
 }
 
 .nav-link > img,
 .dropdown-item > img {
     margin-right:10px;
 }
+
+.bg-primary-gradient {
+    padding-top:25px;
+}
+
+
 
 #footer > p > strong, .form-control, .btn {
     /*font-family: "Arial Narrow", Arial, Helvetica, sans-serif;*/
