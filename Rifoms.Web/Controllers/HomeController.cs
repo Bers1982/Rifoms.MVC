@@ -74,7 +74,7 @@ namespace Rifoms.Web.Controllers
         /// <returns></returns>
         public async Task<IActionResult> Menu()
         {
-            var seolink = ExtractSEOlink(Request.Path.Value).Replace("menu/","");
+            var seolink = ExtractSEOlink(Request.Path.Value);
             var model = new ContentModel();
             model = await dbService.GetContentBySeolinkAsync(seolink);
             return base.View(model);

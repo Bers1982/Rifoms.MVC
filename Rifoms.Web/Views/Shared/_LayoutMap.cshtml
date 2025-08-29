@@ -4,44 +4,46 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/reset.css"/>
+    <link rel="stylesheet" href="~/css/reset.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/css/widget.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/rifoms.css" />
 
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/common.css" />
 </head>
 <body class="body_content">
 
     <div id="header" class="container-fluid m-0 p-0">
         <div class="logo_bg">
-            <a asp-page="/Index">
+            <a href="/">
                 <img src="~/images/web/logo_new1.png" alt="Логотип ТФ ОМС РИ" title="Логотип ТФ ОМС РИ" />
                 ТЕРРИТОРИАЛЬНЫЙ ФОНД<br /> ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО<br /> СТРАХОВАНИЯ РЕСПУБЛИКИ ИНГУШЕТИЯ
             </a>
         </div>
 
-        @*<nav class="navbar navbar-bg-color text-light navbar-expand-lg bg-body-tertiary">*@
         <nav class="navbar text-light navbar-expand-lg bg-primary-gradient">
-            <div class="container-fluid">
-                <a class="navbar-brand ms-5" asp-page="/Index">
+            <div class="container-fluid ">
+                <a class="navbar-brand ms-5" href="/">
                     <img src="~/images/web/home-icon.png" alt="На главную" title="Главная" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse d-inline-flex flex-md-row-reverse" id="navbarSupportedContent">
-                    <partial name="_TopAdminMenu" />
+                <div class="collapse navbar-collapse d-inline-flex" id="navbarSupportedContent">
                     <partial name="_TopMenu" />
+                    <partial name="_LoginMenu" />
                 </div>
             </div>
         </nav>
-
-        @*<partial name="_CookieConsentPartial" />*@
     </div>
 
     <main>
-        <div class="container-fluid m-0 p-0 mt-4 px-3 py-2">
-            @RenderBody()
+        <div class="container-fluid m-0 p-0 mt-4">
+            <div class="row">
+                <div class="col ps-3 py-2">
+                    @RenderBody()
+                </div>
+            </div>
         </div>
     </main>
 
@@ -53,12 +55,8 @@
     <script src="~/lib/jquery/jquery.js" asp-append-version="true"></script>
     <script src="~/lib/jquery/jquery.min.js" asp-append-version="true"></script>
     <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
-    <!--ЕСЛИ РАСКОММЕНТИШЬ ВСПЛЫВАЮЩИЕ ОКНА В ПРОВЕРКЕ ПОЛИСА НЕ СВОРАЧИВАЮТСЯ-->
-    @*<script src="~/lib/bootstrap/js/bootstrap.min.js" asp-append-version="true"></script>*@
-
-    <script src="https://pos.gosuslugi.ru/bin/script.min.js"></script>
-    <script>Widget("https://pos.gosuslugi.ru/form", 354207)</script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>

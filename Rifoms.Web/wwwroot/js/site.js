@@ -22,6 +22,16 @@ function fnCenterDiv() {
 }
 
 /**
+* Js-функция для установки высоты(свойства height) для контейнера
+* карты fomsMap
+*/
+function SetTfomsMapHeight(name) {
+    let headerHeight = document.getElementById("header").offsetHeight;
+    let mapHeight = (parseInt($(window).height() - headerHeight - 5));
+    document.getElementById(name).style.height = `${mapHeight}px`;
+}
+
+/**
  * ПРОВЕРКА ПИНГА ДЛЯ ДАННОГО АЙПИ ИЛИ УРЛА
  * @param {any} url
  */
