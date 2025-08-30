@@ -68,6 +68,10 @@
         <p><strong>&copy; @DateTime.Now.Year - ТФ ОМС РИ. Все права защищены.</strong></p>
     </footer>
 
+    <script src="https://pos.gosuslugi.ru/bin/script.min.js"></script>
+    <script>Widget("https://pos.gosuslugi.ru/form", 354207)</script>
+    <script src="~/js/widget.js" asp-append-version="true"></script>
+
     <script src="~/lib/jquery/jquery.js" asp-append-version="true"></script>
     <script src="~/lib/jquery/jquery.min.js" asp-append-version="true"></script>
     <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
@@ -76,9 +80,6 @@
 
     <!--ЕСЛИ РАСКОММЕНТИШЬ ВСПЛЫВАЮЩИЕ ОКНА В ПРОВЕРКЕ ПОЛИСА НЕ СВОРАЧИВАЮТСЯ-->
     @*<script src="~/lib/bootstrap/js/bootstrap.min.js" asp-append-version="true"></script>*@
-
-    <script src="https://pos.gosuslugi.ru/bin/script.min.js"></script>
-    <script>Widget("https://pos.gosuslugi.ru/form", 354207)</script>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
     @{
@@ -94,7 +95,7 @@
                         autclose: true,
                         todayHighlight: true
                     });
-                }                
+                }
             </script>
         }
     }
