@@ -49,7 +49,7 @@ html, body {
 
 .nav-link > img,
 .dropdown-item > img {
-    margin-right:10px;
+    margin-right:5px;
 }
 
 .bg-primary-gradient {
