@@ -19,6 +19,7 @@
         placeholder: 'Анонс статьи (необязательно)',
         tabsize: 2,
         height: 120,
+        maxwidth: 1000,
         fontNames: ['Arial', 'summernote', 'Comic Sans MS', 'Courier New', 'Helvetica', 'Impact', 'Lucida Grande', 'Tahoma', 'Times New Roman', 'Verdana', 'CustomWebFont'],
         fontSizes: ['11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'],
         toolbar: [

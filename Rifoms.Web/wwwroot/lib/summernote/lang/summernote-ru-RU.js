@@ -46,7 +46,7 @@ var __webpack_exports__ = {};
 			dialogTitle: 'Изменить атрибуты изображения',
 			widthLabel: 'Ширина',
 			heightLabel: 'Высота',
-			imageLockLabel: 'Сохранять пропорции',
+			imageLockLabel: 'Пропорции',
 			resizeLabel: 'Сбросить размер до исходного'
 		},
       image: {
