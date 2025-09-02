@@ -140,6 +140,20 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
     flex-direction: column;
 }
 
+.flex-row {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 #currentDate > img {
     margin-right: 5px;
 }
