@@ -19,7 +19,7 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
 /*X-Small devices (portrait phones, less than 576px)*/
 @media (min-width: 375px) and (max-width: 575.98px) {
     .summernote {
-        margin: 0 5px;
+        margin: 0 5px 5px 5px;
         /*max-width: 400px;*/
     }
 
@@ -41,7 +41,7 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
 @media (min-width: 575.98px) and (max-width: 767.98px) {
     .summernote {
         /*max-width: 650px;*/
-        margin: 0 5px;
+        margin: 0 5px 5px 5px;
     }
 
     .polis_service {
@@ -56,7 +56,7 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
 /*Medium devices (tablets, less than 992px)*/
 @media (min-width:767.98px) and (max-width:991.98px) {
     .summernote {
-        margin: 0 10px;
+        margin: 0 10px 10px 10px;
         /*max-width:800px;*/
     }
 
@@ -73,7 +73,7 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
 /*Large devices (desktops, less than 1200px)*/
 @media (min-width:991.98px) and (max-width: 1199.98px) {
     .summernote {
-        margin: 0 15px;
+        margin: 0 15px 15px 15px;
     }
 
     .polis_service {
@@ -88,7 +88,7 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
 /*X-Large devices (large desktops, less than 1400px)*/
 @media (min-width:1199.98px) and (max-width: 1399.98px) {
     .summernote {
-        margin: 0 20px;
+        margin: 0 20px 20px 20px;
     }
 
     .polis_service {
@@ -103,7 +103,7 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
 /*XX-Large devices (larger desktops)*/
 @media (min-width: 1399.98px) {
     .summernote {
-        margin: 0 30px;
+        margin: 0 30px 30px 30px;
     }
 
     .polis_service {
