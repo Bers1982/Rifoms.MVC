@@ -92,7 +92,22 @@
     <script>
         $(document).ready(function () {
             $('#summernoteDescr').summernote({
+                imageAttributes: {
+                    icon: '<i class="note-icon-pencil"/>',
+                    figureClass: 'figureClass',
+                    figcaptionClass: 'captionClass',
+                    captionText: 'Caption Goes Here.',
+                    manageAspectRatio: true // true = Lock the Image Width/Height, Default to true
+                },
                 lang: 'ru-RU',
+                popover: {
+                    image: [
+                        ['imagesize', ['resizeFull', 'resizeHalf', 'resizeQuarter']],
+                        ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                        ['remove', ['removeMedia']],
+                        ['custom', ['imageAttributes']],
+                    ],
+                },
                 placeholder: 'Анонс статьи (необязательно)',
                 tabsize: 2,
                 height: 120,

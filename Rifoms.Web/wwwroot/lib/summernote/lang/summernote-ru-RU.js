@@ -36,6 +36,19 @@ var __webpack_exports__ = {};
         superscript: 'Верхний индекс',
         size: 'Размер шрифта'
       },
+	  imageAttributes: {
+			edit: 'Редактировать',
+			titleLabel: 'Заголовок',
+			altLabel: 'Альтернативный текст',
+			captionLabel: 'Название',
+			tooltip: 'Редактировать картинку',
+			dialogSaveBtnMessage: 'Сохранить',
+			dialogTitle: 'Изменить атрибуты изображения',
+			widthLabel: 'Ширина',
+			heightLabel: 'Высота',
+			imageLockLabel: 'Сохранять пропорции',
+			resizeLabel: 'Сбросить размер до исходного'
+		},
       image: {
         image: 'Картинка',
         insert: 'Вставить картинку',
