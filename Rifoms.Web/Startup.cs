@@ -237,6 +237,11 @@ namespace Rifoms.Web
                     defaults: new { controller = "File", action = "Download" });
 
                 routes.MapRoute(
+                  name: "test",
+                  template: "auth/test.html",
+                  defaults: new { controller = "Auth", action = "Test" });
+
+                routes.MapRoute(
                     name: "editor",
                     template: "auth/editor.html",
                     defaults: new { controller = "Auth", action = "Editor" });

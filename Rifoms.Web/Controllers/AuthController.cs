@@ -34,6 +34,12 @@ namespace Rifoms.Web.Controllers
             return View(await Task.FromResult(model));
         }
 
+        public async Task<IActionResult> Test()
+        {
+            var model = new BaseModel();
+
+            return View(await Task.FromResult(model));
+        }
         public async Task<IActionResult> Editor()
         {
             var model = new BaseModel();
