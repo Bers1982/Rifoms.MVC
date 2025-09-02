@@ -33,7 +33,7 @@
                         <img src="~/images/web/calendar.png" alt="Текущая дата" />
                     </div>
                     <div id="currentTime" class="d-flex align-items-center">
-                        <img src="~/images/web/clock-3d.png"/>
+                        <img src="~/images/web/clock-3d.png" />
                         <div id="Time"></div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
             const today = new Date();
             const year = today.getFullYear();
             const month = today.getMonth();
-            const day = today.getDate();
+            const day = today.getDate().toString().padStart(2, "0");
             const currentDate = document.getElementById("currentDate");
             currentDate.innerHTML = currentDate.innerHTML + ` ${day} ${months[month]}`;
         });
@@ -88,7 +88,7 @@
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const seconds = String(now.getSeconds()).padStart(2, '0');
             const timeString = `${hours}:${minutes}:${seconds}`;
-                      
+
             document.getElementById("Time").innerHTML = ` ${timeString}`;
         }
 
