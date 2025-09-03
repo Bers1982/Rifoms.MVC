@@ -1,71 +1,163 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+/*Ресетим все*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    /* font-size: 100%;*/
+    font-family: inherit;
+    vertical-align: baseline;
 }
+
+/*Ресетим все*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font-size: 10px;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+}
+
+/*Картинка на всю ширину шапки и блок флекс для дочерних элементов*/
+.logo_bg {
+    background-image: url('/images/top-bg-left.jpg');
+    background-repeat: no-repeat;
+    display: flex;
+    height: 177px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*Верхний навбар цвет и элементы внутри в колонку*/
+.navbar {
+    background: #0d6efd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0d6efd, #78adfc); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0d6efd, #78adfc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+/*Картинка лого и надпись ТФОМС посередине верхнего родителя и отступ справа*/
+.navbar-brand {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: auto 60px;
+}
+
+/*Курсор ввиде ручки в меню и подменюшках*/
+.navbar-nav > li > a:hover,
+.navbar-nav .nav-item > ul > li > a:hover {
+    cursor: pointer;
+}
+
+/*Делаем слева отступы между менюшками в верхнем меню*/
+.navbar-nav .nav-item {
+    margin-left: 10px;
+}
+    /*Делаем картинки и надписи по вертикали посередине в меню и подменюшках*/
+    .navbar-nav .nav-item .nav-link,
+    .navbar-nav .nav-item > ul > li > a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+        /*Убираем стрелку внизу в верхнем меню*/
+        .navbar-nav .nav-item .nav-link::after {
+            content: unset;
+        }
+
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+/*html {
+    font-size: 14px;
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
+    font-size: 1rem;
+    line-height: inherit;
+}*/
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+/*X-Small devices (portrait phones, less than 576px)*/
+@media (min-width: 375px) and (max-width: 575.98px) {
+ 
+}
+
+/*Small devices (landscape phones, less than 768px)*/
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (min-width:767.98px) and (max-width:991.98px) {
+
+}
+
+/*Large devices (desktops, less than 1200px)*/
+@media (min-width:991.98px) and (max-width: 1199.98px) {
+
+}
+
+/*X-Large devices (large desktops, less than 1400px)*/
+@media (min-width:1199.98px) and (max-width: 1399.98px) {
+
+}
+
+/*XX-Large devices (larger desktops)*/
+@media (min-width: 1399.98px) {
+ 
 }
