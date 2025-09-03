@@ -6,7 +6,7 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
     outline: 0;
     font-weight: inherit;
     font-style: inherit;
-    /* font-size: 100%;*/
+    font-size: 100%;
     font-family: inherit;
     vertical-align: baseline;
 }
@@ -15,6 +15,21 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
     font-size: 10px;
     font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
 }
+
+.note-btn-group .note-btn {
+    font-size: 10px;
+}
+
+.form-check-label {
+    display: inline-block;
+}
+
+    .form-check-label > input,
+    .form-check-input {
+        position: absolute;
+        margin-top: 0.3rem;
+        margin-left: -1.25rem;
+    }
 
 /*X-Small devices (portrait phones, less than 576px)*/
 @media (min-width: 375px) and (max-width: 575.98px) {
@@ -87,6 +102,30 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
 
 /*X-Large devices (large desktops, less than 1400px)*/
 @media (min-width:1199.98px) and (max-width: 1399.98px) {
+    .note-btn-group .note-btn,
+    .note-btn-group .note-btn > span,
+    .note-placeholder,    
+    .dropdown-item,
+    .dropdown-item > span,
+    .modal-header > h4,
+    .modal-body .form-check > label,
+    .modal-body .form-group > label,
+    .modal-body .form-group > label > small,
+    .modal-body .form-group > input,
+    .modal-body > span, 
+    .modal-body > label > KBD,
+    .modal-footer > input,
+    .modal-footer > button,
+    input.form-control,
+    label.form-label,
+    .col_margin > h2{
+        font-size: 1.4rem;
+    }
+
+    .close {
+        font-size: 2.1rem;
+    }
+
     .summernote {
         margin: 0 20px 20px 20px;
     }
@@ -98,6 +137,13 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
     .col_margin, .col_margin > input, .col_margin > h2 {
         margin: 0 20px;
     }
+
+    /*.note-btn,
+    .note-dropdown-menu > a,
+    .note-dropdown-menu > a > span,
+    .note-modal > h4 {
+        font-size: 1.4rem;
+    }*/
 }
 
 /*XX-Large devices (larger desktops)*/
@@ -140,18 +186,18 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
     flex-direction: column;
 }
 
-.flex-row {
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
+.d-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.flex-column {
+.d-column {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 #currentDate > img {
