@@ -114,7 +114,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SELECT", "SELECT", "{4B0BA1
 		FILES\SQL\SELECT\SELECT_NEWS.sql = FILES\SQL\SELECT\SELECT_NEWS.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rifoms.BurgerMenuBootstrap4.4.1", "Rifoms.BurgerMenuBootstrap4.4.1\Rifoms.BurgerMenuBootstrap4.4.1.csproj", "{D0360EF6-34E7-425E-BA8A-FF1CDF2DFC1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rifoms.BurgerMenuBootstrap4.4.1", "Rifoms.BurgerMenuBootstrap4.4.1\Rifoms.BurgerMenuBootstrap4.4.1.csproj", "{33D6D59A-7594-4495-B7D8-DDB55D5C7073}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -134,10 +134,10 @@ Global
 		{EA272A56-A7F0-44EC-8DC4-A6D9CFC47CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA272A56-A7F0-44EC-8DC4-A6D9CFC47CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA272A56-A7F0-44EC-8DC4-A6D9CFC47CA2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D0360EF6-34E7-425E-BA8A-FF1CDF2DFC1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0360EF6-34E7-425E-BA8A-FF1CDF2DFC1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0360EF6-34E7-425E-BA8A-FF1CDF2DFC1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0360EF6-34E7-425E-BA8A-FF1CDF2DFC1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D6D59A-7594-4495-B7D8-DDB55D5C7073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D6D59A-7594-4495-B7D8-DDB55D5C7073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D6D59A-7594-4495-B7D8-DDB55D5C7073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D6D59A-7594-4495-B7D8-DDB55D5C7073}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
