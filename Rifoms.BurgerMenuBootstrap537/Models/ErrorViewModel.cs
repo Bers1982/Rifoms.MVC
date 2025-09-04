@@ -1,6 +1,6 @@
 using System;
 
-namespace Rifomd.BurgerMenuBootstrap537.Models
+namespace Rifoms.BurgerMenuBootstrap537.Models
 {
     public class ErrorViewModel
     {

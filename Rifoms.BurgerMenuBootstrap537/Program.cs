@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Rifomd.BurgerMenuBootstrap537
+namespace Rifoms.BurgerMenuBootstrap537
 {
     public class Program
     {

@@ -1,13 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Rifomd.BurgerMenuBootstrap537.Models;
-using System;
-using System.Collections.Generic;
+using Rifoms.BurgerMenuBootstrap537.Models;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Rifomd.BurgerMenuBootstrap537.Controllers
+namespace Rifoms.BurgerMenuBootstrap537.Controllers
 {
     public class HomeController : Controller
     {

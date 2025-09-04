@@ -1,71 +1,269 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+/*Картинка на всю ширину шапки и блок флекс для дочерних элементов*/
+.logo_bg {
+    background-image: url('/images/top-bg-left1.jpg');
+    background-repeat: no-repeat;    
+    display: flex;
+    height: 177px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
+
+    .logo_bg > a > span {
+        font-weight: 600;
+        color: #3d65c4;
+        text-decoration: none;
+        text-shadow: 1px 1px 2px #65b5b0;
+        font-style:italic;
+    }
+
+    .logo_bg > a > span:hover {
+        color: #403dc4;
+        text-decoration: none;
+        text-shadow: 1px 1px 2px #6576b5;
+    }
+
+/*Верхний навбар цвет и элементы внутри в колонку*/
+.navbar {
+    background: #0d6efd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0d6efd, #78adfc); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0d6efd, #78adfc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+/*Картинка лого и надпись ТФОМС посередине верхнего родителя и отступ справа*/
+.navbar-brand {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin:auto;
+}
+
+
+/*Курсор ввиде ручки в меню и подменюшках*/
+.navbar-nav > li > a:hover,
+.navbar-nav .nav-item > ul > li > a:hover {
+    cursor: pointer;
+}
+
+
+
+/*Делаем слева отступы между менюшками в верхнем меню*/
+#topmenu.navbar-nav .nav-item {
+    margin:0 0 0 10px;
+}
+
+/*Делаем дисплей флекс чтоб два меню были в ряд*/
+.collapse.show {
+    display:flex;
+    flex-direction:row;
+    align-items:baseline;
+}
+
+
+/*Делаем отступ справа для меню Логина*/
+.show ul#loginmenu {
+    margin:0 10px 0 0;
+}
+
+/*Делаем слева отступы между менюшками в верхнем меню*/
+#loginmenu.navbar-nav .nav-item {
+    margin:0;
+}
+    /*Делаем картинки и надписи по вертикали посередине в меню и подменюшках*/
+#topmenu.navbar-nav .nav-item .nav-link,
+#topmenu.navbar-nav .nav-item > ul > li > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+        /*Убираем стрелку внизу в верхнем меню*/
+    #topmenu.navbar-nav .nav-item .nav-link::after {
+        content: unset;
+    }
+
 
 /* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
+/*a {
+    color: #0366d6;
+}*/
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+/*html {
+    font-size: 14px;
+}*/
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+/*X-Small devices (portrait phones, less than 576px)*/
+@media (min-width: 375px) and (max-width: 575.98px) {
+    .navbar-brand > span {
+        font-size: 1.3rem;
+    }
+    .logo_bg, .logo_bg > img {
+        height: 127px;
+    }
+
+    .navbar-brand > img {
+        width: 58px;
+        height: 58px;
+    }
+
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.3rem;
+    }
+}
+
+/*Small devices (landscape phones, less than 768px)*/
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .navbar-brand > span {
+        font-size: 1.4rem;
+    }
+    .logo_bg, .logo_bg > img {
+        height: 137px;
+    }
+
+    .navbar-brand > img {
+        width: 68px;
+        height: 68px;
+    }
+
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.3rem;
+    }
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (min-width:767.98px) and (max-width:991.98px) {
+    .navbar-brand > span {
+        font-size: 1.5rem;
+    }
+    .logo_bg, .logo_bg > img {
+        height: 157px;
+    }
+
+    .navbar-brand > img {
+        width: 68px;
+        height: 68px;
+    }
+
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.4rem;
+    }
+}
+
+/*Large devices (desktops, less than 1200px)*/
+@media (min-width:991.98px) and (max-width: 1199.98px) {
+    .navbar-brand > span {
+        font-size: 1.6rem;
+    }
+    .logo_bg, .logo_bg > img {
+        height: 157px;
+    }
+
+    .navbar-brand > img {
+        width: 78px;
+        height: 78px;
+    }
+
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.4rem;
+    }
+}
+
+/*X-Large devices (large desktops, less than 1400px)*/
+@media (min-width:1199.98px) and (max-width: 1399.98px) {
+    .navbar-brand > span {
+        font-size: 1.7rem;
+    }
+    .logo_bg, .logo_bg > img {
+        height: 157px;
+    }
+    .navbar-brand > img {
+        width: 88px;
+        height: 88px;
+    }
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.4rem;
+    }    
+}
+
+/*XX-Large devices (larger desktops)*/
+@media (min-width: 1399.98px) {
+    .navbar-brand > span {
+        font-size: 1.8rem;
+    }
+    .logo_bg, .logo_bg > img {
+        height:177px;
+    }
+/*    .navbar-brand {
+        margin: auto 60px;
+    }
+*/
+.navbar-brand > img {
+        width:98px;
+        height:98px;
+    }
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.5rem;
+    }
 }
