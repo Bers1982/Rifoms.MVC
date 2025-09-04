@@ -44,8 +44,6 @@ for details on configuring this project to bundle and minify static web assets. 
     margin:auto;
 }
 
-    /*.navbar-brand > span {
-    }*/
 
 /*Курсор ввиде ручки в меню и подменюшках*/
 .navbar-nav > li > a:hover,
@@ -56,25 +54,26 @@ for details on configuring this project to bundle and minify static web assets. 
 
 
 /*Делаем слева отступы между менюшками в верхнем меню*/
-.navbar-nav .nav-item {
+#topmenu.navbar-nav .nav-item {
     margin-left: 10px;
 }
 
 /*Делаем слева отступы между менюшками в верхнем меню*/
-#loginmenu.navbar-nav.nav-item {
-    margin-left: 5px;
+#loginmenu.navbar-nav .nav-item {
+    margin-left: 0px;
+    margin-right:0px;
 }
     /*Делаем картинки и надписи по вертикали посередине в меню и подменюшках*/
-    .navbar-nav .nav-item .nav-link,
-    .navbar-nav .nav-item > ul > li > a {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
+#topmenu.navbar-nav .nav-item .nav-link,
+#topmenu.navbar-nav .nav-item > ul > li > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
         /*Убираем стрелку внизу в верхнем меню*/
-        .navbar-nav .nav-item .nav-link::after {
-            content: unset;
-        }
+    #topmenu.navbar-nav .nav-item .nav-link::after {
+        content: unset;
+    }
 
 
 /* Provide sufficient contrast against white background */
@@ -151,7 +150,8 @@ body {
         height: 58px;
     }
 
-    .navbar-nav .nav-item .nav-link {
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
         font-size: 1.3rem;
     }
 }
@@ -170,7 +170,8 @@ body {
         height: 68px;
     }
 
-    .navbar-nav .nav-item .nav-link {
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
         font-size: 1.3rem;
     }
 }
@@ -189,7 +190,8 @@ body {
         height: 68px;
     }
 
-    .navbar-nav .nav-item .nav-link {
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
         font-size: 1.4rem;
     }
 }
@@ -208,7 +210,8 @@ body {
         height: 78px;
     }
 
-    .navbar-nav .nav-item .nav-link {
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
         font-size: 1.4rem;
     }
 }
@@ -225,7 +228,8 @@ body {
         width: 88px;
         height: 88px;
     }
-    .navbar-nav .nav-item .nav-link {
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
         font-size: 1.4rem;
     }    
 }
@@ -246,7 +250,8 @@ body {
         width:98px;
         height:98px;
     }
-    .navbar-nav .nav-item .nav-link {
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
         font-size: 1.5rem;
     }
 }
