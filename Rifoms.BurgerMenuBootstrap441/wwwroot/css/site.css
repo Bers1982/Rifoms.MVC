@@ -58,9 +58,25 @@ for details on configuring this project to bundle and minify static web assets. 
     margin:0 0 0 10px;
 }
 
-.show ul#loginmenu {
-    margin:10px 0 0 10px;
+/*Делаем дисплей флекс чтоб два меню были в ряд*/
+.collapse.show {
+    display:flex;
+    flex-direction:row;
+    align-items:baseline;
 }
+
+/*Делаем дисплей флекс чтоб меню и подменю были в столбик*/
+.dropdown.show {
+    display: flex;
+    flex-direction: column;
+    width:fit-content;
+}
+
+/*Делаем отступ справа для меню Логина*/
+.show ul#loginmenu {
+    margin:0 10px 0 0;
+}
+
 /*Делаем слева отступы между менюшками в верхнем меню*/
 #loginmenu.navbar-nav .nav-item {
     margin:0;
