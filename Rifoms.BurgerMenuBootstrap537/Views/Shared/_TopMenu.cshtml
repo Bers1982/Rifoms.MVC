@@ -1,5 +1,10 @@
 ﻿@model BaseModel
-<ul class="navbar-nav text-light me-auto mb-2 mb-lg-0">    
+<ul id="topmenu" class="navbar-nav text-light">
+    <li class="nav-item main-brand">
+        <a href="/">
+            <img src="~/images/home-icon.png" alt="На главную" title="Главная" />
+        </a>
+    </li>
     <li class="nav-item dropdown">
         <a class="nav-link text-light dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             О фонде
@@ -44,7 +49,7 @@
             <li>
                 <hr class="dropdown-divider">
             </li>
-            <li>                
+            <li>
                 <a class="dropdown-item" href=@($"{Model.SiteUrl}/normativnye-pravovye-i-inye-akty-v-sfere-tfoms-ri.html")>
                     Локальные правовые и иные акты в сфере противодействия коррупции
                 </a>
@@ -119,7 +124,7 @@
                 <hr class="dropdown-divider">
             </li>
             <li>
-                <a class="dropdown-item"  href=@($"{Model.SiteUrl}/48/osnovnye-voprosy-organizacii-sistemy-oms.html")>
+                <a class="dropdown-item" href=@($"{Model.SiteUrl}/48/osnovnye-voprosy-organizacii-sistemy-oms.html")>
                     Основные вопросы организации системы ОМС
                 </a>
             </li>
@@ -191,10 +196,11 @@
     <!-- Раздел меню СЕРВИСЫ ДОБАВИЛ 22.07.2025  -->
     <li class="nav-item dropdown">
         <a class="nav-link text-light dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Сервисы        
+            Сервисы
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href=@($"{Model.SiteUrl}/56/zajavka-smo-na-uchastie-v-sisteme-oms.html")>
+            <li>
+                <a class="dropdown-item" href=@($"{Model.SiteUrl}/56/zajavka-smo-na-uchastie-v-sisteme-oms.html")>
                     Заявка СМО на участие в системе ОМС
                 </a>
             </li>
