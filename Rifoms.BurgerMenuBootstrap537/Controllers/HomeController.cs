@@ -1,19 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Rifoms.BurgerMenuBootstrap537.Models;
+using Rifoms.BurgerMenuBootstrap537.Controllers.Base;
+using Rifoms.Domain.Data.Models;
+using Rifoms.Domain.Infrastructure.Interfaces;
 using System.Diagnostics;
 
 namespace Rifoms.BurgerMenuBootstrap537.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController<HomeController>
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IHttpContextAccessor httpContext, IDbService dbService,
+                    ILogger<HomeController> logger)
+                    : base(httpContext, dbService, logger)
         {
-            _logger = logger;
         }
-
         public IActionResult Index()
         {
             return View();
