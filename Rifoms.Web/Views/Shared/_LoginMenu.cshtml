@@ -1,17 +1,17 @@
 ﻿@model BaseModel
-<ul class="navbar-nav">
-    <li>
-        <a class="navbar-brand ms-5" href=@($"{Model.SiteUrl}/auth/editor.html")>
+<ul id="loginmenu" class="navbar-nav">
+    <li class="nav-item">
+        <a class="navbar-brand" href=@($"{Model.SiteUrl}/auth/editor.html")>
             <img src="~/images/web/edit.gif" alt="Вход" title="Вход" />
         </a>
     </li>
-    <li>
-        <a class="navbar-brand ms-5" href=@($"{Model.SiteUrl}/auth/test.html")>
-            <img src="~/images/web/help.gif" alt="Вход" title="Вход" />
+    <li class="nav-item">
+        <a class="navbar-brand" href=@($"{Model.SiteUrl}/auth/test.html")>
+            <img src="~/images/web/add.gif" alt="Вход" title="Вход" />
         </a>
     </li>
-    <li>
-        <a class="navbar-brand ms-5" href=@($"{Model.SiteUrl}/auth/login.html")>
+    <li class="nav-item">
+        <a class="navbar-brand" href=@($"{Model.SiteUrl}/auth/login.html")>
             <img src="~/images/web/enter-icon.png" alt="Вход" title="Вход" />
         </a>
     </li>
