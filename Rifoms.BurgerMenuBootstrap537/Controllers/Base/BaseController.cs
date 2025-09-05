@@ -25,15 +25,8 @@ namespace Rifoms.BurgerMenuBootstrap537.Controllers.Base
     {
 
         #region public ReadOnly Objects
-        public readonly IWebHostEnvironment webHostEnvironment;
-        public readonly IConfiguration configuration;
-        public readonly RifomsDbContext dbContext;
         public readonly IHttpContextAccessor httpContext;
-        public readonly IDbService dbService;
-        public readonly IRazorRenderService razorRenderService;
         public readonly BaseModel baseModel;
-        //public readonly IEmailSender emailSender;
-        public readonly IMailService mailService;
         public readonly ILogger<T> logger;
         #endregion
 
@@ -61,20 +54,8 @@ namespace Rifoms.BurgerMenuBootstrap537.Controllers.Base
             baseModel = new BaseModel();
             foreach (var item in list)
             {
-                if (item is IWebHostEnvironment _webHostEnvironment)
-                    webHostEnvironment = _webHostEnvironment;
-                if (item is RifomsDbContext _dbContext)
-                    dbContext = _dbContext;
-                if (item is IConfiguration _configuration)
-                    configuration = _configuration;
                 if (item is IHttpContextAccessor _httpContext)
                     httpContext = _httpContext;
-                if (item is IDbService _dbService)
-                    dbService = _dbService;
-                if (item is IRazorRenderService _razorRenderService)
-                    razorRenderService = _razorRenderService;
-                if (item is IMailService _mailService)
-                    mailService = _mailService;
                 if (item is ILogger<T> _logger)
                     logger = _logger;
             }

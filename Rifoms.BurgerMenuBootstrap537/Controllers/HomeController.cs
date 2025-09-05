@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Rifoms.BurgerMenuBootstrap537.Controllers.Base;
 using Rifoms.Domain.Data.Models;
+using Rifoms.Domain.Data.Models.Base;
 using Rifoms.Domain.Infrastructure.Interfaces;
 using System.Diagnostics;
 
@@ -10,14 +11,14 @@ namespace Rifoms.BurgerMenuBootstrap537.Controllers
 {
     public class HomeController : BaseController<HomeController>
     {
-        public HomeController(IHttpContextAccessor httpContext, IDbService dbService,
-                    ILogger<HomeController> logger)
-                    : base(httpContext, dbService, logger)
+        public HomeController(IHttpContextAccessor httpContext)
+                    : base(httpContext)
         {
         }
         public IActionResult Index()
         {
-            return View();
+            var model = new BaseModel();
+            return View(model);
         }
 
         public IActionResult Privacy()
