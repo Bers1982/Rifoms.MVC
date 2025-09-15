@@ -30,7 +30,7 @@ VALUES(1,
 	<div id="newSearch" style="display:block;">
     <div id="fio">
         <a class="btn btn-primary my-3 w-100" data-bs-toggle="collapse" data-bs-target="#collapseFio" aria-expanded="false" aria-controls="collapseExample">
-            <div id="btnFio" class="float-start d-inline-block text-nowrap">
+            <div id="btnFio" class="float-start d-inline-block">
                 <img src="/images/web/enp_site.png" /> Проверить актуальность полиса по ФИО и дате роджения
             </div>
         </a>
@@ -74,7 +74,7 @@ VALUES(1,
 
     <div id="first">
         <a class="btn btn-primary my-3 w-100" data-bs-toggle="collapse" data-bs-target="#collapseFirst" aria-expanded="false" aria-controls="collapseExample">
-            <div id="btnFirst" class="float-start d-inline-block text-nowrap">
+            <div id="btnFirst" class="float-start d-inline-block">
                 <img src="/images/web/enp_site.png" /> Проверить актуальность полиса старого образца
             </div>
         </a>
@@ -117,7 +117,7 @@ VALUES(1,
 
     <div id="second">
         <a class="btn btn-primary my-3 w-100" data-bs-toggle="collapse" data-bs-target="#collapseSecond" aria-expanded="false" aria-controls="collapseExample">
-            <div id="btnSecond" class="float-start d-inline-block text-nowrap">
+            <div id="btnSecond" class="float-start d-inline-block">
                 <img src="/images/web/goznak_site.png" /> Проверить актуальность временного свидетельства
             </div>
         </a>
@@ -154,7 +154,7 @@ VALUES(1,
 
     <div id="third">
         <a class="btn btn-primary my-3 w-100" data-bs-toggle="collapse" data-bs-target="#collapseThird" aria-expanded="false" aria-controls="collapseExample">
-            <div id="btnThird" class="float-start d-inline-block text-nowrap">
+            <div id="btnThird" class="float-start d-inline-block">
                 <img src="/images/web/polis_site.png" /> Проверить актуальность полиса единого образца
             </div>
         </a>

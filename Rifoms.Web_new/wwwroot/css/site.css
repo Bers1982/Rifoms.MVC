@@ -597,7 +597,7 @@ body {
 
     .header_text,
     .paragraf-text {
-        margin: 0 5px 0 5px;
+        margin: 0 15px 0 15px;
     }
     /*Отступ для КНОПОК ВСЕ НОВОСТИ(РЕГИОНЛАЬНЫЕ , МЕСТНЫЕ)*/
     .tab-pane > .float-end {
