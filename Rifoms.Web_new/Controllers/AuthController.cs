@@ -34,6 +34,13 @@ namespace Rifoms.Web_new.Controllers
             return View(await Task.FromResult(model));
         }
 
+        public async Task<IActionResult> AccessDenied()
+        {
+            var model = new AccessDeniedModel();
+
+            return View(await Task.FromResult(model));
+        }
+
         public async Task<IActionResult> Test()
         {
             var model = new BaseModel();

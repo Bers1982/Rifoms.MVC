@@ -99,20 +99,24 @@ namespace Rifoms.Web_new
             services.AddTransient<IRazorRenderService, RazorRenderService>();
             //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-            //services.ConfigureApplicationCookie(options =>
-            //{
-            //    options.Cookie.Name = "TFomsRi";
-            //    options.ExpireTimeSpan = TimeSpan.FromHours(8);
-            //    options.Cookie.MaxAge = options.ExpireTimeSpan;
-            //    options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
-            //    options.SlidingExpiration = true;
-            //    options.Cookie.SameSite = SameSiteMode.Strict;
-            //    options.EventsType = typeof(CustomCookieAuthenticationEvents);
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Cookie.Name = "TFomsRi";
+                options.ExpireTimeSpan = TimeSpan.FromHours(8);
+                options.Cookie.MaxAge = options.ExpireTimeSpan;
+                options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
+                options.SlidingExpiration = true;
+                options.Cookie.SameSite = SameSiteMode.Strict;
+                options.EventsType = typeof(CustomCookieAuthenticationEvents);
 
-            //    options.LoginPath = new PathString("/Identity/Account/Login");
-            //    options.LogoutPath = new PathString("/Identity/Account/Logout");
-            //    options.AccessDeniedPath = new PathString("/Identity/Account/AccessDenied");
-            //});
+                //options.LoginPath = new PathString("/Identity/Account/Login");
+                //options.LogoutPath = new PathString("/Identity/Account/Logout");
+                //options.AccessDeniedPath = new PathString("/Identity/Account/AccessDenied");
+
+                options.LoginPath = new PathString("/auth/login.html");
+                options.LogoutPath = new PathString("/auth/logout.html");
+                options.AccessDeniedPath = new PathString("/auth/accessdenied.html");
+            });
 
             //for sessions
             services.AddSession();
@@ -178,8 +182,9 @@ namespace Rifoms.Web_new
                     policy.Requirements.Add(new ReportAccessRequirement(accessReport: true));
                 });
             });
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-            //services.AddRazorPages();
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -298,8 +303,6 @@ namespace Rifoms.Web_new
                     defaults: new { controller = "Home", action = "Content" });
 
                 #endregion
-
-
             });
         }
     }
