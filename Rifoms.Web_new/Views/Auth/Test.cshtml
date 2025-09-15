@@ -1,0 +1,93 @@
+﻿@model BaseModel
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "TEST-панель ТФОМС РИ";
+}
+@{
+    <div class="row">
+        <div class="col m-0 p-0">
+            <div class="col_margin border border-5 border-primary rounded rounded-5">
+                <h2>Создать статью</h2>
+                <div class="d-flex flex-row flex-nowrap">
+                    <div class="d-flex flex-column">
+                        <label for="inputArticle" class="form-label">Название статьи</label>
+                        <input type="text" class="form-control w-75" id="inputArticle" placeholder="name@example.com">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" checked="checked" type="checkbox" value="" id="checkShowArticle">
+                    </div>
+                </div>
+                <div class="summernote">
+                    <textarea id="summernoteDescr"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6 offset-md-3 mt-5 p-0">
+            <div class="col polis_service">
+                <div id="newSearch" style="display:block;">
+                    <h4 class="display-6">Проверка полиса</h4>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label class="form-label control-label fs-4">
+                                Сервис для проверки актуальности полиса !!!
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="fio">
+                        <a class="btn btn-primary my-3 w-100" data-toggle="collapse" data-target="#collapseFio" aria-expanded="false" aria-controls="collapseExample">
+                            <div id="btnFio" class="float-start d-inline-block text-wrap">
+                                <img src="~/images/web/enp_site.png" /> Проверить актуальность полиса по ФИО и дате рождения
+                            </div>
+                        </a>
+
+                        <div class="collapse" id="collapseFio">
+                            <div class="card card-body border-1 border-primary">
+                                <form id="SearchFio" method="post">
+                                    @Html.AntiForgeryToken()
+                                    <div class="form-group row">
+                                        <div class="col-12 mt-3">
+                                            <label>
+                                                Для поиска полиса необходимо заполнить <strong>фамилию, имя, отчество и дату рождения</strong>
+                                            </label>
+                                        </div>
+                                        <div class="col-6 mt-3">
+                                            <label>Фамилия</label>
+                                            <input type="text" name="FAM" placeholder="Фамилия" class="form-control border-1 border-primary rounded-3" />
+                                        </div>
+                                        <div class="col-6 mt-3">
+                                            <label>Имя</label>
+                                            <input type="text" name="IM" placeholder="Имя" class="form-control border-1 border-primary rounded-3" />
+                                        </div>
+                                        <div class="col-6 mt-3">
+                                            <label>Отчество</label>
+                                            <input type="text" name="OT" placeholder="Отчество" class="form-control border-1 border-primary rounded-3" />
+                                        </div>
+                                        <div class="col-6 mt-3">
+                                            <label>Дата рождения</label>
+                                            <input id="datepicker" name="DR" placeholder="дд.мм.гггг" class="form-control border-1 border-primary rounded-3" />
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <button type="submit" onclick="fnFindPolis('SearchFio')" class="btn btn-primary text-light">Начать поиск</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            @*RESULT_DIV*@
+                            <div id="SearchFio_result" class="btn w-100 fw-bold mt-3 fs-6 text-danger"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            fnStartSummernote('summernoteDescr');
+        });
+    </script>
+}

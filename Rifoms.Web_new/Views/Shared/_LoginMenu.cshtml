@@ -1,0 +1,19 @@
+﻿@model BaseModel
+<ul id="loginmenu" class="navbar-nav text-dark">
+    <li class="nav-item">
+        <a class="nav-link" href=@($"{Model.SiteUrl}/auth/editor.html")>
+            <img src="~/images/web/edit.gif" alt="Admin-panel" />
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href=@($"{Model.SiteUrl}/auth/test.html")>
+            <img src="~/images/web/add.gif" alt="Test" />
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href=@($"{Model.SiteUrl}/auth/login.html")>
+            <img src="~/images/web/enter-icon.png" alt="Enter" />
+        </a>
+    </li>
+</ul>
+

@@ -1,0 +1,778 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/*Тень для body*/
+.body_content {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/*ДЕЛАЕМ МИНИМАЛЬНУЮ ШИРИНУ ДЛЯ ВИДЖЕТА ГОСУСЛУГИ 100%*/
+#js-show-iframe-wrapper {
+    min-width: 100%;
+ }
+
+/*НАЧАЛО Стили для текста в футере, кнопок и форм-контролов для всех разрешений такое шрифт*/
+#footer > p > strong,
+.form-control,
+.btn {
+    font-size: 1.6rem;
+}
+/*КОНЕЦ Стили для текста в футере, кнопок и форм-контролов для всех разрешений такое шрифт*/
+
+/*ОТСТУП СНИЗУ И ПО КРАЯМ ДЛЯ ТЭГА BODY ДЛЯ РАЗНЫХ РАЗРЕШЕНИЙ*/
+.body_content {
+    margin: 0 0 25px 0;
+}
+
+/*НАЧАЛО СТИЛИ ДЛЯ КАРТИНОК КНОПОК СЕРВИСА ПОИСКА ПОЛИСА*/
+#btnFio > img,
+#btnFirst > img,
+#btnSecond > img,
+#btnThird > img {
+    width: 44px;
+    padding: 5px 0 5px 0;
+}
+/*КОНЕЦ СТИЛИ ДЛЯ КАРТИНОК КНОПОК СЕРВИСА ПОИСКА ПОЛИСА*/
+
+/*<!-- НАЧАЛО СТИЛИ ДЛЯ БОКОВОГО МЕНЮ КНОПОК -->*/
+.bf-116__btn-wrap {
+    font-size: 16px;
+}
+/*<!-- КОНЕЦ СТИЛИ ДЛЯ БОКОВОГО МЕНЮ КНОПОК -->*/
+
+
+/*СТИЛИ ДЛЯ БОКОВОГО МЕНЮ*/
+aside > ul > li > a,
+aside > ul > li > a > span {
+    font-size: 1.6rem;
+}
+
+    aside > ul > li > a > img {
+        float: left;
+        padding: 0 0 0 20px;
+    }
+/*КОНЕЦ СТИЛИ ДЛЯ БОКОВОГО МЕНЮ*/
+
+/*<!-- СТИЛИ ДЛЯ СТРАНИЦ НОВОСТЕЙ -->*/
+#news-tab.nav-link,
+#region-news-tab.nav-link {
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+/*<!-- КОНЕЦ СТИЛИ ДЛЯ СТРАНИЦ НОВОСТЕЙ -->*/
+
+/*НАЧАЛО СТИЛИ ДЛЯ НОВОСТЕЙ*/
+.tab-pane > div > h2 > a {
+    font-size: 1.6rem;
+}
+/*КОНЕЦ СТИЛИ ДЛЯ НОВОСТЕЙ*/
+
+/*СТИЛИ ДЛЯ ПАРАГРАФА*/
+.paragraf-text {
+    text-align: justify;
+    font-size: 1.6rem;
+}
+
+    .paragraf-text > div > p {
+        text-indent: 25pt;
+    }
+
+    /*.paragraf-text > p,*/
+    /*.paragraf-text > p > span,*/
+    .paragraf-text > p > img,
+    .paragraf-text > p > span > img,
+    /*.paragraf-text > p > strong > span,*/
+    .paragraf-text > p > strong > span > img {
+        float: left;
+        padding: 0 10px 10px 0;
+    }
+
+    .paragraf-text > p > span > u > strong,
+    .paragraf-text > p > u > span > strong,
+    .paragraf-text > p > span > b > u > span {
+        color: #0000ff;
+    }
+
+    .paragraf-text > p > span > b > span,
+    .paragraf-text > p > span > b > u > span {
+        color: #ff0000;
+    }
+
+    .paragraf-text > table {
+        margin: 0px auto;
+    }
+
+        .paragraf-text > table > tbody > tr > td > p {
+            text-align: center;
+        }
+
+        .paragraf-text > table > tbody > tr > td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        .paragraf-text > table.w-100 > tbody > tr > td {
+            border: 0;
+        }
+
+        .paragraf-text > a,
+        .paragraf-text > .general_cont > div > p,
+        .paragraf-text > .general_cont > div > p > a,
+        .paragraf-text > .general_cont > div > p > strong,
+        .paragraf-text > .general_cont > div > p > strong > strong,
+        .paragraf-text > h3 > span > u > a,
+        .paragraf-text > p,
+        .paragraf-text > p > a,
+        .paragraf-text > p > strong,
+        .paragraf-text > p > strong > strong,
+        .paragraf-text > p > strong > span,
+        .paragraf-text > p > strong > span > span > a,
+        .paragraf-text > p > span,
+        .paragraf-text > p > span > a,
+        .paragraf-text > p > span > b > a > span,
+        .paragraf-text > p > span > a > u > span,
+        .paragraf-text > p > span > span,
+        .paragraf-text > p > span > span > a,
+        .paragraf-text > p > span > u > strong,
+        .paragraf-text > p > span > u > strong > a,
+        .paragraf-text > p > span > u > strong > a > span,
+        .paragraf-text > p > span > span > a > span,
+        .paragraf-text > p > span > a > span,
+        .paragraf-text > p > span > strong,
+        .paragraf-text > p > span > strong > a > span,
+        .paragraf-text > p > span > strong > span,
+        .paragraf-text > p > a > span,
+        .paragraf-text > p > span > a > span
+        .paragraf-text > p > span > a > u > span,
+        .paragraf-text > p > b > span,
+        .paragraf-text > p > b > span > a,
+        .paragraf-text > p > b > u > span,
+        .paragraf-text > p > span > b > span,
+        .paragraf-text > p > span > b > span > a,
+        .paragraf-text > p > span > b > u > span,
+        .paragraf-text > p > u > span > a,
+        .paragraf-text > p > u > span > strong,
+        .paragraf-text > p > u > span > a > span,
+        .paragraf-text > p > u > span > u > a,
+        .paragraf-text > p > u > span > span > u > a,
+        .paragraf-text > p > u > strong > a,
+        .paragraf-text > p > u > strong > a > span,
+        .paragraf-text > table > tbody > tr > td > p,
+        .paragraf-text > table > tbody > tr > td > p > b,
+        .paragraf-text > table > tbody > tr > td > div > a,
+        .paragraf-text > table > tbody > tr > td > div > span,
+        .paragraf-text > table > tbody > tr > td > div > span > a,
+        .paragraf-text > div > p,
+        .paragraf-text > div > div > p,
+        .paragraf-text > div > div > p > span,
+        .paragraf-text > div > span,
+        .paragraf-text > div > span > a,
+        .paragraf-text > div > div > div > label,
+        .paragraf-text > div > div > a > div,
+        .paragraf-text > div > div > div > div > form > div > div > label,
+        .paragraf-text > div > div > div > div > form > div > div > label > strong,
+        .paragraf-text > ol > li,
+        .paragraf-text > ol > li > span,
+        .paragraf-text > ol > li > span > u > span > a,
+        .paragraf-text > ol > li > p > span > u > span > a,
+        .paragraf-text > ol > li > span > u > a > span > span,
+        .paragraf-text > ol > li > span > u > span > a > span > span,
+        .paragraf-text > ol > li > span > span > u > a > span,
+        .paragraf-text > ol > li > p > a,
+        .paragraf-text > ol > li > p > span > a,
+        .paragraf-text > ol > li > p > span > a > span,
+        .paragraf-text > ol > li > p > span > u > span > span > a,
+        .paragraf-text > ol > li > p > span > u > span > span > span > a > span,
+        .paragraf-text > ol > li > p > span > a > span > u > span > span > span > span,
+        .paragraf-text > ol > li > p > span > u > span > a > span > span > span > span,
+        .paragraf-text > ol > li > p > span > u > a > span > span,
+        .paragraf-text > ol > li > p > u > span,
+        .paragraf-text > ol > li > p > u > span > a,
+        .paragraf-text > ol > li > p > u > span > span,
+        .paragraf-text > ol > li > p > span > u > span > span,
+        .paragraf-text > ol > li > p > a > span > u > a > span,
+        .paragraf-text > ol > li > p > a > span > u > span > span,
+        .paragraf-text > ol > li > p > span > u > a > span,
+        .paragraf-text > ol > li > p > span > u > a,
+        .paragraf-text > ol > li > p > a > span,
+        .paragraf-text > ol > li > p > a > u > span,
+        .paragraf-text > ol > li > a > span > span > u,
+        .paragraf-text > ol > li > u > span > a > span > span,
+        .paragraf-text > ol > li > u > span > span > a > span > span,
+        .paragraf-text > ul > li,
+        .paragraf-text > ul > li > strong {
+            font-size: 1.6rem;
+        }
+
+
+/*Делаем так, чтобы первая картинке в новостях не изменялись размеры ширины,
+    для последующих картинок ширина будет подстраиваться под размер экрана,
+    а высоту просто отменяем
+*/
+.col-12 > .paragraf-text > p > img:nth-child(1),
+.col-12 > .paragraf-text > p > span > img:nth-child(1),
+.tab-pane > .paragraf-text > p > img,
+.tab-pane > .paragraf-text > p > span > img {
+    width: revert-layer;
+    float: left;
+    padding: 0 10px 10px 0;
+}
+
+.col-12 > .paragraf-text > p > img,
+.col-12 > .paragraf-text > p > span > img {
+    max-width: 100%;
+    max-height: fit-content;
+    padding: 5px 0 0 5px;
+}
+
+/*КОНЕЦ СТИЛИ ДЛЯ ПАРАГРАФА*/
+
+/*СТИЛИ ДЛЯ КОНТАКТ_ЦЕНТРА*/
+.contact-center-text,
+.contact-center-text > p,
+.contact-center-text > p > a,
+.contact-center-text > span,
+.contact-center-text > span > a,
+.contact-center-text > ul > li
+.contact-center-text > div > span > a,
+.contact-center-text > div > p {
+    text-align: justify;
+    font-size: 1.6rem;
+}
+
+.img_contact_center {
+    float: right;
+    margin: 5px 0 0 15px;
+    border: 1px solid #0d6efd;
+    border-radius: 13px;
+}
+/*КОНЕЦ СТИЛИ ДЛЯ КОНТАКТ_ЦЕНТРА*/
+
+/*ЦВЕТА И ПОДСВЕТКА ЛЯ КНОПОК*/
+.bg-primary-gradient {
+    background: #0d6efd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0d6efd, #78adfc); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0d6efd, #78adfc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    /* border: 2px solid #055ee1;
+    border-radius: 2px;*/
+}
+
+.btn-light-secondary-gradient {
+    background: #d3d4d6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #d3d4d6, #b8baba); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #d3d4d6, #b8baba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 2px solid #b8baca;
+    border-radius: 5px;
+}
+
+.btn-pembe {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #f7ddde;
+    --bs-btn-border-color: #f2b0b3;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #f2b0b3;
+    --bs-btn-hover-border-color: #f2b0b3;
+}
+
+.btn-light-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d3d4d6;
+    --bs-btn-border-color: #565657;
+    --bs-btn-hover-color: #fff;
+    /*--bs-btn-hover-bg: #a3a4a4;*/
+    --bs-btn-hover-bg: #b8baba;
+    --bs-btn-hover-border-color: #292a2a;
+}
+
+.btn-pembe-gradient {
+    background: #f7ddde; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f7ddde, #f2b0b3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f7ddde, #f2b0b3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 2px solid #f2b0c3;
+    border-radius: 5px;
+}
+
+    .btn-pembe-gradient:hover,
+    .btn-light-secondary-gradient:hover {
+        opacity: 60%;
+    }
+
+.current_page {
+    opacity: 60%;
+}
+
+/*КОНЕЦ ЦВЕТА И ПОДСВЕТКА ЛЯ КНОПОК*/
+
+/*СТИЛИ ДЛЯ ЛИЧНОГО КАБИНЕТА ГОСУСЛУГи*/
+.blue_p {
+    color: #0d6efd;
+    margin: 0 0 0 5px;
+}
+
+.img_gosuslugi {
+    margin: 0 0 0 15px;
+}
+/*КОНЕЦ СТИЛИ ДЛЯ ЛИЧНОГО КАБИНЕТА ГОСУСЛУГи*/
+
+/*Цвет для панели верхнего меню*/
+.bg-primary-gradient {
+    background: #0d6efd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0d6efd, #78adfc); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0d6efd, #78adfc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    /* border: 2px solid #055ee1;
+    border-radius: 2px;*/
+}
+
+/*Отступ для градиентный цвет для верхнего меню сверху и снизу*/
+.bg-primary-gradient {
+    padding: 10px 0 10px 0;
+}
+
+/*Картинка на всю ширину шапки и блок флекс для дочерних элементов*/
+
+.logo {
+    background-image: url('/images/web/bg.png');
+    background-repeat: repeat-x;
+    /* display: flex;
+    height: 177px;*/
+    width: 100%;
+    /* margin: auto;
+    padding: 0;*/
+}
+
+.logo_bg {
+    background-image: url('/images/web/top-bg-left_korot.png');
+    background-repeat: no-repeat;
+    display: flex;
+    height: 177px;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+}
+
+    .logo_bg > a > span {
+        font-weight: 600;
+        color: #3d65c4;
+        text-decoration: none;
+        text-shadow: 1px 1px 2px #65b5b0;
+        font-style: italic;
+    }
+
+        .logo_bg > a > span:hover {
+            color: #403dc4;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px #6576b5;
+        }
+
+/*Верхний навбар цвет и элементы внутри в колонку*/
+.navbar {
+    background: #0d6efd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0d6efd, #78adfc); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0d6efd, #78adfc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+/*Для кнопки тогглера, которая сворачивает меню в бургер меню
+    делаем отступ как менюшек*/
+.navbar-toggler {
+    margin: 0 0 0 10px;
+}
+
+/*Картинка лого и надпись ТФОМС посередине верхнего родителя и отступ справа*/
+.navbar-brand {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: auto;
+}
+
+/*Картинка возврат на главную, отсуп и посередине расположение*/
+.main-brand {
+    display: flex;
+    align-items: center;
+}
+
+    .main-brand > a {
+        margin: 0 0 0 20px;
+    }
+
+.collapse.show > ul > li.main-brand > a {
+    margin: 0 0 0 10px;
+}
+
+/*Курсор ввиде ручки в меню и подменюшках*/
+.navbar-nav > li > a:hover,
+.navbar-nav .nav-item > ul > li > a:hover {
+    cursor: pointer;
+}
+
+
+/*Делаем слева отступы между менюшками в верхнем меню. Для первого 
+элемента(картинка в виде домика для возврата на главную) отступ не делаем */
+#topmenu.navbar-nav .nav-item:first-child {
+    margin: 0 0 0 5px;
+}
+/*Делаем слева отступы между менюшками в верхнем меню*/
+#topmenu.navbar-nav .nav-item {
+    margin: 0 0 0 10px;
+}
+
+/*Делаем дисплей флекс чтоб два меню были в ряд*/
+.navbar-collapse.collapse.show {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 10px 0 0 0;
+}
+
+
+/*Делаем отступ справа для меню Логина*/
+.show ul#loginmenu {
+    margin: 0 10px 0 0;
+}
+
+/*Делаем слева отступы между менюшками в верхнем меню*/
+#loginmenu.navbar-nav .nav-item {
+    margin: 0;
+}
+
+/*Делаем картинки и надписи по вертикали посередине в меню и подменюшках*/
+#topmenu.navbar-nav .nav-item .nav-link,
+#topmenu.navbar-nav .nav-item > ul > li > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/*Перенос слов подменюшек, когда сайт свернут до бургерменю*/
+.collapse.show > #topmenu.navbar-nav .nav-item > ul > li > a.dropdown-item {
+    width: 100%;
+    text-wrap: inherit;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: unset;
+}
+/*Убираем стрелку внизу в верхнем меню*/
+#topmenu.navbar-nav .nav-item .nav-link::after {
+    content: unset;
+}
+
+
+/*НАЧАЛО Стили для нового календаря в сервисе проверки полиса и админке */
+.gj-datepicker > .btn-outline-secondary,
+.gj-datepicker > span > .btn-outline-secondary {
+    color: #007bff;
+    border-color: #007bff
+}
+
+    .gj-datepicker > .btn-outline-secondary:hover,
+    .gj-datepicker > span > .btn-outline-secondary:hover {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff
+    }
+
+    .gj-datepicker > .btn-outline-secondary.focus,
+    .gj-datepicker > span > .btn-outline-secondary.focus,
+    .btn-outline-secondary:focus {
+        box-shadow: 0 0 0 .2rem rgba(0,123,255,.5)
+    }
+
+    .gj-datepicker > .btn-outline-secondary.disabled,
+    .gj-datepicker > span > .btn-outline-secondary.disabled,
+    .btn-outline-secondary:disabled {
+        color: #007bff;
+        background-color: transparent
+    }
+
+    .gj-datepicker > .btn-outline-secondary:not(:disabled):not(.disabled).active,
+    .gj-datepicker > span > .btn-outline-secondary:not(:disabled):not(.disabled).active,
+    .btn-outline-secondary:not(:disabled):not(.disabled):active,
+    .show > .btn-outline-secondary.dropdown-toggle {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff
+    }
+
+        .gj-datepicker > .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+        .gj-datepicker > span > .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+        .btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
+        .show > .btn-outline-secondary.dropdown-toggle:focus {
+            box-shadow: 0 0 0 .2rem rgba(0,123,255,.5)
+        }
+/*КОНЕЦ  Стили для нового календаря в сервисе проверки полиса и админке */
+
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+/*html {
+    font-size: 14px;
+}*/
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+/*Стили для брейкпоинтов*/
+/*X-Small devices (portrait phones, less than 576px)*/
+@media (min-width: 375px) and (max-width: 575.98px) {
+    /*Шрифт текста верхнего лого*/
+    .navbar-brand > span {
+        font-size: 1.3rem;
+    }
+    /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
+    /*ОТСТУП ДЛЯ БОКОВОГО МЕНЮ А ТАКЖЕ ДЛЯ ВИДЖЕТА ГОСУСЛУГИ*/
+    aside,
+    .header_text,
+    .paragraf-text {
+        margin: 0 15px 0 15px;
+    }
+    /*ШРИФТ ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
+    .font {
+        font-size: 1.3rem;
+    }
+
+    /*Высота для контейнера и картинки верхней поджложки ТФОМС РИ*/
+    .logo_bg,
+    .logo_bg > img {
+        height: 127px;
+    }
+    /*Высота и ширина картинки Логотипа ТФОМС РИ при разных разрешениях*/
+    .navbar-brand > img {
+        width: 58px;
+        height: 58px;
+    }
+    /*Шрифт для верхних меню и подменю в разных разрешениях*/
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.3rem;
+    }
+}
+
+/*Small devices (landscape phones, less than 768px)*/
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    /*Шрифт текста верхнего лого*/
+    .navbar-brand > span {
+        font-size: 1.4rem;
+    }
+    /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
+    .header_text,
+    .paragraf-text {
+        margin: 0 6px 0 6px;
+    }
+    /*ШРИФТ ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
+    .font {
+        font-size: 1.4rem;
+    }
+
+    /*Высота для контейнера и картинки верхней поджложки ТФОМС РИ*/
+    .logo_bg,
+    .logo_bg > img {
+        height: 137px;
+    }
+    /*Высота и ширина картинки Логотипа ТФОМС РИ при разных разрешениях*/
+    .navbar-brand > img {
+        width: 68px;
+        height: 68px;
+    }
+    /*Шрифт для верхних меню и подменю в разных разрешениях*/
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.3rem;
+    }
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (min-width:767.98px) and (max-width:991.98px) {
+    /*ОТСТУП СНИЗУ И ПО КРАЯМ ДЛЯ ТЭГА BODY ДЛЯ РАЗНЫХ РАЗРЕШЕНИЙ*/
+    .body_content {
+        margin: 0 0 25px 0;
+    }
+    /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
+    .header_text,
+    .paragraf-text {
+        margin: 0 10px 0 10px;
+    }
+    /*ШРИФТ ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
+    .font {
+        font-size: 1.5rem;
+    }
+    /*Шрифт текста верхнего лого*/
+    .navbar-brand > span {
+        font-size: 1.5rem;
+    }
+
+    /*Высота для контейнера и картинки верхней поджложки ТФОМС РИ*/
+    .logo_bg,
+    .logo_bg > img {
+        height: 157px;
+    }
+    /*Высота и ширина картинки Логотипа ТФОМС РИ при разных разрешениях*/
+    .navbar-brand > img {
+        width: 68px;
+        height: 68px;
+    }
+
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.4rem;
+    }
+}
+
+/*Large devices (desktops, less than 1200px)*/
+@media (min-width:991.98px) and (max-width: 1199.98px) {
+    /*ОТСТУП СНИЗУ И ПО КРАЯМ ДЛЯ ТЭГА BODY ДЛЯ РАЗНЫХ РАЗРЕШЕНИЙ*/
+    .body_content {
+        margin: 0 0 25px 0;
+    }
+    /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
+    .header_text,
+    .paragraf-text {
+        margin: 0;
+    }
+    /*Шрифт текста верхнего лого*/
+    .navbar-brand > span {
+        font-size: 1.6rem;
+    }
+
+    .font {
+        font-size: 1.6rem;
+    }
+
+    /*Высота для контейнера и картинки верхней поджложки ТФОМС РИ*/
+    .logo_bg,
+    .logo_bg > img {
+        height: 157px;
+    }
+    /*Высота и ширина картинки Логотипа ТФОМС РИ при разных разрешениях*/
+    .navbar-brand > img {
+        width: 78px;
+        height: 78px;
+    }
+    /*Шрифт для верхних меню и подменю в разных разрешениях*/
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.4rem;
+    }
+}
+
+/*X-Large devices (large desktops, less than 1400px)*/
+@media (min-width:1199.98px) and (max-width: 1399.98px) {
+    /*ОТСТУП СНИЗУ И ПО КРАЯМ ДЛЯ ТЭГА BODY ДЛЯ РАЗНЫХ РАЗРЕШЕНИЙ*/
+    .body_content {
+        margin: 0 50px 25px 50px;
+    }
+    /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
+    .header_text,
+    .paragraf-text {
+        margin: 0;
+    }
+    /*Шрифт текста верхнего лого*/
+    .navbar-brand > span {
+        font-size: 1.7rem;
+    }
+
+    .font {
+        font-size: 1.6rem;
+    }
+
+    /*Высота для контейнера и картинки верхней поджложки ТФОМС РИ*/
+    .logo_bg,
+    .logo_bg > img {
+        height: 157px;
+    }
+    /*Высота и ширина картинки Логотипа ТФОМС РИ при разных разрешениях*/
+    .navbar-brand > img {
+        width: 88px;
+        height: 88px;
+    }
+    /*Шрифт для верхних меню и подменю в разных разрешениях*/
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.4rem;
+    }
+}
+
+/*XX-Large devices (larger desktops)*/
+@media (min-width: 1399.98px) {
+    /*ОТСТУП СНИЗУ И ПО КРАЯМ ДЛЯ ТЭГА BODY ДЛЯ РАЗНЫХ РАЗРЕШЕНИЙ*/
+    .body_content {
+        margin: 0 150px 25px 150px;
+    }
+
+    /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
+    .header_text,
+    .paragraf-text {
+        margin: 0;
+    }
+
+    /*Шрифт текста верхнего лого*/
+    .navbar-brand > span {
+        font-size: 1.8rem;
+    }
+
+    .font {
+        font-size:1.6rem;
+    }
+
+    /*Высота для контейнера и картинки верхней поджложки ТФОМС РИ*/
+    .logo_bg, .logo_bg > img {
+        height: 177px;
+    }
+    /*Высота и ширина картинки Логотипа ТФОМС РИ при разных разрешениях*/
+    .navbar-brand > img {
+        width: 98px;
+        height: 98px;
+    }
+    /*Шрифт для верхних меню и подменю в разных разрешениях*/
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.5rem;
+    }
+}
