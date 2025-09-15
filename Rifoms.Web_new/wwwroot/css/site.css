@@ -9,11 +9,17 @@ for details on configuring this project to bundle and minify static web assets. 
 #js-show-iframe-wrapper {
     min-width: 100%;
 }
-
+    /*ОТСТУПЫ ДЛЯ ДИВА В ВИДЖЕТЕ ГОСУСЛУГИ*/
     #js-show-iframe-wrapper .bf-116__content {
         padding: 15px 22px 45px 5px;
     }
 
+    /*НАДПИС РЕШАЕМ ВМЕСТЕ СМЕЩАЕМ ПОД КНОПКУ НАПИСАТЬ В ВИДЖЕТЕ ГОСУСЛУГИ*/
+    #js-show-iframe-wrapper .bf-116__logo-wrap {
+        position: unset;
+        padding: unset;
+        margin: 10px 0 0 0;
+    }
 /*НАЧАЛО Стили для текста в футере, кнопок и форм-контролов для всех разрешений такое шрифт*/
 #footer > p > strong,
 .form-control,
