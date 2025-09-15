@@ -581,10 +581,12 @@ body {
     }
     /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
     /*ОТСТУП ДЛЯ БОКОВОГО МЕНЮ А ТАКЖЕ ДЛЯ ВИДЖЕТА ГОСУСЛУГИ*/
-    aside,
+    aside {
+        margin: 0 15px 0 15px;
+    }
     .header_text,
     .paragraf-text {
-        margin: 0 15px 0 15px;
+        margin: 0 5px 0 5px;
     }
     /*Отступ для КНОПОК ВСЕ НОВОСТИ(РЕГИОНЛАЬНЫЕ , МЕСТНЫЕ)*/
     .tab-pane > .float-end {
@@ -624,10 +626,12 @@ body {
     }
     /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
     /*ОТСТУП ДЛЯ БОКОВОГО МЕНЮ А ТАКЖЕ ДЛЯ ВИДЖЕТА ГОСУСЛУГИ*/
-    aside,
+    aside{
+        margin: 0 15px 0 15px;
+    }
     .header_text,
     .paragraf-text {
-        margin: 0 15px 0 15px;
+        margin:0 5px 0 5px;
     }
     /*Отступ для КНОПОК ВСЕ НОВОСТИ(РЕГИОНЛАЬНЫЕ , МЕСТНЫЕ)*/
     .tab-pane > .float-end {
@@ -663,10 +667,12 @@ body {
     }
     /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
     /*ОТСТУП ДЛЯ БОКОВОГО МЕНЮ А ТАКЖЕ ДЛЯ ВИДЖЕТА ГОСУСЛУГИ*/
-    aside,
+    aside {
+        margin: 0 10px 0 10px;
+    }
     .header_text,
     .paragraf-text {
-        margin: 0 10px 0 10px;
+        margin: 0 5px 0 5px;
     }
     /*Отступ для КНОПОК ВСЕ НОВОСТИ(РЕГИОНЛАЬНЫЕ , МЕСТНЫЕ)*/
     .tab-pane > .float-end {
@@ -706,10 +712,12 @@ body {
     }
     /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
     /*ОТСТУП ДЛЯ БОКОВОГО МЕНЮ А ТАКЖЕ ДЛЯ ВИДЖЕТА ГОСУСЛУГИ*/
-    aside,
+    aside {
+        margin: 0 10px 0 10px;
+    }
     .header_text,
     .paragraf-text {
-        margin: 0 10px 0 10px;
+        margin: 0 5px 0 5px;
     }
     /*Отступ для КНОПОК ВСЕ НОВОСТИ(РЕГИОНЛАЬНЫЕ , МЕСТНЫЕ)*/
     .tab-pane > .float-end {
@@ -792,10 +800,12 @@ body {
     }
 
     /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
-    aside,
+    aside {
+        margin: 0 10px 0 10px;
+    }
     .header_text,
     .paragraf-text {
-        margin: 0 10px 0 10px;
+        margin:0 5px 0 5px;
     }
     /*Отступ для КНОПОК ВСЕ НОВОСТИ(РЕГИОНЛАЬНЫЕ , МЕСТНЫЕ)*/
     .tab-pane > .float-end {
