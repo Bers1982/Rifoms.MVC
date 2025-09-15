@@ -646,12 +646,12 @@ body {
     /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
     /*ОТСТУП ДЛЯ БОКОВОГО МЕНЮ А ТАКЖЕ ДЛЯ ВИДЖЕТА ГОСУСЛУГИ*/
     aside {
-        margin: 0 15px 0 15px;
+        margin: 0 25px 0 25px;
     }
 
     .header_text,
     .paragraf-text {
-        margin: 0 5px 0 5px;
+        margin: 0 25px 0 25px;
     }
     /*Отступ для КНОПОК ВСЕ НОВОСТИ(РЕГИОНЛАЬНЫЕ , МЕСТНЫЕ)*/
     .tab-pane > .float-end {
@@ -734,7 +734,8 @@ body {
         font-size: 1.4rem;
     }
     /*РАСПОЛОЖЕНИЕ ВИДЖЕТА ГОСУСЛУГ ВНИЗУ В РЯД*/
-    .pos-banner-fluid .bf-116 {
+    /*РАСПОЛОЖЕНИЕ ВИДЖЕТА ГОСУСЛУГ ВНИЗУ В РЯД*/
+    #js-show-iframe-wrapper .bf-116 {
         display: flex;
         flex-direction: row;
     }
