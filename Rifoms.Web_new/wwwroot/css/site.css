@@ -424,7 +424,8 @@ aside > ul > li > a > span {
     margin: 0 0 0 10px;
 }
 
-/*Делаем дисплей флекс чтоб два меню были в ряд*/
+/*Делаем дисплей флекс чтоб два меню(верхних, клиента меню и авторизации)
+    были в ряд*/
 .navbar-collapse.collapse.show {
     display: flex;
     flex-direction: row;
@@ -562,6 +563,10 @@ body {
 /*Стили для брейкпоинтов*/
 /*X-Small devices (portrait phones, less than 576px)*/
 @media (min-width: 375px) and (max-width: 575.98px) {
+    /*ОТСТУП СНИЗУ И ПО КРАЯМ ДЛЯ ТЭГА BODY ДЛЯ РАЗНЫХ РАЗРЕШЕНИЙ*/
+    .body_content {
+        margin: 0 0 25px 0;
+    }
     /*Шрифт текста верхнего лого*/
     .navbar-brand > span {
         font-size: 1.3rem;
@@ -570,6 +575,7 @@ body {
     /*ОТСТУП ДЛЯ БОКОВОГО МЕНЮ А ТАКЖЕ ДЛЯ ВИДЖЕТА ГОСУСЛУГИ*/
     aside,
     .header_text,
+
     .paragraf-text {
         margin: 0 15px 0 15px;
     }
@@ -597,6 +603,10 @@ body {
 
 /*Small devices (landscape phones, less than 768px)*/
 @media (min-width: 575.98px) and (max-width: 767.98px) {
+    /*ОТСТУП СНИЗУ И ПО КРАЯМ ДЛЯ ТЭГА BODY ДЛЯ РАЗНЫХ РАЗРЕШЕНИЙ*/
+    .body_content {
+        margin: 0 0 25px 0;
+    }
     /*Шрифт текста верхнего лого*/
     .navbar-brand > span {
         font-size: 1.4rem;
