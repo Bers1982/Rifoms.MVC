@@ -8,7 +8,11 @@ for details on configuring this project to bundle and minify static web assets. 
 /*ДЕЛАЕМ МИНИМАЛЬНУЮ ШИРИНУ ДЛЯ ВИДЖЕТА ГОСУСЛУГИ 100%*/
 #js-show-iframe-wrapper {
     min-width: 100%;
- }
+}
+
+    #js-show-iframe-wrapper .bf-116__content {
+        padding: 15px 22px 45px 5px;
+    }
 
 /*НАЧАЛО Стили для текста в футере, кнопок и форм-контролов для всех разрешений такое шрифт*/
 #footer > p > strong,
@@ -19,7 +23,7 @@ for details on configuring this project to bundle and minify static web assets. 
 /*КОНЕЦ Стили для текста в футере, кнопок и форм-контролов для всех разрешений такое шрифт*/
 
 /*ОТСТУП СНИЗУ И ПО КРАЯМ ДЛЯ ТЭГА BODY ДЛЯ РАЗНЫХ РАЗРЕШЕНИЙ*/
-.body_content { 
+.body_content {
     margin: 0 0 25px 0;
 }
 
@@ -584,13 +588,14 @@ body {
     aside {
         margin: 0 15px 0 15px;
     }
+
     .header_text,
     .paragraf-text {
         margin: 0 5px 0 5px;
     }
     /*Отступ для КНОПОК ВСЕ НОВОСТИ(РЕГИОНЛАЬНЫЕ , МЕСТНЫЕ)*/
     .tab-pane > .float-end {
-        margin:0 15px 0 0 ;
+        margin: 0 15px 0 0;
     }
     /*ШРИФТ ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
     .font {
@@ -626,12 +631,13 @@ body {
     }
     /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
     /*ОТСТУП ДЛЯ БОКОВОГО МЕНЮ А ТАКЖЕ ДЛЯ ВИДЖЕТА ГОСУСЛУГИ*/
-    aside{
+    aside {
         margin: 0 15px 0 15px;
     }
+
     .header_text,
     .paragraf-text {
-        margin:0 5px 0 5px;
+        margin: 0 5px 0 5px;
     }
     /*Отступ для КНОПОК ВСЕ НОВОСТИ(РЕГИОНЛАЬНЫЕ , МЕСТНЫЕ)*/
     .tab-pane > .float-end {
@@ -670,6 +676,7 @@ body {
     aside {
         margin: 0 10px 0 10px;
     }
+
     .header_text,
     .paragraf-text {
         margin: 0 5px 0 5px;
@@ -715,6 +722,7 @@ body {
     aside {
         margin: 0 10px 0 10px;
     }
+
     .header_text,
     .paragraf-text {
         margin: 0 5px 0 5px;
@@ -757,11 +765,15 @@ body {
     }
     /*МАРГИН ДЛЯ ЭТИХ РАЗРЕШЕНИЙ*/
     /*ОТСТУП ДЛЯ БОКОВОГО МЕНЮ А ТАКЖЕ ДЛЯ ВИДЖЕТА ГОСУСЛУГИ*/
-    aside,
-    .header_text,
-    .paragraf-text {
+    aside {
         margin: 0 10px 0 10px;
     }
+
+    .header_text,
+    .paragraf-text {
+        margin: 0 5px 0 5px;
+    }
+
     /*Отступ для КНОПОК ВСЕ НОВОСТИ(РЕГИОНЛАЬНЫЕ , МЕСТНЫЕ)*/
     .tab-pane > .float-end {
         margin: 0 10px 0 0;
@@ -803,9 +815,10 @@ body {
     aside {
         margin: 0 10px 0 10px;
     }
+
     .header_text,
     .paragraf-text {
-        margin:0 5px 0 5px;
+        margin: 0 5px 0 5px;
     }
     /*Отступ для КНОПОК ВСЕ НОВОСТИ(РЕГИОНЛАЬНЫЕ , МЕСТНЫЕ)*/
     .tab-pane > .float-end {
@@ -817,7 +830,7 @@ body {
     }
 
     .font {
-        font-size:1.6rem;
+        font-size: 1.6rem;
     }
 
     /*Высота для контейнера и картинки верхней поджложки ТФОМС РИ*/
