@@ -52,7 +52,7 @@ namespace Rifoms.Domain.Infrastructure.Services
         public async Task<NewsModel> GetAllContents(string seolink)
         {
             var model = new NewsModel { SiteUrl = SiteUrl };
-            int pageSize = 10;
+            int pageSize = 5;
 
             using var dbContext = dbFactory();
 

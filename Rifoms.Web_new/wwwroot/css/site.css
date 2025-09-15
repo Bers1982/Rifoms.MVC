@@ -14,12 +14,14 @@ for details on configuring this project to bundle and minify static web assets. 
         padding: 15px 22px 45px 5px;
     }
 
-    /*НАДПИС РЕШАЕМ ВМЕСТЕ СМЕЩАЕМ ПОД КНОПКУ НАПИСАТЬ В ВИДЖЕТЕ ГОСУСЛУГИ*/
+    /*НАДПИСь РЕШАЕМ ВМЕСТЕ СМЕЩАЕМ ПОД КНОПКУ НАПИСАТЬ В ВИДЖЕТЕ ГОСУСЛУГИ*/
+    #js-show-iframe-wrapper > .bf-116__decor > .bf-116__logo-wrap,
     #js-show-iframe-wrapper .bf-116__logo-wrap {
         position: unset;
         padding: unset;
         margin: 10px 0 0 0;
     }
+
 /*НАЧАЛО Стили для текста в футере, кнопок и форм-контролов для всех разрешений такое шрифт*/
 #footer > p > strong,
 .form-control,
@@ -570,14 +572,10 @@ body {
     line-height: 60px; /* Vertically center the text there */
 }
 
-/*НАДПИСЬ РЕШАЕМ ВМЕСТЕ В ВИДЖЕТЕ ГОСУСЛУГ ОБНУЛЯЕМ СВОЙСТВА
-    И СМЕЩАЕМ ПОД КНОПКУ НАПИСАТЬ
-*/
-#js-show-iframe-wrapper > .bf-116__decor > .bf-116__logo-wrap {
-    position: unset;
-    padding: unset;
-    margin: 10px 0 0 0;
+.header_text > h2 {
+    margin-right:20px;
 }
+
 /*Стили для брейкпоинтов*/
 /*X-Small devices (portrait phones, less than 576px)*/
 @media (min-width: 375px) and (max-width: 575.98px) {
@@ -622,6 +620,16 @@ body {
     #topmenu.navbar-nav .nav-item .nav-link,
     #topmenu.navbar-nav .nav-item > ul > li > a {
         font-size: 1.3rem;
+    }
+    /*РАСПОЛОЖЕНИЕ ВИДЖЕТА ГОСУСЛУГ ВНИЗУ В РЯД*/
+    #js-show-iframe-wrapper .bf-116 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bf-116__content,
+    .bf-116__decor {
+        width: 50%;
     }
 }
 
@@ -669,6 +677,16 @@ body {
     #topmenu.navbar-nav .nav-item > ul > li > a {
         font-size: 1.3rem;
     }
+    /*РАСПОЛОЖЕНИЕ ВИДЖЕТА ГОСУСЛУГ ВНИЗУ В РЯД*/
+    #js-show-iframe-wrapper .bf-116 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bf-116__content,
+    .bf-116__decor {
+        width: 50%;
+    }
 }
 
 /*Medium devices (tablets, less than 992px)*/
@@ -685,7 +703,7 @@ body {
 
     .header_text,
     .paragraf-text {
-        margin: 0 5px 0 5px;
+        margin: 0 20px 0 5px;
     }
     /*Отступ для КНОПОК ВСЕ НОВОСТИ(РЕГИОНЛАЬНЫЕ , МЕСТНЫЕ)*/
     .tab-pane > .float-end {
@@ -714,6 +732,16 @@ body {
     #topmenu.navbar-nav .nav-item .nav-link,
     #topmenu.navbar-nav .nav-item > ul > li > a {
         font-size: 1.4rem;
+    }
+    /*РАСПОЛОЖЕНИЕ ВИДЖЕТА ГОСУСЛУГ ВНИЗУ В РЯД*/
+    .pos-banner-fluid .bf-116 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bf-116__content,
+    .bf-116__decor {
+        width: 50%;
     }
 }
 
