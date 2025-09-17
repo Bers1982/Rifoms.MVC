@@ -55,7 +55,7 @@ namespace Rifoms.Web_new
                 options.UseMySql(MySqlConn, ServerVersion.AutoDetect(MySqlConn), ma =>
                 {
                     ma.MigrationsHistoryTable("app_migrationhistory");
-                    ma.MigrationsAssembly("Rifoms.Web");
+                    ma.MigrationsAssembly("Rifoms.Web_new");
                 })
                 //.UseLoggerFactory()
                 .EnableSensitiveDataLogging(true);
