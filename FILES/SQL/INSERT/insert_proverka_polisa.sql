@@ -1,4 +1,4 @@
-INSERT INTO `cms_content`
+INSERT INTO  `cms_content`
 (`category_id`,
 `user_id`,
 `pubdate`,
