@@ -79,8 +79,9 @@ aside > ul > li > a > span {
 /*КОНЕЦ СТИЛИ ДЛЯ НОВОСТЕЙ*/
 
 /*СТИЛИ ДЛЯ ПАРАГРАФА*/
-.paragraf-text {
-    text-align: justify;
+/*НА ВСЕ ДОЧЕРНИЕ ЭЛЕМЕНТЫ РАСПРОСТРАНЯЕТСЯ ДАННОЕ ПРАВИЛО*/
+.paragraf-text * {
+    /*text-align: justify;*/
     font-size: 1.6rem;
 }
 
@@ -217,10 +218,6 @@ aside > ul > li > a > span {
             font-size: 1.6rem;
         }*/
 
-    /*НА ВСЕ ДОЧЕРНИЕ ЭЛЕМЕНТЫ РАСПРОСТРАНЯЕТСЯ ДАННОЕ ПРАВИЛО*/
-    .paragraf-text * {
-        font-size: 1.6rem;
-    }
 /*Делаем так, чтобы первая картинке в новостях не изменялись размеры ширины,
     для последующих картинок ширина будет подстраиваться под размер экрана,
     а высоту просто отменяем
@@ -839,7 +836,7 @@ body {
     /*Шрифт для верхних меню и подменю в разных разрешениях*/
     #topmenu.navbar-nav .nav-item .nav-link,
     #topmenu.navbar-nav .nav-item > ul > li > a {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -884,6 +881,6 @@ body {
     /*Шрифт для верхних меню и подменю в разных разрешениях*/
     #topmenu.navbar-nav .nav-item .nav-link,
     #topmenu.navbar-nav .nav-item > ul > li > a {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 }

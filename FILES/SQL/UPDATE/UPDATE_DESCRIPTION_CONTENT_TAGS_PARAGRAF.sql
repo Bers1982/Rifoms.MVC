@@ -69,7 +69,7 @@ content = REGEXP_REPLACE(content, 'http://rifoms.ru' ,''),
 description = REGEXP_REPLACE(description, 'https://www.rifoms.ru' ,''),
 description = REGEXP_REPLACE(description, 'http://www.rifoms.ru' ,''),
 description = REGEXP_REPLACE(description, 'https://rifoms.ru' ,''),
-description = REGEXP_REPLACE(description, 'http://rifoms.ru' ,'')
+description = REGEXP_REPLACE(description, 'http://rifoms.ru' ,'');
 /* description = REGEXP_REPLACE(description, '&nbsp;' ,''); */
 
 UPDATE gb_rifoms.cms_content
