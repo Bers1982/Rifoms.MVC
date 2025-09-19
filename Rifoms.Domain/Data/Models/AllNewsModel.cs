@@ -13,5 +13,6 @@ namespace Rifoms.Domain.Data.Models
     {
         public string NewsTitle;
         public List<CmsContent> AllNews = new List<CmsContent>();
+        public PageViewModel PageView;
     }
 }

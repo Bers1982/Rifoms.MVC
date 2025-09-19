@@ -5,7 +5,7 @@ using System;
 namespace Rifoms.Domain.Data.Models
 {
     /// <summary>
-    /// PageViewModel, класс который будет содержать всю информацию о пагинации   
+    /// PageViewModel, КЛАСС который будет содержать всю информацию о пагинации   
     /// </summary>
     public class PageViewModel: BaseModel
     {
