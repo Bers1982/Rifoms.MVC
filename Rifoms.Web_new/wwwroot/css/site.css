@@ -81,7 +81,7 @@ aside > ul > li > a > span {
 /*СТИЛИ ДЛЯ ПАРАГРАФА*/
 /*НА ВСЕ ДОЧЕРНИЕ ЭЛЕМЕНТЫ РАСПРОСТРАНЯЕТСЯ ДАННОЕ ПРАВИЛО*/
 .paragraf-text * {
-    /*text-align: justify;*/
+    text-align: justify;
     font-size: 1.6rem;
 }
 
