@@ -92,6 +92,7 @@ aside > ul > li > a > span {
     /*.paragraf-text > p > span,*/
     .paragraf-text > p > img,
     .paragraf-text > p > span > img,
+    .paragraf-text > p > span > a > span > img,
     /*.paragraf-text > p > strong > span,*/
     .paragraf-text > p > strong > span > img {
         float: left;
@@ -127,7 +128,7 @@ aside > ul > li > a > span {
             border: 0;
         }
 
-        .paragraf-text > a,
+    /*.paragraf-text > a,
         .paragraf-text > .general_cont > div > p,
         .paragraf-text > .general_cont > div > p > a,
         .paragraf-text > .general_cont > div > p > strong,
@@ -214,9 +215,12 @@ aside > ul > li > a > span {
         .paragraf-text > ul > li,
         .paragraf-text > ul > li > strong {
             font-size: 1.6rem;
-        }
+        }*/
 
-
+    /*НА ВСЕ ДОЧЕРНИЕ ЭЛЕМЕНТЫ РАСПРОСТРАНЯЕТСЯ ДАННОЕ ПРАВИЛО*/
+    .paragraf-text * {
+        font-size: 1.6rem;
+    }
 /*Делаем так, чтобы первая картинке в новостях не изменялись размеры ширины,
     для последующих картинок ширина будет подстраиваться под размер экрана,
     а высоту просто отменяем
@@ -573,7 +577,7 @@ body {
 }
 
 .header_text > h2 {
-    margin-right:20px;
+    margin-right: 20px;
 }
 
 /*Стили для брейкпоинтов*/

@@ -57,7 +57,7 @@ description = REGEXP_REPLACE(description, 'https://www.rifoms.ru' ,''),
 description = REGEXP_REPLACE(description, 'http://www.rifoms.ru' ,''),
 description = REGEXP_REPLACE(description, 'https://rifoms.ru' ,''),
 description = REGEXP_REPLACE(description, 'http://rifoms.ru' ,''),
-description = REGEXP_REPLACE(description, '&nbsp;' ,'')
+-- description = REGEXP_REPLACE(description, '&nbsp;' ,'')
 where id=17;  
 
 UPDATE gb_rifoms.cms_content
@@ -65,7 +65,7 @@ SET content = REGEXP_REPLACE(content, 'https://www.rifoms.ru' ,''),
 content = REGEXP_REPLACE(content, 'http://www.rifoms.ru' ,''),
 content = REGEXP_REPLACE(content, 'https://rifoms.ru' ,''),
 content = REGEXP_REPLACE(content, 'http://rifoms.ru' ,''),
-content = REGEXP_REPLACE(content, '&nbsp;' ,''),
+-- content = REGEXP_REPLACE(content, '&nbsp;' ,''),
 description = REGEXP_REPLACE(description, 'https://www.rifoms.ru' ,''),
 description = REGEXP_REPLACE(description, 'http://www.rifoms.ru' ,''),
 description = REGEXP_REPLACE(description, 'https://rifoms.ru' ,''),
