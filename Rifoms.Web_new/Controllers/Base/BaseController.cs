@@ -91,10 +91,17 @@ namespace Rifoms.Web_new.Controllers.Base
         public string ExtractSEOlink(string seolink)
         {
             if (seolink != null)
-            {
+            {               
                 seolink = seolink.Replace(".html", "");
-                int lastIndex = seolink.LastIndexOf("/");
-                seolink = seolink.Substring(lastIndex + 1);
+                if (seolink.Contains("page-"))
+                { 
+                
+                }
+                else
+                {
+                    int lastIndex = seolink.LastIndexOf("/");
+                    seolink = seolink.Substring(lastIndex + 1);
+                }
             }
             return seolink;
         }
@@ -107,7 +114,12 @@ namespace Rifoms.Web_new.Controllers.Base
         public int ExtractIDFromRequest(string seolink)
         {
             seolink = seolink.Substring(1, seolink.Length - 1).Replace(".html", "");
-            string idValue = seolink.Split("/")[0];
+            var idArray = seolink.Split("/");
+            string idValue = string.Empty;
+            if (seolink.Contains("page"))
+                idValue = idArray[idArray.Length - 1].Replace("page-", ""); 
+            else
+                idValue = idArray[0];
             if (int.TryParse(idValue, out int id))
                 id = Convert.ToInt32(idValue);
             return id;

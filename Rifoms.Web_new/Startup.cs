@@ -275,7 +275,12 @@ namespace Rifoms.Web_new
                     name: "allnews",
                     template: "novosti/{seolink}.html",
                     defaults: new { controller = "Home", action = "AllNews" });
-                
+
+                routes.MapRoute(
+                    name: "allnews1",
+                    template: "novosti/{seolink1}/{seolink2}.html",
+                    defaults: new { controller = "Home", action = "AllNews" });
+
                 routes.MapRoute(
                      name: "menu",
                      template: "menu/{seolink}.html",

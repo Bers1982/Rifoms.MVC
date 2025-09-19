@@ -4,26 +4,97 @@
     ViewData["Title"] = Model.NewsTitle;
 }
 @{
-    <h1 class="font">@Model.NewsTitle</h1>
-
-    if (Model.AllNews?.Count > 0)
-    {
-        foreach (var item in Model.AllNews)
-        {
-            <div class="header_text d-flex flex-row flex-nowrap justify-content-between align-content-start">
-                <h2 class="mb-3 fw-bolder text-wrap">
-                    @{
-                        <a class="font text-decoration-none" href="@($"{Model.SiteUrl}/{item.Id}/{item.Seolink}.html")">
-                            @item.Title
-                        </a>
-                    }
-                </h2>
-                <h4 class="text-nowrap mt-2">@item.Pubdate.ToString("D")</h4>
-            </div>
-            <div class="d-inline-block paragraf-text">
-                @(Html.Raw(item.Description))
-            </div>
-            <hr />
+    <style>
+        .allnews > nav {
+            display:flex;
+            flex-direction:row;            
+            align-items:center;
+            justify-content: flex-end;
         }
-    }
+
+            .allnews > nav * {
+                font-size: 1.6rem;
+            }
+            .allnews > nav > ul {
+                margin:0 0 0 10px;
+            }
+            .allnews > nav > ul > li {
+                padding: 0 5px 0 5px;
+            }
+    </style>
+
+    <h1 class="font">@Model.NewsTitle</h1>
+    <div class="allnews">
+        @if (Model.AllNews?.Count > 0)
+        {
+            foreach (var item in Model.AllNews)
+            {
+                <div class="header_text d-flex flex-row flex-nowrap justify-content-between align-content-start">
+                    <h2 class="mb-3 fw-bolder text-wrap">
+                        @{
+                            <a class="font text-decoration-none" href="@($"{Model.SiteUrl}/{item.Id}/{item.Seolink}.html")">
+                                @item.Title
+                            </a>
+                        }
+                    </h2>
+                    <h4 class="text-nowrap mt-2">@item.Pubdate.ToString("D")</h4>
+                </div>
+                <div class="d-inline-block paragraf-text">
+                    @(Html.Raw(item.Description))
+                </div>
+                <hr />
+            }
+        }
+        @{
+            var AllNewsSeolink = Model.AllNews.Any(c => c.CategoryId == 8) ? "novosti-tfoms-ri" : "regionalnye-novosti";
+
+            <nav aria-label="AllNewsPagination">
+                <span>Страницы :</span>
+                <ul class="pagination">
+                    @if (Model.PageView.HasPreviousPage)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}.html")" aria-label="Previous"
+                               data-bs-toggle="tooltip" data-bs-placement="top"
+                               title="Первая">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    }
+
+                    <li class="page-item active">
+                        <a class="page-link">
+                            @(Model.PageView.PageNumber)
+                        </a>
+                    </li>
+
+                    <li class="page-item">
+                        <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.PageNumber+1}.html")">
+                            @((!Model.PageView.HasNextPage) ? Model.PageView.PageNumber-3 : Model.PageView.PageNumber+1)
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.PageNumber+2}.html")">
+                            @((!Model.PageView.HasNextPage) ? Model.PageView.PageNumber - 2 : Model.PageView.PageNumber+2)
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.PageNumber+3}.html")">
+                            @((!Model.PageView.HasNextPage) ? Model.PageView.PageNumber - 1 : Model.PageView.PageNumber+3)
+                        </a>
+                    </li>
+
+                    @if (Model.PageView.HasNextPage)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.TotalPages}.html")" aria-label="Next"
+                               data-bs-toggle="tooltip" data-bs-placement="bottom" title="Последняя">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
+    </div>
 }

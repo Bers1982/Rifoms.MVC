@@ -75,27 +75,31 @@ namespace Rifoms.Domain.Infrastructure.Services
             return model;
         }
 
-        public async Task<AllNewsModel> GetAllNewsBySeolink(string seolink)
+        public async Task<AllNewsModel> GetAllNewsBySeolink(string seolink, int page = 0)
         {
+            int pageSize = 10;
             var model = new AllNewsModel { SiteUrl = SiteUrl };
+            var AllNews = new List<CmsContent>();
 
             using var dbContext = dbFactory();
             if (seolink.Contains("novosti-tfoms-ri"))
             {
-                model.AllNews = await dbContext.CmsContents
-                     //.Where(c => c.Seolink.Contains(seolink) && c.CategoryId == 8)
+                AllNews = await dbContext.CmsContents
                      .Where(c => c.CategoryId == 8)
                      .OrderByDescending(c => c.Pubdate)
                      .ToListAsync();
             }
             else
             {
-                model.AllNews = await dbContext.CmsContents
-                    //.Where(c => c.Seolink.Contains(seolink) && c.CategoryId == 9)
+                AllNews = await dbContext.CmsContents
                     .Where(c => c.CategoryId == 9)
                     .OrderByDescending(c => c.Pubdate)
                     .ToListAsync();
             }
+
+            var count = AllNews.Count();
+            model.AllNews = AllNews.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            model.PageView = new PageViewModel(count, page, pageSize);
 
             return model;
         }

@@ -57,9 +57,14 @@ namespace Rifoms.Web_new_new.Controllers
         /// <returns></returns>
         public async Task<IActionResult> AllNews()
         {
+            int page = 1;
+            var model = new AllNewsModel();
             var seolink = ExtractSEOlink(Request.Path.Value);
 
-            var model = await dbService.GetAllNewsBySeolink(seolink);
+            if (seolink.Contains("page"))
+                page = ExtractIDFromRequest(seolink);
+            model = await dbService.GetAllNewsBySeolink(seolink, page);
+
             if (model.AllNews.Any(c => c.CategoryId == 8))
                 model.NewsTitle = "Новости ТФОМС РИ";
             else
@@ -99,9 +104,12 @@ namespace Rifoms.Web_new_new.Controllers
                 seolink = ExtractSEOlink(seolink);
                 var categoryId = await dbService.GetCategoryIDBySeolink(seolink);
                 model = await dbService.GetContentsByCategoryIDAsync(categoryId);
-                if (model.CurrentContents.Count == 0)
+                if (model.CurrentContents != null)
                 {
-                    model = await dbService.GetCategoryByIDAsync(categoryId);
+                    if (model.CurrentContents.Count == 0)
+                    {
+                        model = await dbService.GetCategoryByIDAsync(categoryId);
+                    }
                 }
             }
             return base.View(model);

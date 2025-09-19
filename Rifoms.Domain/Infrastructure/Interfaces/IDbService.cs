@@ -39,7 +39,7 @@ namespace Rifoms.Domain.Infrastructure.Interfaces
         /// ПОЛУЧЕНИЕ ВСЕХ ТИПОВ (МЕСТНЫХ, РЕГИОНАЛЬНЫХ) НОВОСТЕЙ
         /// </summary>
         /// <returns></returns>
-        Task<AllNewsModel> GetAllNewsBySeolink(string seolink);
+        Task<AllNewsModel> GetAllNewsBySeolink(string seolink, int page = 0);
 
         /// <summary>
         /// ПОЛУЧЕНИЕ ВСЕХ ТИПОВ (МЕСТНЫХ, РЕГИОНАЛЬНЫХ) НОВОСТЕЙ
@@ -68,7 +68,7 @@ namespace Rifoms.Domain.Infrastructure.Interfaces
         /// <returns></returns>
         Task<ContentModel> GetContentsByCategoryIDAsync(int id);
 
-     
+
         /// <summary>
         /// Получение СПИСКА (ЛИСТА, в случае, если больше одного) КОНТЕНТА по ID новости
         /// </summary>
