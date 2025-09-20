@@ -65,13 +65,23 @@
                                     <span aria-hidden="true">&laquo;</span>
                                 </a>
                             </li>
+                            if (Model.PageView.PageNumber - 1 != 1)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.PageNumber-1}.html")" aria-label="Previous"
+                                       data-bs-toggle="tooltip" data-bs-placement="top"
+                                       title="Предыдущая">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                            }
                         }
 
-                        if (step >= 5)
+                        if (step > 4)
                         {
-                            for (int i = 1; i <= 5; i++)
+                            for (int i = 1; i <= 4; i++)
                             {
-                                var isActive = Model.PageView.TotalPages - step == Model.PageView.PageNumber;
+                                bool isActive = Model.PageView.TotalPages - step == Model.PageView.PageNumber;
 
                                 <li class="page-item @(isActive ? "active" : string.Empty)">
                                     <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.TotalPages - step}.html")">
@@ -83,13 +93,13 @@
                         }
                         else
                         {
-                            for (int i = 4; i >= 0; --i)
+                            for (int i = 4; i >= 1; i--)
                             {
-                                var isActive = Model.PageView.TotalPages - i == Model.PageView.PageNumber;
+                                bool isActive = Model.PageView.TotalPages - (i - 1) == Model.PageView.PageNumber;
 
                                 <li class="page-item @(isActive ? "active" : string.Empty)">
-                                    <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.TotalPages -i}.html")">
-                                        @(Model.PageView.TotalPages -i)
+                                    <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.TotalPages - (i-1)}.html")">
+                                        @(Model.PageView.TotalPages - (i-1))
                                     </a>
                                 </li>
                             }
@@ -97,13 +107,23 @@
 
                         if (Model.PageView.HasNextPage)
                         {
+                            if ((Model.PageView.TotalPages - Model.PageView.PageNumber > 4))
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.PageNumber+1}.html")" aria-label="Previous"
+                                       data-bs-toggle="tooltip" data-bs-placement="top"
+                                       title="Следующая">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            }
+
                             <li class="page-item">
                                 <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.TotalPages}.html")" aria-label="Next"
                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Последняя">
                                     <span aria-hidden="true">&raquo;</span>
                                 </a>
                             </li>
-
                         }
                     }
                 </ul>
