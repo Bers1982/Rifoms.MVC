@@ -5,6 +5,28 @@ for details on configuring this project to bundle and minify static web assets. 
 .body_content {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
+/*НАЧАЛО ПОСТРАНИЧНАЯ ПАГИНАЦИЯ НА СТРАНИЦЕ ВСЕХ НОВОСТЕЙ*/
+.allnews > nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+    .allnews > nav * {
+        font-size: 1.6rem;
+    }
+
+    .allnews > nav > ul {
+        margin: 0 0 0 10px;
+    }
+
+        .allnews > nav > ul > li {
+            padding: 0 5px 0 5px;
+        }
+/*КОНЕЦ ПОСТРАНИЧНАЯ ПАГИНАЦИЯ НА СТРАНИЦЕ ВСЕХ НОВОСТЕЙ*/
+
 /*ДЕЛАЕМ МИНИМАЛЬНУЮ ШИРИНУ ДЛЯ ВИДЖЕТА ГОСУСЛУГИ 100%*/
 #js-show-iframe-wrapper {
     min-width: 100%;

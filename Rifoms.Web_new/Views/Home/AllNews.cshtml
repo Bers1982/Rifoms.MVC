@@ -54,8 +54,6 @@
                 <span>Страницы :</span>
                 <ul class="pagination">
                     @{
-                        int FirstPageIndex = 0;
-                        int NextPageIndex = 0;
                         int step = Model.PageView.TotalPages - Model.PageView.PageNumber;
 
                         if (Model.PageView.HasPreviousPage)
@@ -99,7 +97,7 @@
                         {
                             for (int i = 5; i >= 1; i--)
                             {
-                                bool isActive = Model.PageView.TotalPages - i+1 == Model.PageView.PageNumber;
+                                bool isActive = Model.PageView.TotalPages - i + 1 == Model.PageView.PageNumber;
 
                                 <li class="page-item @(isActive ? "active" : string.Empty)">
                                     <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.TotalPages - i+1}.html")">
