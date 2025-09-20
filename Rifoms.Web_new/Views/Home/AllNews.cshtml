@@ -54,7 +54,8 @@
                 <span>Страницы :</span>
                 <ul class="pagination">
                     @{
-                        var step = Model.PageView.TotalPages - Model.PageView.PageNumber;
+                        int FirstPageIndex, NextPageIndex;
+                        int step = Model.PageView.TotalPages - Model.PageView.PageNumber;
 
                         if (Model.PageView.HasPreviousPage)
                         {
@@ -65,24 +66,26 @@
                                     <span aria-hidden="true">&laquo;</span>
                                 </a>
                             </li>
-                            if (Model.PageView.PageNumber - 1 != 1)
-                            {
-                                <li class="page-item">
-                                    <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.PageNumber-1}.html")" aria-label="Previous"
-                                       data-bs-toggle="tooltip" data-bs-placement="top"
-                                       title="Предыдущая">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                            }
                         }
-
-                        if (step > 4)
+                        if (step >= 4)
                         {
                             for (int i = 1; i <= 4; i++)
                             {
                                 bool isActive = Model.PageView.TotalPages - step == Model.PageView.PageNumber;
-
+                                if (isActive)
+                                {
+                                    FirstPageIndex = step;
+                                    if (Model.PageView.PageNumber - 1 > 1 && FirstPageIndex == 1)
+                                    {
+                                        <li class="page-item">
+                                            <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.PageNumber-1}.html")" aria-label="Previous"
+                                               data-bs-toggle="tooltip" data-bs-placement="top"
+                                               title="Предыдущая">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                    }
+                                }
                                 <li class="page-item @(isActive ? "active" : string.Empty)">
                                     <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.TotalPages - step}.html")">
                                         @(Model.PageView.TotalPages - step)
@@ -95,11 +98,24 @@
                         {
                             for (int i = 4; i >= 1; i--)
                             {
-                                bool isActive = Model.PageView.TotalPages - (i - 1) == Model.PageView.PageNumber;
-
+                                bool isActive = Model.PageView.TotalPages - i == Model.PageView.PageNumber;
+                                if (isActive)
+                                {
+                                    FirstPageIndex = i;
+                                    if (Model.PageView.PageNumber - 1 > 1 && FirstPageIndex == 1)
+                                    {
+                                        <li class="page-item">
+                                            <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.PageNumber-1}.html")" aria-label="Previous"
+                                               data-bs-toggle="tooltip" data-bs-placement="top"
+                                               title="Предыдущая">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                    }
+                                }
                                 <li class="page-item @(isActive ? "active" : string.Empty)">
-                                    <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.TotalPages - (i-1)}.html")">
-                                        @(Model.PageView.TotalPages - (i-1))
+                                    <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.TotalPages - i}.html")">
+                                        @(Model.PageView.TotalPages - i)
                                     </a>
                                 </li>
                             }
@@ -107,20 +123,10 @@
 
                         if (Model.PageView.HasNextPage)
                         {
-                            if ((Model.PageView.TotalPages - Model.PageView.PageNumber > 4))
-                            {
-                                <li class="page-item">
-                                    <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.PageNumber+1}.html")" aria-label="Previous"
-                                       data-bs-toggle="tooltip" data-bs-placement="top"
-                                       title="Следующая">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            }
-
                             <li class="page-item">
-                                <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.TotalPages}.html")" aria-label="Next"
-                                   data-bs-toggle="tooltip" data-bs-placement="bottom" title="Последняя">
+                                <a class="page-link" href="@($"{Model.SiteUrl}/novosti/{AllNewsSeolink}/page-{Model.PageView.TotalPages}.html")" aria-label="Previous"
+                                   data-bs-toggle="tooltip" data-bs-placement="top"
+                                   title="Последняя">
                                     <span aria-hidden="true">&raquo;</span>
                                 </a>
                             </li>

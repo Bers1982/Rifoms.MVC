@@ -13,6 +13,10 @@ namespace Rifoms.Domain.Data.Models
     {
         public string NewsTitle;
         public List<CmsContent> AllNews = new List<CmsContent>();
+        /// <summary>
+        /// PageViewModel, КЛАСС который будет содержать всю информацию о 
+        /// пагинации   
+        /// </summary>
         public PageViewModel PageView;
     }
 }
