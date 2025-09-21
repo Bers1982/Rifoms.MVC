@@ -9,7 +9,10 @@ where (category_id=8 or category_id=9 or category_id=1)  and
 description regexp 'class="[\\d\\D]*?"';
 
 UPDATE gb_rifoms.cms_content
-set description=replace(description,'</strong>','');
+set description=replace(description,'<strong>',''),
+description=replace(description,'</strong>',''),
+content=replace(content,'<strong>',''),
+content=replace(content,'</strong>','');
 
 UPDATE gb_rifoms.cms_content
 SET content = REGEXP_REPLACE(content, '</span></p><p><span>' ,'')

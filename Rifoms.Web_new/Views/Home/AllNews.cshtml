@@ -4,27 +4,6 @@
     ViewData["Title"] = Model.NewsTitle;
 }
 @{
-    <style>
-        .allnews > nav {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-end;
-        }
-
-            .allnews > nav * {
-                font-size: 1.6rem;
-            }
-
-            .allnews > nav > ul {
-                margin: 0 0 0 10px;
-            }
-
-                .allnews > nav > ul > li {
-                    padding: 0 5px 0 5px;
-                }
-    </style>
-
     <h1 class="font">@Model.NewsTitle</h1>
     <div class="allnews">
         @{
