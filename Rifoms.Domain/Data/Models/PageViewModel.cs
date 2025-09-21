@@ -8,7 +8,7 @@ namespace Rifoms.Domain.Data.Models
     /// PageViewModel, КЛАСС который будет содержать всю информацию о 
     /// пагинации   
     /// </summary>
-    public class PageViewModel: BaseModel
+    public class PageViewModel : BaseModel
     {
         /// <summary>
         /// Номер текущей страницы в свойстве PageNumber
@@ -31,7 +31,7 @@ namespace Rifoms.Domain.Data.Models
         /// есть ли еще какие-нибудь страницы
         /// </summary>
         public bool HasNextPage => PageNumber < TotalPages;
-        public PageViewModel(int count,int pageNumber,int pageSize)
+        public PageViewModel(int count, int pageNumber, int pageSize)
         {
             PageNumber = pageNumber;
             TotalPages = (int)Math.Ceiling(count / (double)pageSize);
