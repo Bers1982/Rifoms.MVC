@@ -100,6 +100,7 @@ aside > ul > li > a > span {
 /*<!-- КОНЕЦ СТИЛИ ДЛЯ СТРАНИЦ НОВОСТЕЙ -->*/
 
 /*НАЧАЛО СТИЛИ ДЛЯ НОВОСТЕЙ*/
+.col-12 > h2 > a,
 .tab-pane > div > h2 > a {
     font-size: 1.6rem;
 }
@@ -107,9 +108,14 @@ aside > ul > li > a > span {
 
 /*СТИЛИ ДЛЯ ПАРАГРАФА*/
 /*НА ВСЕ ДОЧЕРНИЕ ЭЛЕМЕНТЫ РАСПРОСТРАНЯЕТСЯ ДАННОЕ ПРАВИЛО*/
+.paragraf-text,
 .paragraf-text * {
     text-align: justify;
     font-size: 1.6rem;
+}
+
+.paragraf-text > p > span {
+    padding:0 0 0 25px;
 }
 
 .paragraf-text > div > p {
@@ -123,7 +129,7 @@ aside > ul > li > a > span {
 .paragraf-text > p > span > a > span > img,
 /*.paragraf-text > p > strong > span,*/
 .paragraf-text > p > strong > span > img {
-    float: left;
+    /*float: left;*/
     padding: 0 10px 10px 0;
 }
 
@@ -249,8 +255,8 @@ aside > ul > li > a > span {
     для последующих картинок ширина будет подстраиваться под размер экрана,
     а высоту просто отменяем
 */
-.col-12 > .paragraf-text > p > img:nth-child(1),
-.col-12 > .paragraf-text > p > span > img:nth-child(1),
+/*.col-12 > .paragraf-text > p > img:nth-child(1),
+.col-12 > .paragraf-text > p > span > img:nth-child(1),*/
 .tab-pane > .paragraf-text > p > img,
 .tab-pane > .paragraf-text > p > span > img {
     width: revert-layer;
@@ -262,7 +268,7 @@ aside > ul > li > a > span {
 .col-12 > .paragraf-text > p > span > img {
     max-width: 100%;
     max-height: fit-content;
-    padding: 5px 0 0 5px;
+    /*padding: 5px 0 0 5px;*/
 }
 
 /*КОНЕЦ СТИЛИ ДЛЯ ПАРАГРАФА*/
