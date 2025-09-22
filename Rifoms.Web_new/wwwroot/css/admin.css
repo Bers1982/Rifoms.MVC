@@ -82,7 +82,9 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
     padding-top: 25px;
 }
 
-
+.summernote {
+    font-size: 1.6rem;
+}
 
 /*#footer > p > strong, 
 .form-control, 
@@ -90,10 +92,10 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
 /*font-family: "Arial Narrow", Arial, Helvetica, sans-serif;*/
 /*font-size: 1.6rem;
 }*/
-#topmenu.navbar-nav .nav-item .nav-link{
-	display:flex;
-	flex-direction:row;
-	align-items:center;
+#topmenu.navbar-nav .nav-item .nav-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 /*X-Small devices (portrait phones, less than 576px)*/
@@ -163,11 +165,11 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
     .col_margin, .col_margin > input, .col_margin > h2 {
         margin: 0 15px;
     }
-	
-	 /*Шрифт для верхних меню и подменю в разных разрешениях*/
+
+    /*Шрифт для верхних меню и подменю в разных разрешениях*/
     #topmenu.navbar-nav .nav-item .nav-link,
     #topmenu.navbar-nav .nav-item > ul > li > a {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -175,7 +177,7 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
 @media (min-width:1199.98px) and (max-width: 1399.98px) {
     .note-btn-group .note-btn,
     .note-btn-group .note-btn > span,
-    .note-placeholder,    
+    .note-placeholder,
     .dropdown-item,
     .dropdown-item > span,
     .modal-header > h4,
@@ -183,13 +185,13 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
     .modal-body .form-group > label,
     .modal-body .form-group > label > small,
     .modal-body .form-group > input,
-    .modal-body > span, 
+    .modal-body > span,
     .modal-body > label > KBD,
     .modal-footer > input,
     .modal-footer > button,
     input.form-control,
     label.form-label,
-    .col_margin > h2{
+    .col_margin > h2 {
         font-size: 1.4rem;
     }
 
@@ -215,11 +217,15 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
     .note-modal > h4 {
         font-size: 1.4rem;
     }*/
-	
-	 /*Шрифт для верхних меню и подменю в разных разрешениях*/
+
+    #currentDate, #currentTime {
+        font-size: 1.2rem;
+    }
+
+    /*Шрифт для верхних меню и подменю в разных разрешениях*/
     #topmenu.navbar-nav .nav-item .nav-link,
     #topmenu.navbar-nav .nav-item > ul > li > a {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -236,8 +242,8 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
     .col_margin, .col_margin > input, .col_margin > h2 {
         margin: 0 30px;
     }
-	
-	 /*Шрифт для верхних меню и подменю в разных разрешениях*/
+
+    /*Шрифт для верхних меню и подменю в разных разрешениях*/
     #topmenu.navbar-nav .nav-item .nav-link,
     #topmenu.navbar-nav .nav-item > ul > li > a {
         font-size: 1.5rem;
