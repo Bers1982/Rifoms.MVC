@@ -5,6 +5,7 @@ for details on configuring this project to bundle and minify static web assets. 
 .body_content {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
 li.breadcrumb-item,
 li.breadcrumb-item > a,
 li.breadcrumb-item ::before {
@@ -114,53 +115,56 @@ aside > ul > li > a > span {
     font-size: 1.6rem;
 }
 
-.paragraf-text > p > span {
-    padding:0 0 0 25px;
-}
-
-.paragraf-text > div > p {
-    text-indent: 25pt;
-}
-
-/*.paragraf-text > p,*/
-/*.paragraf-text > p > span,*/
-.paragraf-text > p > img,
-.paragraf-text > p > span > img,
-.paragraf-text > p > span > a > span > img,
-/*.paragraf-text > p > strong > span,*/
-.paragraf-text > p > strong > span > img {
-    /*float: left;*/
-    padding: 0 10px 10px 0;
-}
-
-.paragraf-text > p > span > u > strong,
-.paragraf-text > p > u > span > strong,
-.paragraf-text > p > span > b > u > span {
-    color: #0000ff;
-}
-
-.paragraf-text > p > span > b > span,
-.paragraf-text > p > span > b > u > span {
-    color: #ff0000;
-}
-
-.paragraf-text > table {
-    margin: 0px auto;
-}
-
-    .paragraf-text > table > tbody > tr > td > p {
-        text-align: center;
+    .paragraf-text > p > span,
+    .paragraf-text > p > i > span {
+        padding: 0 0 0 25px;
     }
 
-    .paragraf-text > table > tbody > tr > td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding: 5px;
+    .paragraf-text > div > p {
+        text-indent: 25pt;
     }
 
-    .paragraf-text > table.w-100 > tbody > tr > td {
-        border: 0;
+    /*.paragraf-text > p,*/
+    /*.paragraf-text > p > span,*/
+    .paragraf-text > p > img,
+    .paragraf-text > p > span > img,
+    .paragraf-text > p > i > span > img,
+    .paragraf-text > p > span > a > span > img,
+    /*.paragraf-text > p > strong > span,*/
+    .paragraf-text > div > span > img,
+    .paragraf-text > p > strong > span > img {
+        /*float: left;*/
+        padding: 0 10px 10px 0;
     }
+
+    .paragraf-text > p > span > u > strong,
+    .paragraf-text > p > u > span > strong,
+    .paragraf-text > p > span > b > u > span {
+        color: #0000ff;
+    }
+
+    .paragraf-text > p > span > b > span,
+    .paragraf-text > p > span > b > u > span {
+        color: #ff0000;
+    }
+
+    .paragraf-text > table {
+        margin: 0px auto;
+    }
+
+        .paragraf-text > table > tbody > tr > td > p {
+            text-align: center;
+        }
+
+        .paragraf-text > table > tbody > tr > td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        .paragraf-text > table.w-100 > tbody > tr > td {
+            border: 0;
+        }
 
 /*.paragraf-text > a,
         .paragraf-text > .general_cont > div > p,
