@@ -6,19 +6,25 @@
     <title>@ViewData["Title"] - Rifoms.BurgerMenuBootstrap441</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/reset.css"/>
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/admin.css" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid w-100 m-0 p-0">
-                <div class="logo_bg">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                        <img src="~/images/logo_new.png" alt="Логотип ТФ ОМС РИ" title="Логотип ТФ ОМС РИ" />
-                        <span>
-                            ТЕРРИТОРИАЛЬНЫЙ ФОНД<br /> ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО<br /> СТРАХОВАНИЯ РЕСПУБЛИКИ ИНГУШЕТИЯ
-                        </span>
-                    </a>
+                <div class="d-flex flex-row flex-nowrap align-items-center">
+                    <div class="logo_bg_admin">
+                        <a href="/"></a>
+                    </div>
+                    <div id="currentDateTime">
+                        <div id="currentDate">
+                            <img src="~/images/web/calendar.png" alt="Текущая дата" />
+                        </div>
+                        <div id="currentTime" class="d-flex align-items-center">
+                            <img src="~/images/web/clock-3d.png" />
+                            <div id="Time"></div>
+                        </div>
+                    </div>
                 </div>                
             </div>
             <div class="container-fluid w-100 m-0 p-0">
@@ -27,14 +33,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    @*<ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                            </li>
-                        </ul>*@
+                    
                     <partial name="_TopAdminMenu" />
                     <partial name="_LoginMenu"/>
                 </div>

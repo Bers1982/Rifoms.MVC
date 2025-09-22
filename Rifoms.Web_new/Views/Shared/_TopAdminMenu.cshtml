@@ -1,4 +1,10 @@
-﻿<ul id="topmenu" class="navbar-nav text-light flex-grow-1">
+﻿@model BaseModel
+<ul id="topmenu" class="navbar-nav text-light flex-grow-1">
+    <li class="nav-item main-brand">
+        <a href="/">
+            <img src="~/images/web/home-icon.png" alt="На главную" title="Главная" />
+        </a>
+    </li>
     @*МЕНЮ И ПОДМЕНЮ*@
     <li class="nav-item dropdown">
         <a class="nav-link text-light dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">

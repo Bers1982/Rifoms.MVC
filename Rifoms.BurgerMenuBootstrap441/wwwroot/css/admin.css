@@ -1,0 +1,251 @@
+﻿
+html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font-size: 10px;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+}
+
+.note-btn-group .note-btn {
+    font-size: 10px;
+}
+
+.form-check-label {
+    display: inline-block;
+}
+
+    .form-check-label > input,
+    .form-check-input {
+        position: absolute;
+        margin-top: 0.3rem;
+        margin-left: -1.25rem;
+    }
+
+.body_content {
+    margin: 0;
+}
+
+.navbar {
+    height: 45px;
+}
+
+    .navbar .navbar-nav > li > a {
+        height: 45px;
+        justify-content: center;
+        align-content: center;
+    }
+
+.nav-link > img,
+.dropdown-item > img {
+    margin-right: 5px;
+}
+
+/*Стили для выбора файлов в панели SUMMERNOTE*/
+.note-group-select-from-files {
+    display: flex;
+    flex-direction: column;
+}
+
+.d-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.d-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#currentDate > img {
+    margin-right: 5px;
+}
+
+#currentTime > img {
+    margin-right: 10px;
+}
+
+.bg-primary-gradient {
+    padding-top: 25px;
+}
+
+.summernote {
+    font-size: 1.6rem;
+}
+
+/*#footer > p > strong, 
+.form-control, 
+.btn {*/
+/*font-family: "Arial Narrow", Arial, Helvetica, sans-serif;*/
+/*font-size: 1.6rem;
+}*/
+#topmenu.navbar-nav .nav-item .nav-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*X-Small devices (portrait phones, less than 576px)*/
+@media (min-width: 375px) and (max-width: 575.98px) {
+    .summernote {
+        margin: 0 5px 5px 5px;
+        /*max-width: 400px;*/
+    }
+
+    .polis_service {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .col_margin, .col_margin > input, .col_margin > h2 {
+        margin: 0 5px;
+    }
+
+        .col_margin > h2 {
+            font-size: 1.3rem;
+        }
+}
+
+/*Small devices (landscape phones, less than 768px)*/
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .summernote {
+        /*max-width: 650px;*/
+        margin: 0 5px 5px 5px;
+    }
+
+    .polis_service {
+        max-width: 575px;
+    }
+
+    .col_margin, .col_margin > input, .col_margin > h2 {
+        margin: 0 5px;
+    }
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (min-width:767.98px) and (max-width:991.98px) {
+    .summernote {
+        margin: 0 10px 10px 10px;
+        /*max-width:800px;*/
+    }
+
+    .polis_service {
+        margin: auto;
+        max-width: 750px;
+    }
+
+    .col_margin, .col_margin > input, .col_margin > h2 {
+        margin: 0 10px;
+    }
+}
+
+/*Large devices (desktops, less than 1200px)*/
+@media (min-width:991.98px) and (max-width: 1199.98px) {
+    .summernote {
+        margin: 0 15px 15px 15px;
+    }
+
+    .polis_service {
+        max-width: 900px;
+    }
+
+    .col_margin, .col_margin > input, .col_margin > h2 {
+        margin: 0 15px;
+    }
+
+    /*Шрифт для верхних меню и подменю в разных разрешениях*/
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.6rem;
+    }
+}
+
+/*X-Large devices (large desktops, less than 1400px)*/
+@media (min-width:1199.98px) and (max-width: 1399.98px) {
+    .note-btn-group .note-btn,
+    .note-btn-group .note-btn > span,
+    .note-placeholder,
+    .dropdown-item,
+    .dropdown-item > span,
+    .modal-header > h4,
+    .modal-body .form-check > label,
+    .modal-body .form-group > label,
+    .modal-body .form-group > label > small,
+    .modal-body .form-group > input,
+    .modal-body > span,
+    .modal-body > label > KBD,
+    .modal-footer > input,
+    .modal-footer > button,
+    input.form-control,
+    label.form-label,
+    .col_margin > h2 {
+        font-size: 1.4rem;
+    }
+
+    .close {
+        font-size: 2.1rem;
+    }
+
+    .summernote {
+        margin: 0 20px 20px 20px;
+    }
+
+    .polis_service {
+        max-width: 1000px;
+    }
+
+    .col_margin, .col_margin > input, .col_margin > h2 {
+        margin: 0 20px;
+    }
+
+    /*.note-btn,
+    .note-dropdown-menu > a,
+    .note-dropdown-menu > a > span,
+    .note-modal > h4 {
+        font-size: 1.4rem;
+    }*/
+
+    #currentDate, #currentTime {
+        font-size: 1.2rem;
+    }
+
+    /*Шрифт для верхних меню и подменю в разных разрешениях*/
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.6rem;
+    }
+}
+
+/*XX-Large devices (larger desktops)*/
+@media (min-width: 1399.98px) {
+    .summernote {
+        margin: 0 30px 30px 30px;
+    }
+
+    .polis_service {
+        max-width: 1100px;
+    }
+
+    .col_margin, .col_margin > input, .col_margin > h2 {
+        margin: 0 30px;
+    }
+
+    /*Шрифт для верхних меню и подменю в разных разрешениях*/
+    #topmenu.navbar-nav .nav-item .nav-link,
+    #topmenu.navbar-nav .nav-item > ul > li > a {
+        font-size: 1.5rem;
+    }
+}
