@@ -8,6 +8,12 @@ $(document).ready(function () {
     fnCenterDiv();
 });
 
+function fnCenterIframeYoutube() {
+    var elements = document.getElementsByTagName("iframe");
+    console.log(`iframe elements : ${elements} ` + elements + "\t" + Array.from(elements));
+    //console.dir(elements + "\t" + Array.from(elements));
+}
+
 /**
  * ЦЕНТРИРОВАНИЕ ФОРМЫ
  * */

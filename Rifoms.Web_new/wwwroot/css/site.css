@@ -1,6 +1,14 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+.paragraf-text > p {
+    text-indent: unset;
+}
+
+    .paragraf-text > p > span {
+        font-size: unset;
+    }
+
 /*Тень для body*/
 .body_content {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -266,6 +274,19 @@ aside > ul > li > a > span {
     width: revert-layer;
     float: left;
     padding: 0 10px 10px 0;
+}
+
+/*.col-12 > .paragraf-text > p {
+position:relative;
+width:100%;
+}*/
+
+.col-12 > .paragraf-text > p > iframe {
+ /*   position:absolute;
+    top:0px;
+    left:0px;*/
+    width: 100% !important;
+    height:100%;
 }
 
 .col-12 > .paragraf-text > p > img,
