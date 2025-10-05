@@ -16,7 +16,7 @@ html, body {
 }
 
 
-.navbar {
+/*.navbar {
     height: 65px;
 }
 
@@ -24,7 +24,7 @@ html, body {
         height: 65px;
         justify-content: center;
         align-content: center;
-    }
+    }*/
 
         .nav-link:hover,
         .navbar .navbar-nav > li > a:hover {

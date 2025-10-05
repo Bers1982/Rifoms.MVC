@@ -1,21 +1,4 @@
 ﻿
-html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-weight: inherit;
-    font-style: inherit;
-    font-size: 100%;
-    font-family: inherit;
-    vertical-align: baseline;
-}
-
-html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-    font-size: 10px;
-    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
-}
-
 .note-btn-group .note-btn {
     font-size: 10px;
 }
@@ -35,7 +18,7 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
     margin: 0;
 }
 
-.navbar {
+/*.navbar {
     height: 45px;
 }
 
@@ -43,11 +26,91 @@ html, body, span, applet, object, iframe, input, h1, h2, h3, h4, h5, h6, p, bloc
         height: 45px;
         justify-content: center;
         align-content: center;
+    }*/
+
+.nav-link:hover,
+.navbar .navbar-nav > li > a:hover {
+    /*opacity: 60%;*/
+    /*height:100%;*/
+    /*padding:10px 5px;*/
+    background: #0657cf;
+    background: -webkit-linear-gradient(to bottom, #0657cf, #78adfc); /*Chrome 10-25, Safari 5.1-6*/
+    background: linear-gradient(to bottom, #0657cf, #78adfc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    /*padding-top:10px;
+    padding-top:10px;
+    border: 2px solid #055ee1;
+    border-radius: 2px;*/
+    cursor: pointer;
+}
+
+.bg-primary-gradient {
+    background: #0d6efd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0d6efd, #78adfc); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0d6efd, #78adfc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    /* border: 2px solid #055ee1;
+    border-radius: 2px;*/
+}
+
+
+.btn-light-secondary-gradient {
+    background: #d3d4d6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #d3d4d6, #b8baba); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #d3d4d6, #b8baba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 2px solid #b8baca;
+    border-radius: 5px;
+}
+
+.btn-pembe {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #f7ddde;
+    --bs-btn-border-color: #f2b0b3;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #f2b0b3;
+    --bs-btn-hover-border-color: #f2b0b3;
+}
+
+.btn-light-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d3d4d6;
+    --bs-btn-border-color: #565657;
+    --bs-btn-hover-color: #fff;
+    /*--bs-btn-hover-bg: #a3a4a4;*/
+    --bs-btn-hover-bg: #b8baba;
+    --bs-btn-hover-border-color: #292a2a;
+}
+
+.btn-pembe-gradient {
+    background: #f7ddde; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f7ddde, #f2b0b3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f7ddde, #f2b0b3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 2px solid #f2b0c3;
+    border-radius: 5px;
+}
+
+    .btn-pembe-gradient:hover,
+    .btn-light-secondary-gradient:hover {
+        opacity: 60%;
     }
 
 .nav-link > img,
 .dropdown-item > img {
     margin-right: 5px;
+}
+
+.logo_bg_admin {
+    /*background-color: #eaf4fd;*/
+    background-image: url('/images/web/top-bg-admin-logo.png');
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 40px;
+    margin-left: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 /*Стили для выбора файлов в панели SUMMERNOTE*/
