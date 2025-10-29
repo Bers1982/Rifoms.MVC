@@ -1,58 +1,60 @@
+-- Удаляем стили в таблице CONTENT
 UPDATE gb_rifoms.cms_content
 SET description = REGEXP_REPLACE(description, ' style="[\\d\\D]*?"' ,'')
 where (category_id=8 or category_id=9 or category_id=1)  and 
 description regexp 'style="[\\d\\D]*?"'; 
 
-UPDATE gb_rifoms.cms_content
-SET description = REGEXP_REPLACE(description, ' class="[\\d\\D]*?"' ,'')
-where (category_id=8 or category_id=9 or category_id=1)  and 
-description regexp 'class="[\\d\\D]*?"';
+-- UPDATE gb_rifoms.cms_content
+-- SET description = REGEXP_REPLACE(description, ' class="[\\d\\D]*?"' ,'')
+-- where (category_id=8 or category_id=9 or category_id=1)  and 
+-- description regexp 'class="[\\d\\D]*?"';
 
+--Удаляем тэги STRONG в таблице CONTENT
 UPDATE gb_rifoms.cms_content
 set description=replace(description,'<strong>',''),
 description=replace(description,'</strong>',''),
 content=replace(content,'<strong>',''),
 content=replace(content,'</strong>','');
 
+--Удаляем тэги P и SPAN в таблице CONTENT
 UPDATE gb_rifoms.cms_content
 SET content = REGEXP_REPLACE(content, '</span></p><p><span>' ,'')
 where (category_id=8 or category_id=9)  and 
 content regexp '</span></p><p><span>';
 
+-- Удаляем стили в таблице CONTENT
 UPDATE gb_rifoms.cms_content
 SET content = REGEXP_REPLACE(content, ' style="[\\d\\D]*?"' ,'')
 where (category_id=8 or category_id=9 or category_id=1)  and 
 content regexp 'style="[\\d\\D]*?"';
 
-UPDATE gb_rifoms.cms_content
-SET content = REGEXP_REPLACE(content, ' class="[\\d\\D]*?"' ,'')
-where (category_id=8 or category_id=9 or category_id=1)  and 
-content regexp 'class="[\\d\\D]*?"'; 
+-- UPDATE gb_rifoms.cms_content
+-- SET content = REGEXP_REPLACE(content, ' class="[\\d\\D]*?"' ,'')
+-- where (category_id=8 or category_id=9 or category_id=1)  and 
+-- content regexp 'class="[\\d\\D]*?"'; 
 
-UPDATE gb_rifoms.cms_content
-SET description = REGEXP_REPLACE(description, ' style="[\\d\\D]*?"' ,'')
-where (category_id=8 or category_id=9 or category_id=1)  and 
-description regexp 'style="[\\d\\D]*?"'; 
 
-UPDATE gb_rifoms.cms_content
-SET description = REGEXP_REPLACE(description, ' class="[\\d\\D]*?"' ,'')
-where (category_id=8 or category_id=9 or category_id=1)  and 
-description regexp 'class="[\\d\\D]*?"';
+-- UPDATE gb_rifoms.cms_content
+-- SET description = REGEXP_REPLACE(description, ' class="[\\d\\D]*?"' ,'')
+-- where (category_id=8 or category_id=9 or category_id=1)  and 
+-- description regexp 'class="[\\d\\D]*?"';
 
+--Удаляем тэги P и SPAN в таблице CONTENT
 UPDATE gb_rifoms.cms_content
 SET content = REGEXP_REPLACE(content, '</span></p><p><span>' ,'')
 where (category_id=8 or category_id=9)  and 
 content regexp '</span></p><p><span>';
 
+-- Удаляем стили в таблице CONTENT
 UPDATE gb_rifoms.cms_content
 SET content = REGEXP_REPLACE(content, ' style="[\\d\\D]*?"' ,'')
 where (category_id=8 or category_id=9 or category_id=1)  and 
 content regexp 'style="[\\d\\D]*?"';
 
-UPDATE gb_rifoms.cms_content
-SET content = REGEXP_REPLACE(content, ' class="[\\d\\D]*?"' ,'')
-where (category_id=8 or category_id=9 or category_id=1)  and 
-content regexp 'class="[\\d\\D]*?"';   
+-- UPDATE gb_rifoms.cms_content
+-- SET content = REGEXP_REPLACE(content, ' class="[\\d\\D]*?"' ,'')
+-- where (category_id=8 or category_id=9 or category_id=1)  and 
+-- content regexp 'class="[\\d\\D]*?"';   
 
 UPDATE gb_rifoms.cms_category
 SET description = REGEXP_REPLACE(description, ' style="[\\d\\D]*?"' ,''),
