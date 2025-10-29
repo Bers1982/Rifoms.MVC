@@ -150,7 +150,7 @@ a .nav-link{
 /*X-Small devices (portrait phones, less than 576px)*/
 @media (min-width: 375px) and (max-width: 575.98px) {
     .summernote {
-        margin: 0 5px 5px 5px;
+        margin: 0 5px;
         /*max-width: 400px;*/
     }
 
@@ -172,7 +172,7 @@ a .nav-link{
 @media (min-width: 575.98px) and (max-width: 767.98px) {
     .summernote {
         /*max-width: 650px;*/
-        margin: 0 5px 5px 5px;
+        margin: 0 5px;
     }
 
     .polis_service {
@@ -187,7 +187,7 @@ a .nav-link{
 /*Medium devices (tablets, less than 992px)*/
 @media (min-width:767.98px) and (max-width:991.98px) {
     .summernote {
-        margin: 0 10px 10px 10px;
+        margin: 0 10px;
         /*max-width:800px;*/
     }
 
@@ -204,7 +204,7 @@ a .nav-link{
 /*Large devices (desktops, less than 1200px)*/
 @media (min-width:991.98px) and (max-width: 1199.98px) {
     .summernote {
-        margin: 0 15px 15px 15px;
+        margin: 0 15px;
     }
 
     .polis_service {
@@ -281,7 +281,7 @@ a .nav-link{
 /*XX-Large devices (larger desktops)*/
 @media (min-width: 1399.98px) {
     .summernote {
-        margin: 0 30px 30px 30px;
+        margin: 0 30px;
     }
 
     .polis_service {
