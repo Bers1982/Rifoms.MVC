@@ -230,7 +230,7 @@ VALUES(1,
 				<div class="modal-dialog modal-sm modal-dialog-centered ">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h3 class="modal-title">Загрузка из ТФОМС РИ...</h3>
+							<h3 class="modal-title">Загрузка данных из ТФОМС РИ...</h3>
                         </div>
 						<div class="modal-body text-center">
 							<img src="/images/web/spinner_green_32.gif" />
@@ -278,7 +278,7 @@ VALUES(1,
                 </form>
             </div>
             <!-- RESULT_DIV -->
-            <div id="SearchFio_result" class="btn w-100 fw-bold mt-3 text-danger"></div>
+            <div id="SearchFio_result" class="btn w-100 fw-bold mt-3 text-danger text-center"></div>
         </div>
 
     </div>
@@ -322,7 +322,7 @@ VALUES(1,
                 </form>
             </div>
             <!-- RESULT_DIV -->
-            <div id="SearchFirst_result" class="btn w-100 fw-bold mt-3 text-danger"></div>
+            <div id="SearchFirst_result" class="btn w-100 fw-bold mt-3 text-danger text-center"></div>
         </div>
     </div>
 
@@ -359,7 +359,7 @@ VALUES(1,
                 </form>
             </div>
             <!-- RESULT_DIV -->
-            <div id="SearchSecond_result" class="btn w-100 fw-bold mt-3 text-danger"></div>
+            <div id="SearchSecond_result" class="btn w-100 fw-bold mt-3 text-danger text-center"></div>
         </div>
     </div>
 
@@ -396,7 +396,7 @@ VALUES(1,
                 </form>
             </div>
             <!-- RESULT_DIV -->
-            <div id="SearchThird_result" class="btn w-100 fw-bold mt-3 text-danger"></div>
+            <div id="SearchThird_result" class="btn w-100 fw-bold mt-3 text-danger text-center"></div>
         </div>
     </div>
 </div>');
