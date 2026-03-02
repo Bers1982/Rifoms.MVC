@@ -9,14 +9,14 @@ description regexp 'style="[\\d\\D]*?"';
 -- where (category_id=8 or category_id=9 or category_id=1)  and 
 -- description regexp 'class="[\\d\\D]*?"';
 
---Удаляем тэги STRONG в таблице CONTENT
+-- Удаляем тэги STRONG в таблице CONTENT
 UPDATE gb_rifoms.cms_content
 set description=replace(description,'<strong>',''),
 description=replace(description,'</strong>',''),
 content=replace(content,'<strong>',''),
 content=replace(content,'</strong>','');
 
---Удаляем тэги P и SPAN в таблице CONTENT
+-- Удаляем тэги P и SPAN в таблице CONTENT
 UPDATE gb_rifoms.cms_content
 SET content = REGEXP_REPLACE(content, '</span></p><p><span>' ,'')
 where (category_id=8 or category_id=9)  and 
@@ -39,7 +39,7 @@ content regexp 'style="[\\d\\D]*?"';
 -- where (category_id=8 or category_id=9 or category_id=1)  and 
 -- description regexp 'class="[\\d\\D]*?"';
 
---Удаляем тэги P и SPAN в таблице CONTENT
+-- Удаляем тэги P и SPAN в таблице CONTENT
 UPDATE gb_rifoms.cms_content
 SET content = REGEXP_REPLACE(content, '</span></p><p><span>' ,'')
 where (category_id=8 or category_id=9)  and 

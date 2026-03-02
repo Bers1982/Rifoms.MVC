@@ -22,7 +22,7 @@ namespace Rifoms.WF
         {
             InitializeComponent();
             WebImagesPath = PathConfig.WebImagesPath;
-            MySqlConnStr = DebugConfig.IsDebug ? ConnectionConfig.DevLocalConnection : ConnectionConfig.DevServerConnection;
+            MySqlConnStr = DebugConfig.IsDebug ? ConnectionConfig.DevLocalConnection : ConnectionConfig.DevLocal38ServerConnection;
 
             //WwwRootPath = Environment.CurrentDirectory + $"/{PathConfig.WwwRootPath}";
         }
