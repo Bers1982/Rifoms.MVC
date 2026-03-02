@@ -41,9 +41,10 @@ namespace Rifoms.Web_new
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            //string MySqlConn = DebugConfig.IsDebug ? ConnectionConfig.DevLocalConnection : ConnectionConfig.DevServerConnection;
-            string MySqlConn = ConnectionConfig.DevLocalConnection;
+            //ЕСЛИ ОТЛАДКА DEBUG , то берем СТРОКУ ПОДКЛЮЧНИЯ ЛОКАЛЬНУЮ 
+            //ЕСЛИ ОТЛАДКА RELEASE , то берем СТРОКУ ПОДКЛЮЧЕНИЯ на 192.168.1.38-ОМ IP-АДРЕСЕ
+            string MySqlConn = DebugConfig.IsDebug ? ConnectionConfig.DevLocalConnection : ConnectionConfig.DevLocal38ServerConnection;
+            //string MySqlConn = ConnectionConfig.DevLocalConnection;
 
             //for AppDbContext for Database
             services.AddDbContext<RifomsDbContext>(options =>
