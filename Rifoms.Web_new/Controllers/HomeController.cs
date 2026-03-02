@@ -25,6 +25,12 @@ namespace Rifoms.Web_new_new.Controllers
             return base.View(model);
         }
 
+        public async Task<IActionResult> Rss()
+        {
+            var model = await Task.FromResult(new ContentModel());
+            return base.View(model);
+        }
+
         /// <summary>
         /// Обработка ошибок
         /// </summary>

@@ -271,6 +271,10 @@ namespace Rifoms.Web_new
                 #endregion
 
                 #region ROUTE's FOR NEWs AND REGIONNEWDs
+                routes.MapRoute(
+                   name: "rss",
+                   template: "feed.rss",
+                   defaults: new { controller = "Home", action = "Rss" });
 
                 routes.MapRoute(
                     name: "allnews",
@@ -288,14 +292,14 @@ namespace Rifoms.Web_new
                      defaults: new { controller = "Home", action = "Menu" });
 
                 routes.MapRoute(
-                name: "content",
-                template: "{seolink}.html",
-                defaults: new { controller = "Home", action = "Content" });
+                    name: "content",
+                    template: "{seolink}.html",
+                    defaults: new { controller = "Home", action = "Content" });
 
 
                 routes.MapRoute(
-                  name: "content1",
-                  template: "{id}/{seolink}.html",
+                      name: "content1",
+                      template: "{id}/{seolink}.html",
                   defaults: new { controller = "Home", action = "Content" });
 
                 routes.MapRoute(
