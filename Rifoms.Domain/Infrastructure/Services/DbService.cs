@@ -72,6 +72,25 @@ namespace Rifoms.Domain.Infrastructure.Services
                    .Take(pageSize)
                    .ToListAsync();
             }
+            else
+            {
+                model.IdExist = false;
+
+                //ЕСЛИ ЗАПРОС ПРИШЕЛ С ДРУГИХ СТРАНИЦ ,НАПРИМЕР ДЛЯ ПОЛУЧЕНИЯ RSS-ЛЕНТЫ
+                if (seolink.Contains("8/feed.rss"))
+                {
+                    model.News = await dbContext.CmsContents
+                     .Where(c => c.CategoryId == 8)
+                     .OrderByDescending(c => c.Pubdate)
+                     .ToListAsync();
+                }else
+                {
+                    model.RegionNews = await dbContext.CmsContents
+                     .Where(c => c.CategoryId == 9)
+                     .OrderByDescending(c => c.Pubdate)
+                     .ToListAsync();
+                }
+            }
             return model;
         }
 

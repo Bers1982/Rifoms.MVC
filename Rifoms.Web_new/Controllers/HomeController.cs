@@ -1,12 +1,18 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Html;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Rifoms.Domain.Data.Models;
 using Rifoms.Domain.Infrastructure.Interfaces;
 using Rifoms.Web_new.Controllers.Base;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.ServiceModel.Syndication;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Rifoms.Web_new_new.Controllers
 {
@@ -27,8 +33,39 @@ namespace Rifoms.Web_new_new.Controllers
 
         public async Task<IActionResult> Rss()
         {
-            var model = await Task.FromResult(new ContentModel());
-            return base.View(model);
+            var seolink = Request.Path.Value;
+            var model = await dbService.GetAllContents(seolink);
+            var items = new List<SyndicationItem>();
+            if (model.News?.Count > 0)
+            {
+                foreach (var news in model.News)
+                {
+                    var item = new SyndicationItem(news.Title, WebUtility.HtmlDecode(news.Content), new System.Uri($"http://www.rifoms.ru/{news.Seolink}.html"));
+                    items.Add(item);
+                }
+            }
+            else
+            {
+                foreach (var news in model.RegionNews)
+                {
+                    var item = new SyndicationItem(news.Title, WebUtility.HtmlDecode(news.Content), new System.Uri($"http://www.rifoms.ru/{news.Seolink}.html"));
+                    items.Add(item);
+                }
+            }
+
+            var feed = new SyndicationFeed("Название сайта", "Описание сайта", new System.Uri("http://www.rifoms.ru"), items);
+
+            feed.Language = "ru-RU";
+            var stream = new MemoryStream();
+            using (var writer = XmlWriter.Create(stream, new XmlWriterSettings { Async = true, Indent = true }))
+            {
+                var formatter = new Rss20FeedFormatter(feed);
+                formatter.WriteTo(writer);
+                await writer.FlushAsync();
+            }
+
+            return File(stream.ToArray(), "application/xml");
+            //return base.View(model);
         }
 
         /// <summary>
