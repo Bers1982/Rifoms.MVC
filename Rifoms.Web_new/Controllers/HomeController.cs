@@ -35,25 +35,25 @@ namespace Rifoms.Web_new_new.Controllers
         {
             var seolink = Request.Path.Value;
             var model = await dbService.GetAllContents(seolink);
-            var items = new List<SyndicationItem>();
+            var rssItems = new List<SyndicationItem>();
             if (model.News?.Count > 0)
             {
                 foreach (var news in model.News)
                 {
-                    var item = new SyndicationItem(news.Title, WebUtility.HtmlDecode(news.Content), new System.Uri($"http://www.rifoms.ru/{news.Seolink}.html"));
-                    items.Add(item);
+                    var rssItem = new SyndicationItem(news.Title, WebUtility.HtmlDecode(news.Content), new System.Uri($"http://www.rifoms.ru/{news.Seolink}.html"));
+                    rssItems.Add(rssItem);
                 }
             }
             else
             {
                 foreach (var news in model.RegionNews)
                 {
-                    var item = new SyndicationItem(news.Title, WebUtility.HtmlDecode(news.Content), new System.Uri($"http://www.rifoms.ru/{news.Seolink}.html"));
-                    items.Add(item);
+                    var rssItem = new SyndicationItem(news.Title, WebUtility.HtmlDecode(news.Content), new System.Uri($"http://www.rifoms.ru/{news.Seolink}.html"));
+                    rssItems.Add(rssItem);
                 }
             }
 
-            var feed = new SyndicationFeed("Название сайта", "Описание сайта", new System.Uri("http://www.rifoms.ru"), items);
+            var feed = new SyndicationFeed("Название сайта", "Описание сайта", new System.Uri("http://www.rifoms.ru"), rssItems);
 
             feed.Language = "ru-RU";
             var stream = new MemoryStream();
