@@ -273,7 +273,7 @@ namespace Rifoms.Web_new
                 #region ROUTE's FOR NEWs AND REGIONNEWDs
                 routes.MapRoute(
                    name: "rss",
-                   template: "{id}/feed.rss",
+                   template: "rss/content/{id}/feed.rss",
                    defaults: new { controller = "Home", action = "Rss" });
 
                 routes.MapRoute(

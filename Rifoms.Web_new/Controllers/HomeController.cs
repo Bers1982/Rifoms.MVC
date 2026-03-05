@@ -33,19 +33,27 @@ namespace Rifoms.Web_new_new.Controllers
 
         public async Task<IActionResult> Rss()
         {
+            var stream = new MemoryStream();
             var seolink = Request.Path.Value;
             var model = await dbService.GetAllContents(seolink);
             var rssItems = new List<SyndicationItem>();
+            var feed= new SyndicationFeed(string.Empty, "Территориальный фонд обязательного медицинского " +
+                          "страхования Республики Ингушетия", new System.Uri("http://www.rifoms.ru"), rssItems);
+            feed.Language = "ru-RU"; 
+            
             if (model.News?.Count > 0)
             {
+                feed.Title = new TextSyndicationContent("Новости ТФОМС РИ");
                 foreach (var news in model.News)
                 {
                     var rssItem = new SyndicationItem(news.Title, WebUtility.HtmlDecode(news.Content), new System.Uri($"http://www.rifoms.ru/{news.Seolink}.html"));
                     rssItems.Add(rssItem);
                 }
+               
             }
             else
             {
+                feed.Title = new TextSyndicationContent("Региональные Новости ТФОМС РИ");
                 foreach (var news in model.RegionNews)
                 {
                     var rssItem = new SyndicationItem(news.Title, WebUtility.HtmlDecode(news.Content), new System.Uri($"http://www.rifoms.ru/{news.Seolink}.html"));
@@ -53,11 +61,7 @@ namespace Rifoms.Web_new_new.Controllers
                 }
             }
 
-            var feed = new SyndicationFeed("Новости ТФОМС РИ :: ТФ ОМС РИ", "Территориальный фонд обязательного медицинского " +
-                "страхования Республики Ингушетия", new System.Uri("http://www.rifoms.ru"), rssItems);
-
-            feed.Language = "ru-RU";
-            var stream = new MemoryStream();
+           
             using (var writer = XmlWriter.Create(stream, new XmlWriterSettings { Async = true, Indent = true }))
             {
                 var formatter = new Rss20FeedFormatter(feed);
