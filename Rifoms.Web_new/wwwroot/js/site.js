@@ -43,22 +43,37 @@ function SetTfomsMapHeight(name) {
  */
 async function fnCheckPing(url) {
     const startTime = Date.now();
+
     try {
-        const response = await fetch(url, {
-            method: 'GET',
-            mode: 'no-cors', // Use 'no-cors' for cross-origin requests where you don't need to read the response content
-            cache: 'no-store' // Prevent caching for more accurate timing
-        });
+        await fetch(`http://${url}:50`);
         const endTime = Date.now();
         const latency = endTime - startTime;
         console.log(`Successfully reached ${url}. Latency: ${latency}ms`);
         return { success: true, latency: latency };
+
     } catch (error) {
         const endTime = Date.now();
         const latency = endTime - startTime; // This will be the time until the error occurred
-        console.error(`Failed to reach ${url}. Error: ${error.message}. Latency until error: ${latency}ms`);
+        console.log(`Failed to reach ${url}. Error: ${error.message}. Latency until error: ${latency}ms`);
         return { success: false, error: error, latency: latency };
     }
+
+    //try {
+    //    const response = await fetch(url, {
+    //        method: 'GET',
+    //        mode: 'no-cors', // Use 'no-cors' for cross-origin requests where you don't need to read the response content
+    //        cache: 'no-store' // Prevent caching for more accurate timing
+    //    });
+    //    const endTime = Date.now();
+    //    const latency = endTime - startTime;
+    //    console.log(`Successfully reached ${url}. Latency: ${latency}ms`);
+    //    return { success: true, latency: latency };
+    //} catch (error) {
+    //    const endTime = Date.now();
+    //    const latency = endTime - startTime; // This will be the time until the error occurred
+    //    console.error(`Failed to reach ${url}. Error: ${error.message}. Latency until error: ${latency}ms`);
+    //    return { success: false, error: error, latency: latency };
+    //}
 }
 
 /**
@@ -94,13 +109,15 @@ function fnFindPolis(formID) {
 
                 //xhr.open('GET', 'http://185.35.130.36:5000/api/polis/getpolis' + params, true);
                 //xhr.open('GET', '/api/polis/getpolis2?' + params, true);
-
                 //xhr.open('POST', '/api/polis/getpolis', true);
-                //xhr.open('POST', 'http://192.168.1.38:50/api/polis/getpolis', true);
 
-                //На удаленном хосте, где расположен сервис поиска полисов
-                //также првоеряем доступность на пинг сервера 200-ого
-                xhr.open('POST', 'http://185.35.130.36:50/api/polis/getpolis', true);
+                if (fnCheckPing("192.168.1.38")) {
+                    xhr.open('POST', 'http://192.168.1.38:50/api/polis/getpolis', true);
+                } else {
+                    //На удаленном хосте, где расположен сервис поиска полисов
+                    //также првоеряем доступность на пинг сервера 200-ого
+                    xhr.open('POST', 'http://185.35.130.36:50/api/polis/getpolis', true);
+                }                
 
                 xhr.setRequestHeader("XSRF-TOKEN", $('input:hidden[name="__RequestVerificationToken"]').val());
                 xhr.setRequestHeader('Content-type', 'application/json');
