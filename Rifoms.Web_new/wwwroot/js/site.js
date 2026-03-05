@@ -57,23 +57,6 @@ async function fnCheckPing(url) {
         console.log(`Failed to reach ${url}. Error: ${error.message}. Latency until error: ${latency}ms`);
         return { success: false, error: error, latency: latency };
     }
-
-    //try {
-    //    const response = await fetch(url, {
-    //        method: 'GET',
-    //        mode: 'no-cors', // Use 'no-cors' for cross-origin requests where you don't need to read the response content
-    //        cache: 'no-store' // Prevent caching for more accurate timing
-    //    });
-    //    const endTime = Date.now();
-    //    const latency = endTime - startTime;
-    //    console.log(`Successfully reached ${url}. Latency: ${latency}ms`);
-    //    return { success: true, latency: latency };
-    //} catch (error) {
-    //    const endTime = Date.now();
-    //    const latency = endTime - startTime; // This will be the time until the error occurred
-    //    console.error(`Failed to reach ${url}. Error: ${error.message}. Latency until error: ${latency}ms`);
-    //    return { success: false, error: error, latency: latency };
-    //}
 }
 
 /**
