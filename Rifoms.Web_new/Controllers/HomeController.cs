@@ -53,7 +53,8 @@ namespace Rifoms.Web_new_new.Controllers
                 }
             }
 
-            var feed = new SyndicationFeed("Название сайта", "Описание сайта", new System.Uri("http://www.rifoms.ru"), rssItems);
+            var feed = new SyndicationFeed("Новости ТФОМС РИ :: ТФ ОМС РИ", "Территориальный фонд обязательного медицинского " +
+                "страхования Республики Ингушетия", new System.Uri("http://www.rifoms.ru"), rssItems);
 
             feed.Language = "ru-RU";
             var stream = new MemoryStream();
