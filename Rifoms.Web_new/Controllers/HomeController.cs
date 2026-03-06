@@ -48,8 +48,7 @@ namespace Rifoms.Web_new_new.Controllers
                 {
                     var rssItem = new SyndicationItem(news.Title, WebUtility.HtmlDecode(news.Content), new System.Uri($"http://www.rifoms.ru/{news.Seolink}.html"));
                     rssItems.Add(rssItem);
-                }
-               
+                }               
             }
             else
             {
@@ -60,7 +59,6 @@ namespace Rifoms.Web_new_new.Controllers
                     rssItems.Add(rssItem);
                 }
             }
-
            
             using (var writer = XmlWriter.Create(stream, new XmlWriterSettings { Async = true, Indent = true }))
             {
