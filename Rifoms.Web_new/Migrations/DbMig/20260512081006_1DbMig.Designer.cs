@@ -9,7 +9,7 @@ using Rifoms.Domain.Context;
 namespace Rifoms.Web_new.Migrations.DbMig
 {
     [DbContext(typeof(RifomsDbContext))]
-    [Migration("20260302062905_1DbMig")]
+    [Migration("20260512081006_1DbMig")]
     partial class _1DbMig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
