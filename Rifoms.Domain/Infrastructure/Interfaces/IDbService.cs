@@ -37,12 +37,14 @@ namespace Rifoms.Domain.Infrastructure.Interfaces
 
         /// <summary>
         /// ПОЛУЧЕНИЕ ВСЕХ ТИПОВ (МЕСТНЫХ, РЕГИОНАЛЬНЫХ) НОВОСТЕЙ
+        /// по параметру SEOLINK
         /// </summary>
         /// <returns></returns>
         Task<AllNewsModel> GetAllNewsBySeolink(string seolink, int page = 0);
 
         /// <summary>
         /// ПОЛУЧЕНИЕ ВСЕХ ТИПОВ (МЕСТНЫХ, РЕГИОНАЛЬНЫХ) НОВОСТЕЙ
+        /// по количеству новостей на одну страницу, обычно 5 штук
         /// </summary>
         /// <returns></returns>
         Task<List<CmsContent>> GetContents(int pageSize);
