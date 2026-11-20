@@ -17,7 +17,6 @@ using System.Threading.Tasks;
 namespace Rifoms.Web_new.Controllers
 {
     //[Authorize(Roles = "admin,manager", Policy = "ZayavkaPolicy")]
-
     public class AuthController : BaseController<AuthController>
     {
 
